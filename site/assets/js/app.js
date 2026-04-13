@@ -519,6 +519,7 @@
 
       scrollToTop();
       initTOC();
+      initBilingualToggle(dirName, slug, category);
       closeMobileSidebar();
 
       // ── Highlight from URL params ──
@@ -527,6 +528,211 @@
       render404();
     });
   }
+
+  // ─── Bilingual Toggle ─────────────────────────────
+  function initBilingualToggle(dirName, slug, category) {
+    var letterCategories = ['shareholder-letter', 'partnership-letter', 'special-letter'];
+    if (letterCategories.indexOf(category) < 0) return;
+
+    var enPath = '/content/' + dirName + '/' + slug + '-en.md';
+    fetch(enPath, { cache: 'no-store' })
+      .then(function(r) { if (!r.ok) throw new Error('no-en'); return r.text(); })
+      .then(function(enMd) {
+        injectBilingualToggle(dirName, slug, enMd);
+      })
+      .catch(function() {
+        // No English version available — silently skip
+      });
+  }
+
+  function injectBilingualToggle(dirName, slug, enMd) {
+    // Insert toggle bar above article body
+    var articleEl = document.querySelector('.article-body');
+    if (!articleEl) return;
+
+    // Restore saved preference
+    var savedLang = sessionStorage.getItem('bilingual-lang-' + slug) || 'zh';
+
+    var toggleBar = document.createElement('div');
+    toggleBar.className = 'bilingual-toggle';
+    toggleBar.innerHTML =
+      '<span class="bilingual-toggle-label">语言：</span>' +
+      '<button class="lang-btn' + (savedLang === 'zh' ? ' active' : '') + '" data-lang="zh">中文</button>' +
+      '<button class="lang-btn' + (savedLang === 'en' ? ' active' : '') + '" data-lang="en">English</button>' +
+      '<button class="lang-btn' + (savedLang === 'both' ? ' active' : '') + '" data-lang="both">对照</button>';
+
+    articleEl.parentNode.insertBefore(toggleBar, articleEl);
+
+    // Store original Chinese HTML
+    var zhHtml = articleEl.innerHTML;
+    var enHtml = window.marked ? marked.parse(enMd) : enMd;
+
+    function switchLang(lang) {
+      sessionStorage.setItem('bilingual-lang-' + slug, lang);
+      toggleBar.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      if (lang === 'zh') {
+        articleEl.className = 'article-body';
+        articleEl.innerHTML = zhHtml;
+      } else if (lang === 'en') {
+        articleEl.className = 'article-body';
+        articleEl.innerHTML = enHtml;
+        processEnglishWords(articleEl);
+      } else {
+        // Side-by-side
+        articleEl.className = 'article-body bilingual-split-mode';
+        articleEl.innerHTML =
+          '<div class="bilingual-pane bilingual-pane-zh"><div class="bilingual-pane-label">中文</div>' + zhHtml + '</div>' +
+          '<div class="bilingual-pane bilingual-pane-en"><div class="bilingual-pane-label">English</div>' + enHtml + '</div>';
+        processEnglishWords(articleEl.querySelector('.bilingual-pane-en'));
+      }
+    }
+
+    toggleBar.addEventListener('click', function(e) {
+      var btn = e.target.closest('.lang-btn');
+      if (!btn) return;
+      switchLang(btn.getAttribute('data-lang'));
+    });
+
+    // Apply saved language
+    if (savedLang !== 'zh') switchLang(savedLang);
+  }
+
+  // ─── English Word Tooltip ─────────────────────────
+  var _translationCache = {};
+  var _activeTooltip = null;
+
+  function processEnglishWords(container) {
+    if (!container) return;
+    // Walk text nodes and wrap words
+    var walker = document.createTreeWalker(
+      container,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function(node) {
+          var parent = node.parentNode;
+          if (!parent) return NodeFilter.FILTER_REJECT;
+          var tag = parent.tagName ? parent.tagName.toUpperCase() : '';
+          // Skip script, style, already-wrapped, code
+          if (['SCRIPT','STYLE','CODE','PRE','A'].indexOf(tag) >= 0) return NodeFilter.FILTER_REJECT;
+          if (parent.classList && parent.classList.contains('en-word')) return NodeFilter.FILTER_REJECT;
+          if (!/[a-zA-Z]/.test(node.textContent)) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    var nodes = [];
+    var node;
+    while ((node = walker.nextNode())) nodes.push(node);
+
+    nodes.forEach(function(textNode) {
+      var text = textNode.textContent;
+      var frag = document.createDocumentFragment();
+      var parts = text.split(/(\b[a-zA-Z]+(?:'[a-zA-Z]+)?\b)/);
+      parts.forEach(function(part) {
+        if (/^[a-zA-Z]/.test(part) && part.length > 1) {
+          var span = document.createElement('span');
+          span.className = 'en-word';
+          span.textContent = part;
+          span.setAttribute('data-word', part.toLowerCase());
+          frag.appendChild(span);
+        } else {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+
+    // Event delegation on container
+    container.addEventListener('click', function(e) {
+      var wordEl = e.target.closest('.en-word');
+      if (!wordEl) { hideWordTooltip(); return; }
+      e.stopPropagation();
+      showWordTooltip(wordEl);
+    });
+  }
+
+  function showWordTooltip(wordEl) {
+    var word = wordEl.getAttribute('data-word');
+    if (!word) return;
+    hideWordTooltip();
+
+    var tooltip = document.createElement('div');
+    tooltip.className = 'en-word-tooltip';
+    tooltip.id = 'en-word-tooltip';
+    tooltip.innerHTML =
+      '<div class="en-word-tooltip-header">' +
+      '<span class="en-word-tooltip-word">' + word + '</span>' +
+      '<button class="en-word-speak-btn" title="发音">🔊</button>' +
+      '<button class="en-word-close-btn" title="关闭">✕</button>' +
+      '</div>' +
+      '<div class="en-word-tooltip-body"><span class="en-word-loading">查询中...</span></div>';
+
+    document.body.appendChild(tooltip);
+    _activeTooltip = tooltip;
+
+    // Position near word
+    var rect = wordEl.getBoundingClientRect();
+    var top = rect.bottom + window.scrollY + 6;
+    var left = rect.left + window.scrollX;
+    // Clamp to viewport
+    var tooltipW = 220;
+    if (left + tooltipW > window.innerWidth - 10) left = window.innerWidth - tooltipW - 10;
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+
+    tooltip.querySelector('.en-word-speak-btn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (window.speechSynthesis) {
+        var utt = new SpeechSynthesisUtterance(word);
+        utt.lang = 'en-US';
+        speechSynthesis.speak(utt);
+      }
+    });
+    tooltip.querySelector('.en-word-close-btn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      hideWordTooltip();
+    });
+
+    // Fetch translation
+    if (_translationCache[word]) {
+      updateTooltipTranslation(tooltip, _translationCache[word]);
+    } else {
+      fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(word) + '&langpair=en|zh')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var zh = (data.responseData && data.responseData.translatedText) || '—';
+          _translationCache[word] = zh;
+          updateTooltipTranslation(tooltip, zh);
+        })
+        .catch(function() {
+          updateTooltipTranslation(tooltip, '翻译失败');
+        });
+    }
+  }
+
+  function updateTooltipTranslation(tooltip, text) {
+    if (!tooltip || !document.body.contains(tooltip)) return;
+    var body = tooltip.querySelector('.en-word-tooltip-body');
+    if (body) body.innerHTML = '<span class="en-word-translation">' + text + '</span>';
+  }
+
+  function hideWordTooltip() {
+    if (_activeTooltip) {
+      _activeTooltip.remove();
+      _activeTooltip = null;
+    }
+  }
+
+  // Close tooltip on outside click
+  document.addEventListener('click', function(e) {
+    if (_activeTooltip && !e.target.closest('#en-word-tooltip')) {
+      hideWordTooltip();
+    }
+  });
 
   // ─── Load article-related quotes ──────────────────
   function loadArticleQuotes(dirName, slug) {

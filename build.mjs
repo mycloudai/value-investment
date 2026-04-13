@@ -70,8 +70,14 @@ function readAllDocs() {
   for (const dir of contentDirs) {
     const dirPath = path.join(CONTENT_DIR, dir);
     if (!fs.statSync(dirPath).isDirectory()) continue;
+    if (dir === 'skills') continue; // handled separately by compileBuffettSkill
 
-    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.md') && !f.endsWith('-quotes.md'));
+    const files = fs.readdirSync(dirPath).filter(f =>
+      f.endsWith('.md') &&
+      !f.endsWith('-quotes.md') &&
+      !f.endsWith('-en.md') &&
+      !f.endsWith('-quotes-en.md')
+    );
     for (const file of files) {
       const filePath = path.join(dirPath, file);
       const raw = fs.readFileSync(filePath, 'utf-8');
@@ -220,7 +226,8 @@ function collectQuotesFiles() {
   for (const dir of contentDirs) {
     const dirPath = path.join(CONTENT_DIR, dir);
     if (!fs.statSync(dirPath).isDirectory()) continue;
-    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('-quotes.md'));
+    if (dir === 'skills') continue;
+    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('-quotes.md') && !f.endsWith('-quotes-en.md'));
     for (const file of files) {
       const raw = fs.readFileSync(path.join(dirPath, file), 'utf-8');
       const { data: fm } = matter(raw);
