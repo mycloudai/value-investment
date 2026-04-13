@@ -1,0 +1,16 @@
+{
+  "name": "mycloudai-value-investment",
+  "version": "1.12.0",
+  "description": "MyCloudAI 价值投资 - 与巴菲特同行，读懂价值投资",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "clean": "rm -rf site/content site/assets/data site/_redirects"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}

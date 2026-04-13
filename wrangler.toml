@@ -1,0 +1,9 @@
+name = "mycloudai-value-investment"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[site]
+bucket = "./site"
+
+# Pages Functions are auto-detected from functions/ directory
+# No additional configuration needed

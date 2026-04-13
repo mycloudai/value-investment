@@ -1,0 +1,4943 @@
+# ⚠️  已归档 · 请勿编辑
+# 此文件是历史迁移产物，已由 scripts/reorganize-quotes.py 一次性转换为
+# content/**/{slug}-quotes.md 文件（153 个）。
+# 网站构建（build.mjs）直接读取 {slug}-quotes.md，不使用此文件。
+# 如需新增/修改金句，请编辑对应的 content/{category}/{slug}-quotes.md。
+#
+# 巴菲特金句原始数据
+# 抓取时间：2026-04-13 15:41:16
+# 来源：网页抓取 + 本地MD文件blockquote提取
+# 网页金句总数：433
+# 本地blockquote总数：275
+
+quotes:
+
+  - id: "web-berkshire-1984-巴菲特致股东信-01"
+    text: |
+      1984年我们的净资产增加了1.526亿美元，每股约增长133美元。这个数字听起来还不错，但实际上只能算中等水平。经济收益必须与产生它的资本相比较来评估。过去二十年来，我们每股账面价值的年复合增长率为22.1%（从1964年的19.46美元增长到1984年的1,108.77美元），但1984年的增长率只有13.6%。
+    source_page: "berkshire/1984-巴菲特致股东信"
+    type: "web-summary"
+    extraction_source: "website"
+    tags: ["1984", "股东信"]
+
+  - id: "web-berkshire-1984-巴菲特致股东信-02"
+    text: "正如我们去年讨论过的，每股内在商业价值的增长才是真正重要的经济衡量标准。不过内在商业价值的计算涉及太多主观判断。就我们的情况来说，账面价值是一个有用的替代指标，虽然有些低估。在我看来，1984年内在价值和账面价值的增长幅度大致相当。"
+    source_page: "berkshire/1984-巴菲特致股东信"
+    type: "web-summary"
+    extraction_source: "website"
+    tags: ["1984", "股东信"]
+
+  - id: "web-berkshire-1987-巴菲特致股东信-01"
+    text: "1987年，我们的净资产增加了4.64亿美元，增幅为19.5%。自现任管理层接手的23年以来，每股账面价值由19.46美元增长到2,477.47美元，年复合增长率约为23.1%。"
+    source_page: "berkshire/1987-巴菲特致股东信"
+    type: "web-summary"
+    extraction_source: "website"
+    tags: ["1987", "股东信"]
+
+  - id: "web-berkshire-2008-巴菲特致股东信-01"
+    text: "注释： 数据为日历年度数据，以下例外：1965年和1966年为截至9月30日的年度；1967年为截至12月31日的15个月。"
+    source_page: "berkshire/2008-巴菲特致股东信"
+    type: "web-summary"
+    extraction_source: "website"
+    tags: ["2008", "股东信"]
+
+  - id: "web-berkshire-2008-巴菲特致股东信-02"
+    text: "自1979年起，会计准则要求保险公司按市价而非此前的成本与市价孰低法计量权益类证券。本表中，伯克希尔1978年及以前的数据已按新规则进行了追溯调整。其他方面的数据均采用当初的原始报告数字。"
+    source_page: "berkshire/2008-巴菲特致股东信"
+    type: "web-summary"
+    extraction_source: "website"
+    tags: ["2008", "股东信"]
+
+  - id: "web-companies-BNSF铁路-01"
+    text: |
+      "2010年的亮点是我们收购了伯灵顿北方圣太菲铁路，这笔交易的效果比我预期的还要好。现在看来，拥有这条铁路将使伯克希尔的'常规'盈利能力税前增长近40%，税后增长远超30%。"
+    source_page: "companies/BNSF铁路"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["BNSF铁路", "交通"]
+    attribution: "2010 巴菲特致股东信
+\"BNSF铁路，我们的第三大巨头，继续扮演着美国商业第一大动脉的角色，使其成为美国和伯克希尔都不可或缺的资产。如果BNSF承运的众多重要产品改用卡车运输，美国的碳排放量将飙升。\""
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-IBM-01"
+    text: |
+      "投资109亿美元购入6,390万股IBM股票。算上IBM，我们现在持有四家卓越公司的大量股权：美国运通13.0%、可口可乐8.8%、IBM 5.5%和富国银行7.6%。"
+    source_page: "companies/IBM"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["IBM", "科技"]
+    attribution: "2011 巴菲特致股东信
+\"最终，我们对IBM投资的成败将主要取决于其未来的盈利。但一个重要的次要因素是，公司用它可能投入的巨额资金回购了多少股票。如果回购最终把IBM的流通股减少到6,390万股（只剩我一个人），我将放弃我著名的节俭作风，给伯克希尔的员工放一天带薪假。\""
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-三井物产-01"
+    text: |
+      "在某些重要方面，这五家公司——伊藤忠、丸红、三菱、三井和住友——实行的股东友好政策远比美国企业的通常做法更为出色。自我们开始买入以来，每一家都以有吸引力的价格回购并减少了流通股数量。"
+    source_page: "companies/三井物产"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["三井物产", "商社"]
+    attribution: "2023 巴菲特致股东信
+\"伯克希尔开始买入五家日本公司的股票已近六年。这五家公司的经营方式在某种程度上与伯克希尔颇为相似，而且都非常成功。\""
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-三菱商事-01"
+    text: |
+      "伯克希尔开始买入五家日本公司的股票已近六年。这五家公司的经营方式在某种程度上与伯克希尔颇为相似，而且都非常成功。这些大型企业各自拥有大量业务的权益，其中许多扎根于日本，也有一些在全球各地运营。"
+    source_page: "companies/三菱商事"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["三菱商事", "商社"]
+    attribution: "2024 巴菲特致股东信
+\"在某些重要方面，这五家公司实行的股东友好政策远比美国企业的通常做法更为出色。自我们开始买入以来，每一家都以有吸引力的价格回购并减少了流通股数量。\""
+    source_letter_year: 2024
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-中国石油-01"
+    text: |
+      "2002年和2003年，伯克希尔以4.88亿美元买入中国石油1.3%的股权，按此价格整个公司的估值约为370亿美元。当时查理和我认为这家公司大约值1,000亿美元。到2007年，有两个因素大幅提升了它的价值：油价显著攀升，而且中国石油的管理层在积累油气储量方面做得很出色。"
+    source_page: "companies/中国石油"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["中国石油", "能源"]
+    attribution: "2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-中美能源-01"
+    text: |
+      "2000年初，为了弥补那次愚蠢的行为（指用股票收购通用再保险），我收购了中美能源76%的股份，这是一家管理出色的公用事业公司，为我们带来了许多盈利丰厚且对社会有益的投资机会。"
+    source_page: "companies/中美能源"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["中美能源", "能源"]
+    attribution: "2016 巴菲特致股东信
+\"BHE之所以能做出这些投资，是因为它保留了全部收益。事实上，去年BHE留存的收益——遥遥领先——超过了美国任何其他电力公司。我们和监管机构都认为这种100%留存收益的政策是一项重要优势。\""
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-伊斯卡-01"
+    text: |
+      "伊斯卡是我见过的最令人叹为观止的制造企业，去年我就说过这话，秋天去造访了它在韩国的那家非凡工厂之后，我的印象更加深刻了。"
+    source_page: "companies/伊斯卡"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["伊斯卡", "制造"]
+    attribution: "2007 巴菲特致股东信
+\"查理和我继续带着惊叹——和感激！——注视着伊斯卡管理团队的成就。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-伯克希尔哈撒韦-01"
+    text: |
+      "1964年5月6日，伯克希尔·哈撒韦当时由一位叫西伯里·斯坦顿的人掌管，他给股东们发了一封信，提出以每股11.375美元的价格回购22.5万股股票。我一直在等那封信，但对报价感到意外。"
+    source_page: "companies/伯克希尔哈撒韦"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["伯克希尔", "控股"]
+    attribution: "2014 伯克希尔的过去现在与未来
+\"我们的'五驾马车'——伯克希尔旗下最大的五家非保险业务——2014年税前收益达到创纪录的124亿美元。\""
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-伯克希尔哈撒韦能源-01"
+    text: |
+      "这使得伯克希尔哈撒韦能源在开发风能和太阳能项目方面比大多数公用事业公司具有重大优势。"
+    source_page: "companies/伯克希尔哈撒韦能源"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["伯克希尔能源", "能源"]
+    attribution: "2014 伯克希尔的过去现在与未来
+\"五家之中，十年前只有伯克希尔能源是我们旗下的，当时的税前收益仅有3.93亿美元。此后我们以全现金方式收购了其中三家。\""
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-克莱顿房屋-01"
+    text: |
+      "老读者都知道，我们的并购案来源经常出人意料。但要说起源最奇特的，没有哪一笔比得上我们去年收购克莱顿房屋了。"
+    source_page: "companies/克莱顿房屋"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["克莱顿房屋", "房地产"]
+    attribution: "2003 巴菲特致股东信
+\"克莱顿盈利的关键在于公司130亿美元的抵押贷款组合。2008-2009年金融恐慌期间，行业融资枯竭，但克莱顿凭借伯克希尔的支持得以继续放贷。事实上，在那段时期，我们不仅为自己的零售业务提供资金，还为竞争对手的零售业务提供融资。\""
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-内布拉斯加家具店-01"
+    text: |
+      "在评估一家企业时，我总会问自己一个问题：假如我拥有充足的资金和人才，我愿不愿意跟它竞争？我宁可跟灰熊摔跤，也不愿跟B夫人和她的后代竞争。"
+    source_page: "companies/内布拉斯加家具店"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["内布拉斯加家具店", "零售"]
+    attribution: "1983 巴菲特致股东信
+\"B夫人唯一的儿子路易在美国陆军服役四年后重返家族店铺......B夫人和路易重聚之后，NFM就势不可挡了。在梦想的驱动下，母子俩起早贪黑、常年无休。结果创造了零售业的一个奇迹。\""
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-冰雪皇后-01"
+    text: |
+      "这两家企业完全符合我们的标准：业务易于理解、拥有优秀的经济特质、由杰出的管理者经营。"
+    source_page: "companies/冰雪皇后"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["冰雪皇后", "餐饮"]
+    attribution: "1997 巴菲特致股东信（谈收购冰雪皇后和明星家具）
+\"有些机构质疑我的'独立性'，理由之一是麦克莱恩和冰雪皇后购买大量可口可乐产品。他们难道想让我们改买百事可乐？\""
+    source_letter_year: 1997
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-利捷航空-01"
+    text: |
+      "在利捷航空——共享飞机所有权的发明者——我们仍然是无可挑战的行业领袖。目前我们在美国运营487架飞机，在欧洲运营135架，机队规模超过三大主要竞争对手加在一起的两倍。"
+    source_page: "companies/利捷航空"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["利捷航空", "航空"]
+    attribution: "2007 巴菲特致股东信
+\"去年伯克希尔面临的最大问题是利捷航空，一家提供飞机部分所有权的航空运营商。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-华盛顿邮报-01"
+    text: |
+      "符合这些标准的股票，我们打算长期持有；事实上，我们最大的一笔股权投资是467,150股华盛顿邮报B股，成本约1,060万美元，我们计划永久持有。"
+    source_page: "companies/华盛顿邮报"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["华盛顿邮报", "媒体"]
+    attribution: "1975 巴菲特致股东信
+\"许多年前，一个好的1,000万美元投资机会就能为我们创造奇迹（想想1973年投资华盛顿邮报或1976年投资盖可保险的案例）。如今，就算有十个这样的机会，每个都增值到三倍，也仅仅能让伯克希尔的净资产增加0.25%。\""
+    source_letter_year: 1975
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-卡夫亨氏-01"
+    text: |
+      "两年前，我的朋友豪尔赫·保罗·雷曼邀请伯克希尔加入他的3G资本集团，共同收购亨氏。我毫不犹豫地答应了：我当即就知道，无论从个人交情还是财务回报来看，这次合作一定会顺利。"
+    source_page: "companies/卡夫亨氏"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["卡夫亨氏", "消费品"]
+    attribution: "2014 巴菲特致股东信
+\"豪尔赫·保罗和他的伙伴们是再好不过的合作伙伴了。我们和他们一样，热衷于买入、打造并永远持有满足人们基本需求和欲望的大型企业。不过在追求这个目标的过程中，我们走的是不同的路。\""
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-可口可乐-01"
+    text: |
+      "当我们持有既拥有出色业务又拥有出色管理层的公司股份时，我们最喜欢的持有期限是——永远。"
+    source_page: "companies/可口可乐"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["可口可乐", "品牌"]
+    attribution: "1988 巴菲特致股东信
+\"一道难以逾越的屏障是企业持续成功的根本保障——比如成为低成本生产商（盖可保险、好市多），或者拥有强大的全球品牌（可口可乐、吉列、美国运通）。\""
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-吉列-01"
+    text: |
+      "每天晚上想到有25亿男性的胡子在生长，我就安心入睡了。"
+    source_page: "companies/吉列"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["吉列", "消费品"]
+    attribution: "巴菲特多次在股东大会上引用的经典语录
+\"一道难以逾越的屏障是企业持续成功的根本保障——比如成为低成本生产商（盖可保险、好市多），或者拥有强大的全球品牌（可口可乐、吉列、美国运通）。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-喜诗糖果-01"
+    text: |
+      "让我们来看看这种梦幻般生意的原型——我们自己的喜诗糖果（See's Candies）。"
+    source_page: "companies/喜诗糖果"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["喜诗糖果", "品牌"]
+    attribution: "2007 巴菲特致股东信
+\"我死咬着不肯超过2,500万美元。幸运的是，他让步了。否则的话，我一犹豫，这13.5亿美元的利润就落入别人口袋了。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-国民保险公司-01"
+    text: |
+      "1967年初，我让伯克希尔花860万美元收购了国民保险公司，这是一家位于奥马哈的小型但前途光明的保险公司。保险正中我的甜蜜区：我理解这个行业，也喜欢它。"
+    source_page: "companies/国民保险公司"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["国民保险", "保险"]
+    attribution: "2014 伯克希尔的过去现在与未来
+\"自从1967年以860万美元收购国民保险公司以来，财产意外险一直是推动我们扩张的引擎。如今，按净资产衡量，国民保险是全世界最大的财产意外险公司。\""
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-大都会通信-01"
+    text: |
+      "大都会通信公司的汤姆·墨菲——他堪称双料冠军，收购标的精准锁定在第一类公司，而自身的经营才华又使他成为第二类的领军人物。"
+    source_page: "companies/大都会通信"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["大都会", "媒体"]
+    attribution: "1981 巴菲特致股东信
+\"我们对Cap Cities的投资使我们与一个卓越的业务组合和一群杰出的人结成了联盟——而且我们喜欢这种大手笔参与的机会。\""
+    source_letter_year: 1981
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-威瑞森通讯-01"
+    text: "威瑞森在2020年以87亿美元的巨额投入首次出现在伯克希尔的前十五大持仓中，持股比例达3.5%。这笔投资的建仓规模之大，表明它经过了深思熟虑的决策过程。"
+    source_page: "companies/威瑞森通讯"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["威瑞森", "通讯"]
+    attribution: "2020 巴菲特致股东信"
+    source_letter_year: 2020
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-富国银行-01"
+    text: |
+      "在富国银行，我们认为找到了银行业最好的管理者——卡尔·理查德和保罗·哈森。在很多方面，卡尔和保罗的组合让我联想到另一对搭档——大都会/ABC的汤姆·墨菲和丹·伯克。"
+    source_page: "companies/富国银行"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["富国银行", "银行"]
+    attribution: "1990 巴菲特致股东信
+\"由于20:1的杠杆比率会放大管理上的优势和劣势，我们对以'便宜'的价格买入管理不善的银行毫无兴趣。相反，我们唯一感兴趣的是以合理的价格买入管理优秀的银行。\""
+    source_letter_year: 1990
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-州立农业保险-01"
+    text: |
+      "即便是好事达保险和州立农业保险这样庞大的直销型保险公司，成本也明显高于盖可保险。"
+    source_page: "companies/州立农业保险"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["州立农业", "保险"]
+    attribution: "1986 巴菲特致股东信
+\"1922年，乔治·梅切尔——伊利诺伊州梅尔纳市的一个农场主——创立了州立农业保险公司，旨在打破行业高成本巨头维持的价格保护伞。凭借低成本结构，州立农业保险最终拿下了行业第一的位置。\""
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-布法罗新闻报-01"
+    text: |
+      "像喜诗糖果和布法罗新闻报这样的业务，目前的价值大约是账面价值的15到20倍。"
+    source_page: "companies/布法罗新闻报"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["布法罗新闻报", "媒体"]
+    attribution: "1999 巴菲特致股东信
+\"出版商们——包括伯克希尔旗下的布法罗新闻报——在互联网上免费提供报纸内容，同时却对纸质版收取不低的费用。这除了导致纸质报纸发行量急剧稳步下降之外，还能带来什么结果呢？\""
+    source_letter_year: 1999
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-康菲石油-01"
+    text: "巴菲特在2008年致股东信中坦诚承认，在油价高位大幅增持康菲石油是一个重大错误。他没有试图预测油价走势的能力，却在高价时做出了大规模的择时判断，这违背了他自己的投资原则。"
+    source_page: "companies/康菲石油"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["康菲石油", "能源"]
+    attribution: "2008 巴菲特致股东信
+康菲石油从伯克希尔的前五大持仓（2008年8,490万股）逐年缩减至2012年的2,400万股，这一减持过程本身就是巴菲特\"知错就改\"投资风格的无声注脚。"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-德克斯特鞋业-01"
+    text: |
+      "我犯了一个更大的错误——我对德克斯特鞋业说了'行'。这是1993年我用价值4.33亿美元的伯克希尔股票收购的一家制鞋公司。我当时评估的持久竞争优势，在短短几年内就烟消云散了。但这只是开头：由于我用的是伯克希尔的股票，我把这个错误成倍放大了。"
+    source_page: "companies/德克斯特鞋业"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["德克斯特鞋业", "制造"]
+    attribution: "2007 巴菲特致股东信
+\"1993年我们收购这家公司时，它业绩出色，在我看来完全不像烟蒂股。然而，由于海外竞争的冲击，它的竞争优势很快便蒸发殆尽。而我根本没有预见到这一点。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-房地美-01"
+    text: |
+      "1988年，我们大手笔买进了联邦住宅贷款抵押公司优先股（'房地美'）和可口可乐。我们打算长期持有这些证券。事实上，当我们持有既拥有出色业务又拥有出色管理层的公司股份时，我们最喜欢的持有期限是——永远。"
+    source_page: "companies/房地美"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["房地美", "金融"]
+    attribution: "1988 巴菲特致股东信
+\"如果我们因为南加州大地震而承受巨额巨灾赔付，那同时我们在喜诗糖果、富国银行和联邦住宅贷款抵押公司（房地美）的持股价值也很可能大幅缩水。\""
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-所罗门-01"
+    text: |
+      "1989年，我宣布我们买了价值10亿美元的可口可乐股票。我把这描述为'用真金白银印证我的嘴巴说过的话'。去年8月18日，当我被选为所罗门公司的临时董事长时，情况反了过来：我是在'用嘴巴去维护我们投出去的真金白银'。"
+    source_page: "companies/所罗门"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["所罗门", "投行"]
+    attribution: "1991 巴菲特致股东信
+\"同理，如果有任何重大坏消息，请立即告诉我。我能处理坏消息，但我不喜欢在它发酵了一阵子之后再来处理。正是因为不愿立即面对坏消息，所罗门公司的一个原本很容易化解的问题，才演变成了几乎让一家拥有8,000名员工的公司倒闭的大祸。\""
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-斯科特费泽-01"
+    text: |
+      "伯克希尔在1986年初收购了斯科特费泽。我们花了3.152亿美元，当时账面价值为1.726亿美元。我们支付的1.426亿美元溢价，意味着我们认为该公司的内在价值大约是其账面价值的两倍。"
+    source_page: "companies/斯科特费泽"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["斯科特费泽", "制造"]
+    attribution: "1994 巴菲特致股东信
+\"斯科特费泽的内在价值与其在伯克希尔账面上的帐列价值之间的差距现在已经非常巨大。这种令人愉悦的不对称，功劳完全归于拉尔夫·谢伊，一位专注、聪明且品格出众的经理人。\""
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-森林河公司-01"
+    text: |
+      "森林河拥有82家工厂，我一家都还没去过（总部也没去过）。没有必要；公司CEO皮特·利格尔把企业经营得好极了。"
+    source_page: "companies/森林河公司"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["森林河", "制造"]
+    attribution: "2010 巴菲特致股东信
+\"2005年6月21日，我第一次听说森林河公司——这家由皮特在印第安纳州创立并管理的公司。那天，我收到一位中间人的来信，详细介绍了这家房车制造商的相关数据。写信人说，森林河公司的唯一股东皮特特别希望把公司卖给伯克希尔。他还告诉了我皮特期望的售价。我喜欢这种干脆利落的方式。\""
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-比亚迪-01"
+    text: |
+      "代表'未来'的则是一辆由比亚迪开发的新型插电式电动车——这是一家令人惊叹的中国公司，我们持有其10%的股权。"
+    source_page: "companies/比亚迪"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["比亚迪", "汽车"]
+    attribution: "2008 巴菲特致股东信
+比亚迪从2009年至2020年连续出现在伯克希尔的主要持仓列表中，最初投入2.32亿美元，到2020年底市值达58.97亿美元——这一数据本身就是最有力的评价。"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-波仙珠宝-01"
+    text: |
+      "波仙珠宝加入伯克希尔的第一年便达到了我们所有的预期。艾克·弗里德曼是波仙的管理天才——我是认真的——他只有一个速度：快进。"
+    source_page: "companies/波仙珠宝"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["波仙珠宝", "零售"]
+    attribution: "1989 巴菲特致股东信
+\"我可以向你保证，信任艾克·弗里德曼和他的家人的人永远不会失望。我们收购波仙股权的方式本身就是最好的证明——没有审计的财务报表，没有盘点存货，也没有核实应收账款。艾克只是告诉我们实际情况如何，于是我们草拟了一页纸的合同，开出了一大张支票。\""
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-特许通讯-01"
+    text: "特许通讯从2016年至2019年连续四年出现在伯克希尔的前十五大持仓列表中，持股比例稳定在2.5%-3.0%之间，反映了伯克希尔对有线宽带行业竞争地位的长期看好。"
+    source_page: "companies/特许通讯"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["特许通讯", "通讯"]
+    attribution: "2016 巴菲特致股东信 至 2019 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-盖可保险-01"
+    text: |
+      "低成本生产商（盖可保险、好市多）……一道难以逾越的屏障是企业持续成功的根本保障。商业史上充斥着'罗马烟火筒'式的公司——它们的'护城河'最终被证明是海市蜃楼，转眼就被对手跨越了。"
+    source_page: "companies/盖可保险"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["盖可保险", "保险"]
+    attribution: "2007 巴菲特致股东信
+\"1996年初，我们收购了盖可保险剩余一半的股权……凭借几乎无限的增长潜力，GEICO很快成为我们的核心，我相信围绕它打造出的，是当今世界首屈一指的财产意外险业务。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-科比吸尘器-01"
+    text: |
+      "斯科特费泽旗下两大业务——世界图书百科全书和柯比吸尘器——各自单独列示。"
+    source_page: "companies/科比吸尘器"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["科比", "制造"]
+    attribution: "1986 巴菲特致股东信
+\"布法罗新闻报、菲希海默制服、柯比吸尘器、内布拉斯加家具店、斯科特费泽制造集团、喜诗糖果和世界图书公司。1987年，这七家企业合计的息税前利润高达1.8亿美元。\""
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-穆迪-01"
+    text: |
+      "截至2022年底，伯克希尔是其中八家巨头的最大股东：美国运通、美国银行、雪佛龙、可口可乐、惠普、穆迪、西方石油和派拉蒙全球。"
+    source_page: "companies/穆迪"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["穆迪", "金融服务"]
+    attribution: "2022 巴菲特致股东信
+\"规模庞大、利润丰厚且家喻户晓的企业的一小部分股权，比如苹果、美国运通、可口可乐和穆迪。其中许多公司在经营所需的净有形权益上获得了非常高的回报。\""
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-精密铸件-01"
+    text: |
+      "明年，我要向大家介绍的将是'六驾马车'。新成员是精密铸件公司，一个月前我们以超过320亿美元的现金收购了它。PCC完美契合伯克希尔的商业模式，将大幅提升我们的经常性每股盈利能力。"
+    source_page: "companies/精密铸件"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["精密铸件", "制造"]
+    attribution: "2015 巴菲特致股东信
+\"那笔令人难堪的110亿美元减值，几乎全部是我2016年犯下的一个错误的数字化体现。那一年，伯克希尔收购了精密铸件公司，我付的价格太高了。\""
+    source_letter_year: 2015
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-约翰斯曼维尔-01"
+    text: |
+      "2009年，我们旗下所有与住宅和商业建筑相关的业务都遭到了沉重打击。萧氏工业、约翰斯曼维尔、阿克米砖业和MiTek的税前利润合计为2.27亿美元，较2006年建筑业繁荣期的12.95亿美元下降了82.5%。这些企业仍在低谷中挣扎，但它们的竞争地位依然完好无损。"
+    source_page: "companies/约翰斯曼维尔"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["约翰斯曼维尔", "建材"]
+    attribution: "2009 巴菲特致股东信"
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-纽约梅隆银行-01"
+    text: |
+      纽约梅隆银行连续多年出现在伯克希尔的前十五大持仓中（2017-2020年），持股比例从5.3%增至最高9.0%，体现了巴菲特对这类"金融基础设施"型企业的认可。
+    source_page: "companies/纽约梅隆银行"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纽约梅隆", "银行"]
+    attribution: "2017 巴菲特致股东信 至 2020 巴菲特致股东信"
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-美国合众银行-01"
+    text: "（巴菲特在致股东信中长期将合众银行列为伯克希尔的重要持仓，从2006年到2020年连续15年出现在前十五大持仓名单中，体现了他对这家银行持久而稳定的信心。）"
+    source_page: "companies/美国合众银行"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["合众银行", "银行"]
+    attribution: "2006 巴菲特致股东信 至 2020 巴菲特致股东信
+合众银行连年出现在伯克希尔的主要持仓列表中，持股比例从最初的1.8%稳步提升至近10%，这种渐进式增持模式体现了巴菲特\"以合理价格持续买入优质银行\"的投资理念。"
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-美国家庭服务-01"
+    text: |
+      "我们把这一业务统称为美国家庭服务公司。不过在各个地方，它以所收购的当地公司的名义经营。在我们运营的大多数大都市地区，我们都是无可争议的市场领导者。"
+    source_page: "companies/美国家庭服务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["家庭服务", "服务"]
+    attribution: "2002 巴菲特致股东信
+\"我们拥有一位出色的经理人罗恩·佩尔蒂尔，他凭借自身的收购和运营才能，正在打造一个房产经纪帝国。\""
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-美国运通-01"
+    text: |
+      "盖可保险当时的困境类似于1964年色拉油丑闻之后的美国运通。两家都是独一无二的公司，暂时因为一场财务打击而摇摇欲坠，但其卓越的基本经济实力并未被摧毁。"
+    source_page: "companies/美国运通"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["美国运通", "金融"]
+    attribution: "1980 巴菲特致股东信
+\"当一家优秀的企业遭遇一次性的重大但可解决的难题时——就像多年前美国运通和盖可保险都经历过的那样——绝佳的投资机会就出现了。\""
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-美国银行-01"
+    text: |
+      "我们很可能会在期权到期前购入。同时，请大家了解，美国银行实际上是我们的第五大股票投资，我们非常看重它。"
+    source_page: "companies/美国银行"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["美国银行", "银行"]
+    attribution: "2013 巴菲特致股东信
+\"未列入上表——但很重要——的是我们持有的50亿美元美国银行优先股。这些优先股每年为我们带来3亿美元的股息，同时附带一份价值可观的认股权证。\""
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-苹果-01"
+    text: |
+      "伯克希尔对苹果的投资生动地展示了回购的威力。我们从2016年末开始买入苹果股票，到2018年7月初完成购买时，伯克希尔的一般账户持有苹果5.2%的股份。"
+    source_page: "companies/苹果"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["苹果", "科技"]
+    attribution: "2020 巴菲特致股东信
+\"尽管卖了一部分——瞧！——伯克希尔目前持有苹果5.4%的股份。这个比例的增加对我们来说是零成本的，原因是苹果一直在持续回购自家股票，大幅减少了流通股数量。\""
+    source_letter_year: 2020
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-蓝筹印花-01"
+    text: |
+      "查理和我其实比他们更早就发现了'奖励回馈'这个绝妙点子的魅力。被这一洞察所鼓舞，我们俩早在1970年就杀入了奖励回馈行业——方式是收购了一家印花交易公司蓝筹印花。那一年，蓝筹印花的营业额为1.26亿美元。"
+    source_page: "companies/蓝筹印花"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["蓝筹印花", "控股"]
+    attribution: "2006 巴菲特致股东信
+\"1972年是伯克希尔的一个转折点。那时我们有机会为蓝筹印花收购喜诗糖果——查理、我和伯克希尔都持有蓝筹印花的大量股份，后来蓝筹印花并入了伯克希尔。\""
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-西方石油-01"
+    text: |
+      "截至年底，伯克希尔持有西方石油27.8%的普通股，同时持有认股权证，在超过五年的时间里给予我们以固定价格大幅增持的选择权。虽然我们非常喜欢我们的持股和这份期权，但伯克希尔无意收购或管理西方石油。"
+    source_page: "companies/西方石油"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["西方石油", "能源"]
+    attribution: "2023 巴菲特致股东信
+\"我们特别看好它在美国的巨大油气储备，以及它在碳捕捉技术方面的领先地位——尽管这项技术的经济可行性尚未得到证实。这两项业务都非常符合我国的利益。\""
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-费希海默制服-01"
+    text: |
+      "由于收购了斯科特费泽和菲希海默，我们新增了四条业务线。"
+    source_page: "companies/费希海默制服"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["费希海默", "制造"]
+    attribution: "1986 巴菲特致股东信
+\"布法罗新闻报、菲希海默制服、柯比吸尘器、内布拉斯加家具店、斯科特费泽制造集团、喜诗糖果和世界图书公司。1987年，这七家企业合计的息税前利润高达1.8亿美元。\""
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-路博润-01"
+    text: |
+      "9月16日，我们收购了路博润，这是一家全球性的添加剂及其他特种化学品生产商。自2004年詹姆斯·汉布里克担任CEO以来，公司业绩记录非常出色，税前利润从1.47亿美元增长到10.85亿美元。路博润在特种化学品领域将有更多增长机会。"
+    source_page: "companies/路博润"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["路博润", "化工"]
+    attribution: "2011 巴菲特致股东信
+\"BNSF铁路、伊斯卡、路博润、马蒙集团和中美能源——我们最赚钱的五家非保险公司——2012年税前收益超过100亿美元。\""
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-通用再保险-01"
+    text: |
+      "我在1998年做出的一个决定，当时我把通用再保险买了下来，却没有首先做好核查工作。至今，这个错误仍在吞噬利润。"
+    source_page: "companies/通用再保险"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通用再保险", "保险"]
+    attribution: "2006 巴菲特致股东信
+\"我们的第三大保险重镇是通用再保险。几年前这家公司还处于困境之中；如今它已是我们保险皇冠上一颗璀璨的宝石。\""
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-通用汽车-01"
+    text: |
+      "这总比那种'我们持有AT&T、通用电气、IBM和通用汽车，所以很保守'（完全不谈买入价格）的说法更有说服力。评估任何投资方式是否保守，应以合理的客观标准为依据。"
+    source_page: "companies/通用汽车"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通用汽车", "汽车"]
+    attribution: "1964 巴菲特致合伙人信
+\"查理跟我穷尽一生寻找，也只能辨认出少数几家'确定性'公司。仅凭市场领导地位并不能保证什么：看看几年前通用汽车、IBM和西尔斯遭受的冲击吧——它们都曾享受过似乎不可撼动的漫长统治期。\""
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "web-companies-通用电气-01"
+    text: |
+      "好的方面是，去年我们在箭牌、高盛和通用电气发行的固定收益证券上总共投入了145亿美元。我们非常喜欢这些投资安排——它们本身就有很高的当期收益率，足以使这些投资相当令人满意。"
+    source_page: "companies/通用电气"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通用电气", "工业"]
+    attribution: "2008 巴菲特致股东信
+\"少数CEO，比如通用电气的杰夫·伊梅尔特，率先推出了对管理层和股东都公平的方案。然而总的来说，他的榜样获得的赞美远多于实际的跟进。\""
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-雪佛龙-01"
+    text: |
+      "截至2022年底，伯克希尔是其中八家巨头的最大股东：美国运通、美国银行、雪佛龙、可口可乐、惠普、穆迪、西方石油和派拉蒙全球。"
+    source_page: "companies/雪佛龙"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["雪佛龙", "能源"]
+    attribution: "2022 巴菲特致股东信
+雪佛龙在2020年首次出现在伯克希尔的持仓表中，便以约40亿美元的投入进入了前十五大持仓行列。此后持续大幅增持，到2022年已成为伯克希尔最重要的能源持仓之一。"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-韦斯科-01"
+    text: |
+      "我强烈建议各位阅读查理·芒格致韦斯科金融股东的信，信中描述了这家子公司的各项业务。"
+    source_page: "companies/韦斯科"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["韦斯科", "控股"]
+    attribution: "1986 巴菲特致股东信（类似推荐出现在1985-1989年多封信中）
+\"下表显示伯克希尔报告收益的来源。伯克希尔拥有蓝筹印花约60%的股权，而蓝筹印花又拥有韦斯科金融公司80%的股权。\""
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-飞安公司-01"
+    text: |
+      "一个良好但远非出色的生意案例，是我们自己的飞安公司。这家公司为客户创造的价值，在我所知的企业中首屈一指。它还拥有持久的竞争优势：接受飞行训练时舍弃最好的公司而选择其他公司，就像做外科手术时选择出价最低的医生一样。"
+    source_page: "companies/飞安公司"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["飞安公司", "服务"]
+    attribution: "2007 巴菲特致股东信
+\"我84岁的老朋友阿尔·尤尔斯基，依然以他1951年用1万美元创立公司时同样的激情在经营飞安公司。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-马蒙集团-01"
+    text: |
+      "我们不久将收购马蒙60%的股份，并将在六年内收购其余几乎全部股份。这笔交易的方式正合杰伊的心意。我们仅凭马蒙的财务报表就确定了价格，没有聘请顾问，也没有斤斤计较。"
+    source_page: "companies/马蒙集团"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["马蒙集团", "工业"]
+    attribution: "2007 巴菲特致股东信
+\"我知道这家公司会和普利兹克家族描述的完全一致，他们也知道无论金融市场多么混乱，我们都会准时交割。过去一年里，许多大型交易被重新谈判或彻底取消了。但对普利兹克家族来说，就像对伯克希尔一样，一言为定。\""
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-鲜果布衣-01"
+    text: |
+      "鲜果布衣拥有三大核心资产：一个有148年历史、全球家喻户晓的品牌；低成本的制造能力；以及其CEO约翰·霍兰德。"
+    source_page: "companies/鲜果布衣"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["鲜果布衣", "服装"]
+    attribution: "2003 巴菲特致股东信
+\"鲜果布衣的单位销量增长了1,000万打，增幅达14%。查理向我保证女性并没有穿更多的内衣。有了这位专家的意见，我只能得出结论：我们在女性内衣品类的市场份额一定在快速增长。多亏了约翰·霍兰德，鲜果布衣又焕发了生机。\""
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-companies-麦克莱恩-01"
+    text: |
+      "高盛的拜伦·特罗特告诉我，沃尔玛有意出售其子公司麦克莱恩。这是一家好公司，只是不在沃尔玛未来发展的核心版图内。但对我们来说，简直是量身定做。"
+    source_page: "companies/麦克莱恩"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["麦克莱恩", "分销"]
+    attribution: "2003 巴菲特致股东信
+\"麦克莱恩是我们旗下的大型分销公司，由格雷迪·罗西尔运营，2011年新增了一些重要客户，税前收益创下3.7亿美元的新纪录。自2003年以15亿美元收购以来，公司累计税前收益达24亿美元。\""
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-买入价格-01"
+    text: |
+      "以合理的价格买入一家好公司，远远好过以便宜的价格买入一家普通的公司。查理很早就明白这个道理；我的反应比较迟钝。但现在不管是买企业还是买股票，我们都只找一流的公司配上一流的管理层。"
+    source_page: "concepts/买入价格"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-买入价格-02"
+    text: |
+      "对投资者来说，即便是一家极其优秀的公司，买入价格过高就可能抵消其后十年靓丽的业务发展。"
+    source_page: "concepts/买入价格"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+    attribution: "1982 巴菲特致股东信"
+    source_letter_year: 1982
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-买入价格-03"
+    text: |
+      "只要买入价格合理，长期来看市场几乎必然会认可留存收益的累积效果。时不时你甚至还能收到蛋糕上的糖霜
+    source_page: "concepts/买入价格"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+    attribution: "市场增值远远超过买入后的累积留存收益。\""
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-买入价格-04"
+    text: |
+      "不论主动还是被动，控制类投资有一点是必须做到的：买入时就要把利润锁定在里面。这类投资的先决条件是一个有吸引力的买入价格。"
+    source_page: "concepts/买入价格"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+    attribution: "1963 巴菲特致合伙人信"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-买入价格-05"
+    text: |
+      "我们喜欢买入价格低于价值的证券，但更喜欢以合理价格收购经营良好的企业。"
+    source_page: "concepts/买入价格"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-买入价格-06"
+    text: |
+      "对投资者来说，即便是一家极其优秀的公司，买入价格过高就可能抵消其后十年靓丽的业务发展。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-07"
+    text: |
+      "有时候一只股票的买入价格高得离谱，就会让一家出色的企业变成一笔糟糕的投资——即便不是永久的，至少也会痛苦很长时间。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-08"
+    text: |
+      "如果你以足够低的价格买入一只股票，通常会在公司经营中出现某个小阳春，给你一个以不错的利润出手的机会，即使这家公司的长期表现可能很糟糕。我称这为'烟蒂'投资法。在路边捡到的烟蒂头可能只剩最后一口，抽不了多少过瘾的，但'廉价买入'让这最后一口也全是利润。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-09"
+    text: |
+      "以合理的价格买入一家好公司，远远好过以便宜的价格买入一家普通的公司。查理很早就明白这个道理；我的反应比较迟钝。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-10"
+    text: |
+      "50多年前，查理就告诉我：以合理的价格买一家优秀的公司，远比以便宜的价格买一家平庸的公司要好。尽管他的道理令人信服，我还是时不时犯捡便宜的老毛病，结果从勉强凑合到一塌糊涂不等。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-11"
+    text: |
+      "不论主动还是被动，控制类投资有一点是必须做到的：买入时就要把利润锁定在里面。这类投资的先决条件是一个有吸引力的买入价格。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-买入价格-12"
+    text: |
+      "只要买入价格合理，长期来看市场几乎必然会认可留存收益的累积效果。时不时你甚至还能收到蛋糕上的糖霜——市场增值远远超过买入后的累积留存收益。"
+    source_page: "concepts/买入价格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["买入价格", "估值"]
+
+  - id: "web-concepts-企业文化-01"
+    text: |
+      "我们的最后一项优势是弥漫在伯克希尔的、难以复制的企业文化。在商业世界里，文化至关重要。"
+    source_page: "concepts/企业文化"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2010 巴菲特致股东信"
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-02"
+    text: |
+      "这种文化非常稀有，一旦存在，也许就应该原样保留
+    source_page: "concepts/企业文化"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "哪怕期权方案中有些低效和不公平之处。\"——1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-03"
+    text: |
+      "要让国民保险这样运营，需要深植于企业文化中的真正魄力。"
+    source_page: "concepts/企业文化"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2004 巴菲特致股东信"
+    source_letter_year: 2004
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-04"
+    text: |
+      "他们的使命是，在其他CEO接替我之后，替我们的股东和经理人确保伯克希尔独特的企业文化得到延续。"
+    source_page: "concepts/企业文化"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-05"
+    text: |
+      "摒弃这种目标（季度盈利数字）向我们众多经理人传递了一个重要信号，强化了我们所珍视的企业文化。"
+    source_page: "concepts/企业文化"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-06"
+    text: "我们的最后一项优势是弥漫在伯克希尔的、难以复制的企业文化。在商业世界里，文化至关重要。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+
+  - id: "web-concepts-企业文化-07"
+    text: |
+      有一些我极为敬佩、经营业绩远优于我的管理者，在固定价格期权这个问题上与我意见不同。他们建立了行之有效的企业文化，而固定价格期权是帮助他们的工具之一。通过他们的领导力和以身作则，加上以期权作为激励手段，这些管理者教会了同事们像所有者一样思考。这种文化非常稀有，一旦存在，也许就应该原样保留
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-08"
+    text: "查理和我相信，伯克希尔内在价值的增长速度长期来看可能会略微超过标普的回报。我们对此充满信心，因为我们拥有一批杰出的企业、一群了不起的运营经理人，以及以股东利益为导向的企业文化。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2012 巴菲特致股东信"
+    source_letter_year: 2012
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-09"
+    text: |
+      伯克希尔没有全公司范围的预算……我们没有这种工具，意味着母公司从来没有一个要达到的季度"数字"。摒弃这种目标向我们众多经理人传递了一个重要信号，强化了我们所珍视的企业文化。
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-10"
+    text: "要让国民保险这样运营，需要深植于企业文化中的真正魄力。翻看上面这张表，你可以一眨眼扫过1986年到1999年那些年份。但日复一日地眼看着业务缩水"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2004 巴菲特致股东信"
+    source_letter_year: 2004
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-11"
+    text: "巴菲特家族的成员将继续留在董事会中。他们不是为了在我去世后经营公司，届时也不会获得任何报酬。他们的使命是，在其他CEO接替我之后，替我们的股东和经理人确保伯克希尔独特的企业文化得到延续。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-12"
+    text: "伯克希尔独特的企业文化已经深植于每家子公司之中，即使我离世，它们的运营也不会有丝毫偏差。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-13"
+    text: "在Mastio 2009年的报告中，科恩河升至第1名，北方天然升至第3名。这一切的实现，要归功于两家管道公司数百名员工全心全意地投入到一种全新的企业文化中，并切切实实地兑现了他们的承诺。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-企业文化-14"
+    text: "我们收购之前有些子公司已经设有员工配捐计划，我们完全支持他们继续执行：干扰成功的企业文化不是我们的风格。"
+    source_page: "concepts/企业文化"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["企业文化", "管理"]
+    attribution: "2001 巴菲特致股东信"
+    source_letter_year: 2001
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-低估-01"
+    text: |
+      "我从不试图预测大盘走势
+    source_page: "concepts/低估"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+    attribution: "我的精力全放在寻找被低估的股票上。\""
+    source_letter_year: 1958
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-低估-02"
+    text: |
+      "我们并不在意市场是否会迅速重新估值我们认为价格被低估的证券。事实上，我们宁可不要这样，因为在大多数年份里，我们预期会有资金净流入来买进证券。"
+    source_page: "concepts/低估"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+    attribution: "1978 巴菲特致股东信"
+    source_letter_year: 1978
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-低估-03"
+    text: |
+      "辛普森始终投资于价值被低估的普通股，这些股票单个来看不太可能造成永久性损失，而作为组合整体来看则接近于无风险。"
+    source_page: "concepts/低估"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+    attribution: "1986 巴菲特致股东信"
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-低估-04"
+    text: |
+      "付出的价格低，得到的价值高。每一笔低估类投资的价值都远超价格，自带可观的安全边际。每只单独有安全边际，分散持有多只，便形成了一个既安全又有上涨潜力的投资组合。"
+    source_page: "concepts/低估"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+    attribution: "1961 巴菲特致合伙人信"
+    source_letter_year: 1961
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-低估-05"
+    text: |
+      "一家企业的成功被市场认可的速度其实并不那么重要
+    source_page: "concepts/低估"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+    attribution: "只要其内在价值在以令人满意的速度增长就行。事实上，被市场发现得晚一些反而是好事：这给了我们更多机会以便宜的价格买进好东西。\""
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-低估-06"
+    text: |
+      "我从不试图预测大盘走势——我的精力全放在寻找被低估的股票上。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-低估-07"
+    text: |
+      "我们并不在意市场是否会迅速重新估值我们认为价格被低估的证券。事实上，我们宁可不要这样，因为在大多数年份里，我们预期会有资金净流入来买进证券。持续以有吸引力的价格买入，最终给我们带来的好处，很可能超过股价短期飙升到我们不愿继续买入的水平所提供的卖出机会。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-低估-08"
+    text: |
+      "低估类（Generals）——这类投资是低估的股票，判断标准以定量分析为主，但定性因素同样受到高度重视。通常来说，这类投资几乎看不出近期股价上涨的具体催化剂。这些股票既不光鲜，也没有市场追捧。它们唯一的优势就是价格低廉。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-低估-09"
+    text: |
+      "新增的类别是'低估类（相对低估）'。其一，我们的'低估类'投资中一直存在这个细微差别，只是一直没有单独体现；其二，这个小类别已经成长为整体投资组合中越来越重要的一部分。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-低估-10"
+    text: |
+      "这类投资有时很快获利，很多时候需要好几年。买入的时候，往往说不清楚这只股票为什么会涨。但也正因为这些股票黯淡无光、短期没有任何显而易见的催化剂，才有那么便宜的价格。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-低估-11"
+    text: |
+      "一家企业的成功被市场认可的速度其实并不那么重要——只要其内在价值在以令人满意的速度增长就行。事实上，被市场发现得晚一些反而是好事：这给了我们更多机会以便宜的价格买进好东西。"
+    source_page: "concepts/低估"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["低估", "估值"]
+
+  - id: "web-concepts-保险业-01"
+    text: |
+      "自1967年我们首次进入保险行业以来，这个板块一直是推动伯克希尔增长的引擎。"
+    source_page: "concepts/保险业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险业", "行业"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险业-02"
+    text: |
+      "当我们赚到承保利润时，我们就相当于在免费使用这笔资金
+    source_page: "concepts/保险业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险业", "行业"]
+    attribution: "更妙的是，持有它们还能获得报酬。\""
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险业-03"
+    text: |
+      "财产意外险是伯克希尔繁荣和增长的核心。我们已经在这个行业经营了57年，虽然规模从1,700万美元增长到830亿美元，增长了近5,000倍，但仍有很大的增长空间。"
+    source_page: "concepts/保险业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险业", "行业"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-01"
+    text: |
+      "浮存金是我们持有但不拥有的钱。保险业务中之所以存在浮存金，是因为大部分保单要求保户预付保费，更重要的是，从保险公司收到索赔通知到最终解决理赔，通常需要相当长的时间。"
+    source_page: "concepts/保险浮存金"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "1994 巴菲特致股东信"
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-02"
+    text: |
+      "真正让我们兴奋的是保险业务。不过在详细展开之前，先来聊聊'浮存金'以及如何衡量它的成本。除非你理解这个概念，否则根本无法对伯克希尔的内在价值做出合理的判断。"
+    source_page: "concepts/保险浮存金"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "1997 巴菲特致股东信"
+    source_letter_year: 1997
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-03"
+    text: |
+      "这意味着我们585亿美元的保险'浮存金'
+    source_page: "concepts/保险浮存金"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "这些钱不属于我们，但由我们持有并为自己的利益进行投资——其成本低于零。事实上，2008年持有这笔浮存金反而给我们带来了28亿美元的收入。查理和我觉得这买卖可真划算。\"——2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-04"
+    text: |
+      "自1967年收购第一家财产意外险公司以来，通过收购、运营和创新，伯克希尔的浮存金增长了8,000倍。虽然在我们的财务报表中没有得到确认，但这笔浮存金对伯克希尔来说是一笔了不起的资产。"
+    source_page: "concepts/保险浮存金"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-05"
+    text: |
+      "从1967年以860万美元收购国民保险公司开始，伯克希尔已经成为保险'浮存金'领域的世界领导者
+    source_page: "concepts/保险浮存金"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "浮存金是我们持有并可以用于投资、但并不属于我们的资金。伯克希尔的浮存金总额已从我们进入保险业时的1,900万美元增长到了1,470亿美元。\"——2021 巴菲特致股东信"
+    source_letter_year: 2021
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-保险浮存金-06"
+    text: |
+      "保险公司先收保费，后付赔款。在一些极端情况下，比如某些工伤赔偿事故，赔付可以延续数十年之久。这种'先收后付'的模式让我们持有大笔资金
+    source_page: "concepts/保险浮存金"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["保险浮存金", "保险"]
+    attribution: "2009 巴菲特致股东信"
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-债券-01"
+    text: |
+      "在当前收益率水平下长期持有现金等价物或长期政府债券，几乎可以肯定是一种糟糕的策略。"
+    source_page: "concepts/债券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["债券", "固定收益"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-债券-02"
+    text: |
+      "有的债券是40年后到期的，但是发行人有权在5或10年后以微小的溢价赎回，怎么能有人买这样的债券呢？"
+    source_page: "concepts/债券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["债券", "固定收益"]
+    attribution: "1970年2月 巴菲特致合伙人信"
+
+  - id: "web-concepts-债券-03"
+    text: |
+      "2002年，垃圾债券变得非常便宜，我们买入了约80亿美元。但钟摆摆动得很快，如今这个板块在我们看来明显不再有吸引力了。昨日的野草如今被当作鲜花来定价。"
+    source_page: "concepts/债券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["债券", "固定收益"]
+    attribution: "2003 巴菲特致股东信"
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-债券-04"
+    text: |
+      "我研究债券的方法和研究股票差不多。有看不懂的，就跳过去。一个机会，我看不懂，就跳过去，就算别人很高明，能分析明白，而且能赚大钱，我也不在意。"
+    source_page: "concepts/债券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["债券", "固定收益"]
+    attribution: "1970年2月 巴菲特致合伙人信"
+
+  - id: "web-concepts-公司治理-01"
+    text: |
+      "在判断美国企业界是否真心在进行改革时，CEO薪酬依然是最关键的试金石。"
+    source_page: "concepts/公司治理"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["公司治理", "管理"]
+    attribution: "2003 巴菲特致股东信"
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-公司治理-02"
+    text: |
+      "除了独立性之外，董事还应该具备商业头脑、股东导向意识，以及对公司的真正关心。在这些品质中，商业头脑最为稀缺
+    source_page: "concepts/公司治理"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["公司治理", "管理"]
+    attribution: "而如果缺了这一条，其他两条也无济于事。\""
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-公司治理-03"
+    text: |
+      "我们董事的底线是：你们赢，他们大赢；你们输，他们大输。我们的这套做法或许可以称为'所有者资本主义'。"
+    source_page: "concepts/公司治理"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["公司治理", "管理"]
+    attribution: "2003 巴菲特致股东信"
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-公司治理-04"
+    text: |
+      "CEO们完全明白这道数学题，他们知道每派出一分钱的红利，所有已发行期权的价值就减少一分。但我从来没有在股东委托书材料中，看到过对这种管理层与股东利益冲突的说明。"
+    source_page: "concepts/公司治理"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["公司治理", "管理"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-内在价值-01"
+    text: |
+      "真正重要的是内在价值
+    source_page: "concepts/内在价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["内在价值", "估值"]
+    attribution: "这个数字代表我们旗下所有业务合理价值的总和。如果有完美的远见，这个数字可以通过对企业未来所有的现金流（流入和流出）按现行利率折现来计算。\""
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-内在价值-02"
+    text: |
+      "账面价值是一个会计概念，衡量的是一家企业投入的资本，包括留存收益在内。内在价值则是对一家企业在其剩余寿命中所能产出的现金流的折现估计值。对大多数公司而言，这两个数字并没有什么关系。"
+    source_page: "concepts/内在价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["内在价值", "估值"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-内在价值-03"
+    text: |
+      "今天任何一只股票、债券或一家企业的价值，取决于在其剩余存续期间预期发生的现金流入和流出
+    source_page: "concepts/内在价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["内在价值", "估值"]
+    attribution: "以适当的利率折现后的现值。\""
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-内在价值-04"
+    text: |
+      "短期来看，市场是一台投票机；但从长远来看，它是一台称重机。"
+    source_page: "concepts/内在价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["内在价值", "估值"]
+    attribution: "2017 巴菲特致股东信（引用本杰明·格雷厄姆）"
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-内在价值-05"
+    text: |
+      "如果一家优秀的企业在市场上以远低于内在价值的价格出售，那还有什么比以这种便宜价格大幅扩大全体股东权益更确定、更有利可图的资本运用呢？"
+    source_page: "concepts/内在价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["内在价值", "估值"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-分散投资-01"
+    text: |
+      "对于诺亚式的分散投资，我向来也不怎么感冒。"
+    source_page: "concepts/分散投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1963 巴菲特致合伙人信"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-分散投资-02"
+    text: |
+      "要成功投资，你不需要懂Beta值、有效市场、现代投资组合理论、期权定价或新兴市场。事实上，你完全不懂这些可能反而更好。"
+    source_page: "concepts/分散投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-分散投资-03"
+    text: |
+      "在评估风险时，一个贝塔理论的信徒根本不屑于了解一家公司到底生产什么、竞争对手在干什么、或者用了多少杠杆。他甚至可能不想知道公司叫什么名字。"
+    source_page: "concepts/分散投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-分散投资-04"
+    text: |
+      "我们在每一笔投资中都追求极大的安全边际并分散投资，力求将永久性资本损失的风险降到绝对最低。"
+    source_page: "concepts/分散投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1962 巴菲特致合伙人信"
+    source_letter_year: 1962
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-分散投资-06"
+    text: |
+      "在评估风险时，一个贝塔理论的信徒根本不屑于了解一家公司到底生产什么、竞争对手在干什么、或者用了多少杠杆。他甚至可能不想知道公司叫什么名字。他珍视的只是这只股票的价格历史。相反，我们很乐意对股价历史一无所知，而是去收集一切有助于了解这家公司业务的信息。"
+    source_page: "concepts/分散投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-分散投资-08"
+    text: |
+      "我们在每一笔投资中都追求极大的安全边际并分散投资，力求将永久性资本损失（不是短期账面浮亏）的风险降到绝对最低。"
+    source_page: "concepts/分散投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "1962 巴菲特致合伙人信"
+    source_letter_year: 1962
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-分散投资-09"
+    text: |
+      "伯克希尔如今拥有一个无与伦比的庞大多元化企业集合。"
+    source_page: "concepts/分散投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["分散投资", "投资策略"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-可转换证券-01"
+    text: |
+      "查理和我认为这些可转换优先股投资应该能产出适度高于大多数固定收益投资组合的回报，同时我们还能在被投资公司中扮演一个虽不显眼但令人愉快且有建设性的角色。"
+    source_page: "concepts/可转换证券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["可转换证券", "投资工具"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-可转换证券-02"
+    text: |
+      "我们的可转换优先股大部分价值源自其固定收益特性。这意味着这些证券的价值不可能低于同等条件的不可转换优先股的价值，而且可能因为拥有转换期权而更有价值。"
+    source_page: "concepts/可转换证券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["可转换证券", "投资工具"]
+    attribution: "1990 巴菲特致股东信"
+    source_letter_year: 1990
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-可转换证券-03"
+    text: |
+      "如果当初走另一条路，用这6亿美元直接向公司购买普通股，我大概可以买到6,000万股……可我偏偏自作聪明。"
+    source_page: "concepts/可转换证券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["可转换证券", "投资工具"]
+    attribution: "1995 巴菲特致股东信"
+    source_letter_year: 1995
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-可转换证券-04"
+    text: |
+      "我说过的那句'优先股几乎不可能让我们赔钱'的断言，确实给我带来了当之无愧的烧心之痛。"
+    source_page: "concepts/可转换证券"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["可转换证券", "投资工具"]
+    attribution: "1995 巴菲特致股东信"
+    source_letter_year: 1995
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-可转换证券-05"
+    text: |
+      "作为一个整体，这些可转换优先股的回报不会达到我们发现一家经济前景绝佳但被市场低估的企业时所能获得的水平。其回报也不如我们最偏爱的资本配置方式——收购一家拥有优秀管理层的好企业80%以上的股权。但这两种机会都很稀少，尤其是考虑到我们目前和预期的资金规模。"
+    source_page: "concepts/可转换证券"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["可转换证券", "投资工具"]
+
+  - id: "web-concepts-品牌-01"
+    text: |
+      "买大宗商品，卖品牌产品"
+    source_page: "concepts/品牌"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "这一直是商业成功的秘诀。——2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-02"
+    text: |
+      "通过观察喜诗糖果的运营，我获得了关于强大品牌价值的商业教育，打开了我的眼界，让我看到了许多其他有利可图的投资机会。"
+    source_page: "concepts/品牌"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-品牌-03"
+    text: |
+      "一道难以逾越的屏障是企业持续成功的根本保障
+    source_page: "concepts/品牌"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "比如成为低成本生产商（盖可保险、好市多），或者拥有强大的全球品牌（可口可乐、吉列、美国运通）。\"——2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-04"
+    text: |
+      "可口可乐和运通都成了全球知名品牌，而且液体消费的需求和对可靠金融信用的需求是这个世界永恒的刚需。"
+    source_page: "concepts/品牌"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-05"
+    text: |
+      "虽然我们的品牌实力无法量化，但我相信它也在显著增强……而且我迫不及待地想花更多。"
+    source_page: "concepts/品牌"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-06"
+    text: "通过观察喜诗糖果的运营，我获得了关于强大品牌价值的商业教育，打开了我的眼界，让我看到了许多其他有利可图的投资机会。——2014 伯克希尔的过去现在与未来"
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-品牌-07"
+    text: |
+      "买大宗商品，卖品牌产品"
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-08"
+    text: |
+      客户按品牌购买，而不是说"给我来根两盎司的糖果棒"；但对食糖就不灵了
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "1982 巴菲特致股东信"
+    source_letter_year: 1982
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-09"
+    text: "一道难以逾越的屏障是企业持续成功的根本保障"
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-10"
+    text: |
+      两家公司都在各自的核心业务上取得了巨大的成功，并根据市场环境不断调整。而且至关重要的是，它们的产品"走向了世界"。可口可乐和运通都成了全球知名品牌，而且液体消费的需求和对可靠金融信用的需求是这个世界永恒的刚需。
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-品牌-11"
+    text: "虽然我们的品牌实力无法量化，但我相信它也在显著增强。1996年伯克希尔全资控股GEICO时，其年广告支出为3,100万美元。去年已经增长到5.02亿美元。而且我迫不及待地想花更多。"
+    source_page: "concepts/品牌"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["品牌", "护城河"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-01"
+    text: |
+      "我们的法宝是一种大多数保险公司无法复制的管理思维。你能想象任何一家上市公司会接受一种导致营收从1986年到1999年持续下滑的商业模式吗？"
+    source_page: "concepts/商业模式"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2004 巴菲特致股东信"
+    source_letter_year: 2004
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-02"
+    text: |
+      "GEICO令人艳羡的业绩来自托尼对一个出色的、几乎不可能被复制的商业模式的精彩执行。"
+    source_page: "concepts/商业模式"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-03"
+    text: |
+      "建立在连续发行高估股票基础上的商业模式
+    source_page: "concepts/商业模式"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "就像连锁信的模式一样——只会重新分配财富，绝不会创造财富。\"——2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-商业模式-04"
+    text: |
+      "PCC完美契合伯克希尔的商业模式，将大幅提升我们的经常性每股盈利能力。"
+    source_page: "concepts/商业模式"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2015 巴菲特致股东信"
+    source_letter_year: 2015
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-05"
+    text: |
+      "伯克希尔之所以拥有如此吸引人的保险经济模式，全靠我们有一批杰出的经理人，他们经营着纪律严明的业务，在大多数情况下拥有难以复制的商业模式。"
+    source_page: "concepts/商业模式"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2016 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-06"
+    text: "(5) 简单易懂的商业模式（如果涉及大量高科技，我们搞不明白）。"
+    source_page: "concepts/商业模式"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-07"
+    text: "我们被财产意外险业务吸引的原因之一是这个行业的商业模式：财产意外险公司先收保费，后付理赔。在极端情况下，比如石棉暴露引发的索赔或严重的工伤事故，赔付可以延续数十年。"
+    source_page: "concepts/商业模式"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商业模式-08"
+    text: "别人可以抄袭我们的商业模式，但他们复制不了我们的经济效益。"
+    source_page: "concepts/商业模式"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商业模式"]
+    attribution: "2021 巴菲特致股东信"
+    source_letter_year: 1999
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-01"
+    text: |
+      "当企业预期能从有形资产上获得大幅超过市场水平的回报率时，从逻辑上讲，企业的价值远远高于其净有形资产。这种超额回报的资本化价值就是经济商誉。"
+    source_page: "concepts/商誉"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-02"
+    text: |
+      "会计商誉从收购那一刻起就有规律地减少，经济商誉却以不规律但非常可观的方式增长。"
+    source_page: "concepts/商誉"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-03"
+    text: |
+      "在通胀时期，商誉是一件不断带来回报的礼物。"
+    source_page: "concepts/商誉"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-04"
+    text: |
+      "与35年前相比，我自己的想法已经发生了巨大转变
+    source_page: "concepts/商誉"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+    attribution: "当年我受到的教导是偏爱有形资产，回避那些价值主要依赖经济商誉的企业。这种偏见让我犯了许多重大的遗漏型错误。\""
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-05"
+    text: |
+      "商誉的成本与其真实价值没有任何关系。如果一家保险公司持续发生大额承保亏损，不管原始成本是多少，归属于它的任何商誉资产都应视为毫无价值。"
+    source_page: "concepts/商誉"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-商誉-06"
+    text: |
+      "当企业预期能从有形资产上获得大幅超过市场水平的回报率时，从逻辑上讲，企业的价值远远高于其净有形资产。这种超额回报的资本化价值就是经济商誉。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-07"
+    text: |
+      "消费者特许经营权是经济商誉的首要来源。其他来源包括不受利润管制的政府特许经营权（如电视台），以及在某个行业中持久的低成本生产者地位。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-08"
+    text: |
+      "1. 在分析经营成果时——即评估一个业务单元的内在经济效益时——摊销费用应当被忽略。一家企业在无杠杆的净有形资产上预期能赚取多少（不扣除任何商誉摊销费用），是衡量该业务经济吸引力的最佳指南。"
+      "2. 在评估企业收购是否明智时，摊销费用同样应当被忽略。摊销费用既不应从利润中扣除，也不应从企业的成本中扣除。这意味着应当永远以全部成本来看待所购买的商誉——不做任何摊销。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-09"
+    text: |
+      "在通胀年代积累起来的大量商业财富，不成比例地来自那些将持久无形资产与对有形资产的相对较低需求结合在一起的企业。在这类企业中，名义美元利润大幅攀升，而这些美元又大部分可用于收购更多的企业。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-10"
+    text: |
+      "考虑到创建这个账户时管理层缺乏的自制力，在这种情况下或许该叫它'无商誉'更合适。不管叫什么名字，通常照样走40年的摊销仪式，管理层那股被资本化的肾上腺素继续作为一项'资产'留在账上——就好像这笔收购是明智之举一样。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-11"
+    text: |
+      "1993年买下德克斯特时我付的价格显然是个错误。更糟糕的是，我还以伯克希尔股份作为支付手段，将这个错误放大了许多倍。去年，为了正视这个错误，我们将当初收购德克斯特时产生的所有剩余商誉一次性注销了。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-商誉-12"
+    text: |
+      "部分抵消这一高估负债的，是归属于我们保险公司的155亿美元'商誉'资产。实际上，这笔商誉代表的是我们为保险业务创造浮存金的能力所支付的价格。然而，商誉的成本与其真实价值没有任何关系。如果一家保险公司持续发生大额承保亏损，不管原始成本是多少，归属于它的任何商誉资产都应视为毫无价值。"
+    source_page: "concepts/商誉"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["商誉", "会计"]
+
+  - id: "web-concepts-回购-01"
+    text: |
+      "在被投资公司使用留存收益的各种方式中，有一种经常让我们格外兴奋，那就是回购自家股票。道理很简单：如果一家优秀的企业在市场上以远低于内在价值的价格出售，那还有什么比以这种便宜价格大幅扩大全体股东权益更确定、更有利可图的资本运用呢？"
+    source_page: "concepts/回购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-02"
+    text: |
+      "仅仅说回购是为了抵消股票增发带来的稀释，或者仅仅因为公司有多余的现金，都是站不住脚的。除非以低于内在价值的价格回购，否则继续持股的股东就是在受损害。资本配置的第一定律
+    source_page: "concepts/回购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "不管资金是用来收购企业还是回购股票——就是在一个价格上聪明的做法，在另一个价格上就是愚蠢的。\"——2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-03"
+    text: |
+      "在投资界，关于股票回购的讨论往往火药味十足。但我建议这场辩论的参与者们先深吸一口气：评估回购是否可取，并没有那么复杂。"
+    source_page: "concepts/回购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "2016 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-04"
+    text: |
+      "理解内在价值，对经营者来说与对投资者一样重要。当经理人做资本配置决策时
+    source_page: "concepts/回购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "包括是否回购股份——至关重要的是必须增加每股内在价值，避免使之减损。\"——1994 巴菲特致股东信"
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-05"
+    text: |
+      "2022年，通过伯克希尔自身的股票回购以及苹果和美国运通的类似举措，每股内在价值获得了非常小的增长。在伯克希尔这边，我们通过回购公司1.2%的流通股，直接增加了各位在我们独特企业组合中的权益。"
+    source_page: "concepts/回购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-06"
+    text: |
+      "资本配置的第一定律
+    source_page: "concepts/回购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-07"
+    text: |
+      "如果一家优秀的企业在市场上以远低于内在价值的价格出售，那还有什么比以这种便宜价格大幅扩大全体股东权益更确定、更有利可图的资本运用呢？公司并购的竞争本质几乎注定了在整体收购另一家企业时，必须支付全价
+    source_page: "concepts/回购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-回购-08"
+    text: |
+      "此外，通过伯克希尔，你们还持有多家不断回购自家股票的公司的大量股权。股价越低，这些回购计划给我们带来的好处就越大：当股价低迷时，被投资公司用同样一笔钱回购的股份更多，间接提升了我们的持股比例。"
+    source_page: "concepts/回购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["回购", "股东回报"]
+    attribution: "1997 巴菲特致股东信"
+    source_letter_year: 1997
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-01"
+    text: |
+      "收益再投资加上复利的力量产生了奇妙的效果，股东们变得富有。"
+    source_page: "concepts/复利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+    attribution: "2021 巴菲特致股东信"
+    source_letter_year: 2021
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-02"
+    text: |
+      "就这样开始了我们通往2023年的旅程。这是一条颠簸的路，一路上汇聚了几重因素：我们股东持续的储蓄（也就是利润的留存再投资），复利的力量，对重大失误的规避
+    source_page: "concepts/复利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+    attribution: "以及最重要的——美国顺风。\""
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-03"
+    text: |
+      "永远不要冒永久性资本损失的风险。感谢美国的顺风和复利的力量，如果你这一辈子做了几个好决定、避开了严重的错误，我们所处的这个竞技场过去是
+    source_page: "concepts/复利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+    attribution: "将来也是——回报丰厚的。\""
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-04"
+    text: |
+      "以非常微小的方式，伯克希尔股东也参与了这个美国奇迹
+    source_page: "concepts/复利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+    attribution: "通过放弃分红，选择再投资而非消费。最初，这种再投资规模极小，几乎微不足道，但随着时间推移呈爆发式增长，体现了持续储蓄文化与长期复利魔力的完美结合。\""
+    source_letter_year: 2024
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-05"
+    text: |
+      "大多数公司习惯把每股收益创新高称为'创纪录'的业绩。但由于企业每年都在不断增加股本基础，所以我们觉得这并没什么值得大书特书的
+    source_page: "concepts/复利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+    attribution: "比方说，股本增加了10%而每股收益只增长了5%。毕竟，一个完全不动的定期存款账户，靠着复利每年也能稳定产生越来越多的利息收入。\""
+    source_letter_year: 1977
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-复利-06"
+    text: "1965年初，一切开始改变。伯克希尔迎来了新的管理层，重新配置了可用资金，基本上把所有收益都投入到了各种好生意中，其中大部分在此后多年一直保持优秀。收益再投资加上复利的力量产生了奇妙的效果，股东们变得富有。"
+    source_page: "concepts/复利"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+
+  - id: "web-concepts-复利-07"
+    text: "现任管理层19年任期内，账面价值从每股19.46美元增长到975.83美元，年复合增长率约22.6%。考虑到我们目前的规模，这样的回报率是不可能持续的。不信的人适合去做销售，但千万别去搞数学。"
+    source_page: "concepts/复利"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+
+  - id: "web-concepts-复利-08"
+    text: "就这样开始了我们通往2023年的旅程。这是一条颠簸的路，一路上汇聚了几重因素：我们股东持续的储蓄（也就是利润的留存再投资），复利的力量，对重大失误的规避——以及最重要的——美国顺风。没有伯克希尔，美国照样行；反过来可不成。"
+    source_page: "concepts/复利"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+
+  - id: "web-concepts-复利-09"
+    text: "给投资者的启示是：花儿盛开之时，杂草的分量自然就不值一提了。假以时日，只需要几个赢家就能创造奇迹。当然了，早点起步、活到90多岁也有帮助。"
+    source_page: "concepts/复利"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["复利", "长期投资"]
+
+  - id: "web-concepts-套利-01"
+    text: |
+      "套利类投资有时间表可循。套利投资机会出现在出售、并购、重组、分拆等公司活动中。我们做套利投资不听传闻或'内幕消息'，只看公司的公告。"
+    source_page: "concepts/套利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["套利", "投资策略"]
+    attribution: "1967 巴菲特致合伙人信"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-套利-02"
+    text: |
+      "评估一项套利机会时，你必须回答四个问题：(1) 已宣布的事件确实发生的可能性有多大？(2) 你的资金会被占用多久？(3) 出现更好结果的概率有多大？(4) 如果事件未能发生，将会怎样？"
+    source_page: "concepts/套利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["套利", "投资策略"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-套利-03"
+    text: |
+      "伯克希尔的套利操作与许多套利客有几个不同之处。首先，每年我们只参与少数
+    source_page: "concepts/套利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["套利", "投资策略"]
+    attribution: "通常是大型的——交易。致富了却整天盯着行情屏幕，这有什么意义？\""
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-套利-04"
+    text: |
+      "一个投资者不可能仅靠锁定某个特定的投资类别或风格就获得超额回报。他只有通过仔细评估事实并持续遵守纪律才能做到。"
+    source_page: "concepts/套利"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["套利", "投资策略"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-套利-05"
+    text: |
+      "套利类投资有时间表可循。套利投资机会出现在出售、并购、重组、分拆等公司活动中。我们做套利投资不听传闻或'内幕消息'，只看公司的公告。在白纸黑字上读到了，我们才会出手。"
+    source_page: "concepts/套利"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["套利", "投资策略"]
+    attribution: "1967 巴菲特致合伙人信"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-媒体与出版-01"
+    text: |
+      "报纸、电视和杂志产业在经济特征上已经越来越像普通企业，而不是拥有特许经营权的事业。"
+    source_page: "concepts/媒体与出版"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["媒体", "行业"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-媒体与出版-02"
+    text: |
+      "拥有喜诗让我们学到了很多关于如何评估特许经营权的知识。我们在某些股票投资上赚到了可观的收益，正是因为在喜诗身上学到的这些功课。"
+    source_page: "concepts/媒体与出版"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["媒体", "行业"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-安全边际-01"
+    text: |
+      "我们坚持在买入价格上留有安全边际。如果我们计算出一只普通股的价值仅仅略高于其价格，我们就不会感兴趣。我们相信恩师本杰明·格雷厄姆极力强调的安全边际原则，是投资成功最关键的基石。"
+    source_page: "concepts/安全边际"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["安全边际", "风险管理"]
+    attribution: "1992 巴菲特致股东信"
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-安全边际-04"
+    text: |
+      "今天的价格水平已经大幅侵蚀了本杰明·格雷厄姆所说的'安全边际'
+    source_page: "concepts/安全边际"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["安全边际", "风险管理"]
+    attribution: "他视之为智慧投资的基石。\""
+    source_letter_year: 1997
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-安全边际-05"
+    text: |
+      "保费定价必须留出充足的安全边际，以应对那些永远会给保险业带来昂贵意外的社会趋势。即便将目标设在100，本身就可能导致巨额亏损；瞄准110到115则无异于自杀。"
+    source_page: "concepts/安全边际"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["安全边际", "风险管理"]
+    attribution: "1990 巴菲特致股东信"
+    source_letter_year: 1990
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-01"
+    text: |
+      "本杰明·格雷厄姆，我的老师也是我的朋友，很久以前描述过一种面对市场波动的心态，我认为这是对投资成功最有帮助的一番话。"
+    source_page: "concepts/市场先生"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-02"
+    text: |
+      "市场先生是来为你服务的，不是来引导你的。对你有用的是他的钱包，而不是他的智慧。如果某天他以一种格外愚蠢的姿态出现，你可以选择无视他，也可以好好利用他，但如果你受了他的影响，那就是灾难。"
+    source_page: "concepts/市场先生"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-03"
+    text: |
+      "市场先生还有一个讨人喜欢的特点：他不在乎被人冷落。如果他今天的报价你不感兴趣，明天他还会带着新的报价登门。交易完全由你说了算。在这种条件下，他的行为越躁狂，对你就越有利。"
+    source_page: "concepts/市场先生"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-04"
+    text: |
+      "追随格雷厄姆的教诲，查理和我让我们持有的股票用其经营成果
+    source_page: "concepts/市场先生"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+    attribution: "而不是每天甚至每年的价格波动——来告诉我们投资是否成功。市场可能会暂时忽视一家企业的成功，但最终必会予以认可。正如格雷厄姆所说：'短期来看，市场是一台投票机；长期来看，它是一台称重机。'\""
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-05"
+    text: |
+      "这位老兄越是喜怒无常，投资者的机会就越多。道理很简单：市场剧烈波动意味着好公司时不时会出现不合理的低价。很难想象，为什么这种低价的出现会被视为增加了投资者的风险
+    source_page: "concepts/市场先生"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+    attribution: "只要他完全可以无视市场或者利用市场的愚蠢。\""
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场先生-06"
+    text: |
+      但是，就像舞会上的灰姑娘一样，你必须牢记一个警告，否则一切都会变回南瓜和老鼠：市场先生是来为你服务的，不是来引导你的。对你有用的是他的钱包，而不是他的智慧。如果某天他以一种格外愚蠢的姿态出现，你可以选择无视他，也可以好好利用他，但如果你受了他的影响，那就是灾难。
+    source_page: "concepts/市场先生"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+
+  - id: "web-concepts-市场先生-07"
+    text: |
+      事实上，真正的投资者欢迎波动还来不及呢。本杰明·格雷厄姆在《聪明的投资者》第八章做过解释。他在书中介绍了"市场先生"——一个殷勤的家伙，每天都会出现在你面前，随时愿意买你的股票或卖给你，任君选择。这位老兄越是喜怒无常，投资者的机会就越多。道理很简单：市场剧烈波动意味着好公司时不时会出现不合理的低价。很难想象，为什么这种低价的出现会被视为增加了投资者的风险。
+    source_page: "concepts/市场先生"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+
+  - id: "web-concepts-市场先生-08"
+    text: "市场先生还有一个讨人喜欢的特点：他不在乎被人冷落。如果他今天的报价你不感兴趣，明天他还会带着新的报价登门。交易完全由你说了算。在这种条件下，他的行为越躁狂，对你就越有利。"
+    source_page: "concepts/市场先生"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场先生", "市场波动"]
+
+  - id: "web-concepts-市场预测-01"
+    text: |
+      "我不做预测股市涨跌或经济波动的事。如果你认为我能预测，或者觉得不预测就没法投资，那合伙基金不适合你。"
+    source_page: "concepts/市场预测"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "1962 巴菲特致合伙人信"
+    source_letter_year: 1962
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-市场预测-02"
+    text: |
+      "市场预测专家只能灌满你的耳朵，却永远灌不满你的钱包。"
+    source_page: "concepts/市场预测"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2014 巴菲特致股东信"
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-03"
+    text: |
+      "自己拍脑袋做宏观判断，或者听别人的宏观和市场预测，都是浪费时间。实际上这还很危险，因为它可能模糊你对真正重要的事实的判断。"
+    source_page: "concepts/市场预测"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2013 巴菲特致股东信"
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-04"
+    text: |
+      "我们对市场短期或中期的走向没有任何想法
+    source_page: "concepts/市场预测"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "从来都没有过。\""
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-07"
+    text: |
+      "自己拍脑袋做宏观判断，或者听别人的宏观和市场预测，都是浪费时间。实际上这还很危险，因为它可能模糊你对真正重要的事实的判断。（每当我听到电视评论员口若悬河地预测市场下一步走势时，就会想起米奇·曼特尔那句一针见血的评论：'你不坐到解说席上去，都不知道这比赛原来这么简单。'）"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2013 巴菲特致股东信"
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-08"
+    text: |
+      "如果1,000位经理人在年初做市场预测，至少有一位的预测很可能连续九年都是正确的。当然，1,000只猴子中也同样可能出现一只看似无所不知的'先知'。但两者之间有一个区别：那只幸运的猴子不会发现有人排队来找它投资。"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2016 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-09"
+    text: |
+      "被误导的读者或观众很可能认为查理和我在预测股市会走坏，而事实上我们不仅在那句话里、还在其他地方都清楚地表明，我们根本没有在预测市场。任何被这些哗众取宠的报道所误导的投资者都付出了沉重代价：这封信公布当天道琼斯指数收于7,063点，而年底收于10,428点。"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2009 巴菲特致股东信"
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-10"
+    text: |
+      "虽然我们从不试图预测股市的走势，但我们确实会以一种非常粗略的方式来评估股市的合理价值。"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "1997 巴菲特致股东信"
+    source_letter_year: 1997
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-11"
+    text: |
+      "投资者的工具箱里没有位置：市场上任何事都可能在任何时候发生。没有任何顾问、经济学家或电视评论员——当然也包括查理和我——能告诉你混乱什么时候会发生。市场预测专家只能灌满你的耳朵，却永远灌不满你的钱包。"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2014 巴菲特致股东信"
+    source_letter_year: 2014
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市场预测-12"
+    text: |
+      "既然我不知道有什么办法能可靠地预测市场走势，我建议你们只在打算持有至少五年的前提下购买伯克希尔股票。那些追求短期利润的人应该去别处看看。"
+    source_page: "concepts/市场预测"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市场预测", "投资心理"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-市盈率-01"
+    text: |
+      "常见的估值指标如股息率、市盈率、市净率，甚至增长率，本身与估值毫无关系
+    source_page: "concepts/市盈率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "除非它们能为一家企业未来现金流入和流出的金额及时间提供线索。\"——2000 巴菲特致股东信"
+    source_letter_year: 2000
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-02"
+    text: |
+      "即使这些特征（低市净率、低市盈率、高股息率）全部同时具备，也远不能保证投资者确实是在以物有所值的价格买入。"
+    source_page: "concepts/市盈率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1992 巴菲特致股东信"
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-03"
+    text: |
+      "猜测贪婪善变的大众会给企业盈利贴上多高的估值倍数，根本谈不上保守。"
+    source_page: "concepts/市盈率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1961 巴菲特致合伙人信"
+    source_letter_year: 1961
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-市盈率-04"
+    text: |
+      "有时候，股票估值不仅仅是市盈率那么简单。"
+    source_page: "concepts/市盈率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-05"
+    text: |
+      "大多数投资者往往把最高的市盈率给了那些名头响亮、许诺翻天覆地变化的公司。这种美好的前景让投资者可以尽情幻想未来的丰厚利润，而不必面对眼前的经营现实。"
+    source_page: "concepts/市盈率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-06"
+    text: "很多人几乎不看市盈率、股息率，就冲进蓝筹股，以为这样很保守。猜测贪婪善变的大众会给企业盈利贴上多高的估值倍数，根本谈不上保守。"
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1961 巴菲特致合伙人信"
+    source_letter_year: 1961
+    source_letter_category: "partnership-letter"
+
+  - id: "web-concepts-市盈率-07"
+    text: "常见的估值指标如股息率、市盈率、市净率，甚至增长率，本身与估值毫无关系"
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "2000 巴菲特致股东信"
+    source_letter_year: 2000
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-08"
+    text: |
+      不管钱是从媒体公司赚来的还是从钢铁厂赚来的，一块钱就是一块钱。过去买家之所以愿意对媒体的一块钱盈利给予远高于钢铁的估值，是因为大家预期媒体的收益会持续增长（而且企业不需要多少额外资本），而钢铁的收益显然属于"打摆子"那一类。
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-09"
+    text: "大多数投资者的想法恰恰相反。他们往往把最高的市盈率给了那些名头响亮、许诺翻天覆地变化的公司。这种美好的前景让投资者可以尽情幻想未来的丰厚利润，而不必面对眼前的经营现实。"
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-10"
+    text: "1953年我第一次买进IDS的股票，当时它增长迅速，市盈率却只有3倍。（那个年代低垂的果子遍地都是。）"
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1994 巴菲特致股东信"
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-11"
+    text: |
+      "价值投资"通常意味着买入具有某些特征的股票，比如低市净率、低市盈率或高股息率。遗憾的是，即使这些特征全部同时具备，也远不能保证投资者确实是在以物有所值的价格买入。相应地，反过来的特征
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "1992 巴菲特致股东信"
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-市盈率-12"
+    text: |
+      凭借个人魅力、大肆宣传或可疑的会计手法——往往三管齐下——这些管理者把一个新组建的企业集团的股价推到20倍市盈率之类的水平，然后以最快速度发行股票，去收购市盈率只有十倍上下的公司。他们立即对收购采用"权益合并法"会计处理，这样一来——被收购公司的业务一分钱都没变——每股收益自动增加了。——2014 伯克希尔的过去现在与未来
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-市盈率-13"
+    text: "即使这些举措只带来了可怜的5%回报率，废物先生仍然能大丰收。具体来说"
+    source_page: "concepts/市盈率"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["市盈率", "估值"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-01"
+    text: |
+      "自1941年公司创立以来，林沃特先生始终坚守'承保必须盈利'这一原则
+    source_page: "concepts/承保纪律"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "业内人人挂在嘴边，真正做到的却寥寥无几。\""
+    source_letter_year: 1969
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-02"
+    text: |
+      "我们非常钦佩国民保险的承保纪律
+    source_page: "concepts/承保纪律"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "这一纪律由创始人杰克·林沃尔特从公司创立之初便植入其中——并且深知这种纪律一旦中断，恐怕永远也无法完全恢复。\""
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-03"
+    text: |
+      "在这个行业里，最要紧的是承保纪律。真正的赢家是那些始终坚守三条关键原则的公司。"
+    source_page: "concepts/承保纪律"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "2001 巴菲特致股东信"
+    source_letter_year: 2001
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-04"
+    text: |
+      "凭借严格的承保纪律，这些资金长期来看很有可能实现零成本。"
+    source_page: "concepts/承保纪律"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-05"
+    text: |
+      "1. 他们只接受自己能够正确评估的风险（坚守在能力圈之内），并且在评估了所有相关因素——包括极端损失情形——之后，确认这些风险具有盈利预期。这些保险公司从不以市场份额为目标，当竞争对手以愚蠢的价格或条款抢夺业务时，他们乐得让出。
+      2. 他们严格限制承接的业务，以确保不会因为单一事件或相关事件而遭受损失聚集，从而威胁到公司的偿付能力。他们不遗余力地搜寻那些看似无关的风险之间可能存在的关联。"
+    source_page: "concepts/承保纪律"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "2001 巴菲特致股东信"
+    source_letter_year: 2001
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-06"
+    text: |
+      "他们的就业和薪酬也不会受到影响。我们非常钦佩国民保险的承保纪律——这一纪律由创始人杰克·林沃尔特从公司创立之初便植入其中——并且深知这种纪律一旦中断，恐怕永远也无法完全恢复。"
+    source_page: "concepts/承保纪律"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-07"
+    text: |
+      "保险集团连续第六年实现了承保盈利。这意味着我们585亿美元的保险'浮存金'——这些钱不属于我们，但由我们持有并为自己的利益进行投资——其成本低于零。事实上，2008年持有这笔浮存金反而给我们带来了28亿美元的收入。"
+    source_page: "concepts/承保纪律"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-承保纪律-08"
+    text: |
+      "我们需要的不是更多的政治家，而是更少的玉米。过去两年里，保险业通过大量融资，已经大幅扩大了玉米的种植面积。由此产生的'丰收'——也就是保险承保能力的激增——对价格和利润的影响，跟农产品过剩自古以来的后果毫无二致。"
+    source_page: "concepts/承保纪律"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["承保纪律", "保险"]
+    attribution: "1986 巴菲特致股东信"
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-护城河-01"
+    text: |
+      "品牌的力量、产品的特质和分销体系的优势赋予了它们巨大的竞争优势，犹如一道宽阔的护城河保卫着它们的经济城堡。相比之下，普通企业每天都要在没有任何类似保护的情况下厮杀求生。"
+    source_page: "concepts/护城河"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["护城河", "竞争优势"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-护城河-02"
+    text: |
+      "在商业的世界里，我寻找的是被坚不可摧的'护城河'保护着的经济城堡。"
+    source_page: "concepts/护城河"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["护城河", "竞争优势"]
+    attribution: "1995 巴菲特致股东信"
+    source_letter_year: 1995
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-护城河-03"
+    text: |
+      "一家真正伟大的企业必须拥有一条持久的'护城河'，保护其投入资本获得丰厚回报。资本主义的竞争活力决定了，任何赚取高回报的商业'城堡'都会遭到竞争对手一波又一波的进攻。因此，一道难以逾越的屏障是企业持续成功的根本保障。"
+    source_page: "concepts/护城河"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["护城河", "竞争优势"]
+    attribution: "2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-护城河-04"
+    text: |
+      "一条需要不断重建的护城河，最终等于没有护城河。"
+    source_page: "concepts/护城河"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["护城河", "竞争优势"]
+    attribution: "2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-护城河-05"
+    text: |
+      "当短期和长期发生冲突时，加宽护城河必须优先。"
+    source_page: "concepts/护城河"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["护城河", "竞争优势"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-01"
+    text: |
+      "在伯克希尔，我们的收购策略简单至极：接电话就行。可喜的是，电话现在响得更勤了，因为越来越多的企业主和经理人希望把自己的公司加入伯克希尔。"
+    source_page: "concepts/收购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "2000 巴菲特致股东信"
+    source_letter_year: 2000
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-02"
+    text: |
+      "不同于杠杆收购者和私募股权公司，我们没有'退出'策略
+    source_page: "concepts/收购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "我们买了就不卖。\""
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-03"
+    text: |
+      "如果你也在经营一家大型的、盈利丰厚的企业，并且觉得在类似盖可保险的环境中会如鱼得水，那就看看我们列出的收购标准，然后给我打个电话吧。我保证会很快答复。"
+    source_page: "concepts/收购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "1998 巴菲特致股东信"
+    source_letter_year: 1998
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-04"
+    text: |
+      "我们必须坚守承诺；避免对收购来的企业加杠杆；赋予管理者非同寻常的自主权；无论顺境逆境都与被收购的企业同在。"
+    source_page: "concepts/收购"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-05"
+    text: |
+      "(1) 有一定的规模（税后净利润至少500万美元）；
+      (2) 表现出持续稳定的盈利能力（我们对未来预测不感兴趣，'困境反转'型企业也不是我们的菜）；
+      (3) 企业在很少或没有负债的情况下取得了良好的股本回报率。"
+    source_page: "concepts/收购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "1984 巴菲特致股东信"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-06"
+    text: |
+      "不同于杠杆收购者和私募股权公司，我们没有'退出'策略——我们买了就不卖。这也是为什么伯克希尔往往是卖方及其经理人的首选——有时甚至是唯一的选择。"
+    source_page: "concepts/收购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-收购-07"
+    text: |
+      "6月21日，我收到了一份两页纸的传真，逐条说明了森林河为什么符合我们的收购标准。在此之前，我既没听说过这家年销售额16亿美元的休闲房车制造商，也不认识它的老板兼经理人皮特·利格尔。但传真说的很有道理，我立刻要求提供更多数据。第二天早上数据就到了，当天下午我就向Pete发出了要约。"
+    source_page: "concepts/收购"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["收购", "资本配置"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-01"
+    text: |
+      "他们正确地观察到市场经常是有效率的，便错误地推论出市场永远是有效率的。这两个命题之间的差别，简直如同黑夜与白昼。"
+    source_page: "concepts/有效市场"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-02"
+    text: |
+      "各学院的教授们依然兴高采烈地宣讲有效市场理论，好像它跟圣经一样确凿无疑。一位胆敢质疑有效市场理论的财务学讲师，获得重大晋升的几率大概跟伽利略被提名为教宗差不多。"
+    source_page: "concepts/有效市场"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "2006 巴菲特致股东信"
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-03"
+    text: |
+      "格雷厄姆学派或许应该捐建几个教授席位，以确保EMT在校园中千秋万代地传承下去。"
+    source_page: "concepts/有效市场"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-04"
+    text: |
+      "地平说学会大概也会把轮船环球航行视为一个恼人但无关紧要的异常现象吧。"
+    source_page: "concepts/有效市场"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "2010 巴菲特致股东信"
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-05"
+    text: |
+      "这一学说在1970年代变得极为时髦——在学术圈简直被奉为圣经。它的核心主张是，分析股票毫无用处，因为所有公开信息都已经恰当地反映在股价中了。换句话说，市场永远无所不知。作为推论，教授EMT的学者们说，一个人闭着眼睛用飞镖扎股票名单选出来的投资组合，其前景跟最聪明、最勤奋的证券分析师选出来的一样好。令人惊讶的是，EMT不仅受到学术界追捧，还被许多投资专业人士和企业经理人所接受。他们正确地观察到市场经常是有效率的，便错误地推论出市场永远是有效率的。这两个命题之间的差别，简直如同黑夜与白昼。"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-06"
+    text: |
+      "当年在格雷厄姆-纽曼公司时，我研究了该公司从1926年到1956年整个存续期间的套利收益。无杠杆年均回报率达到20%。从1956年起，我先在巴菲特合伙公司、后在伯克希尔运用格雷厄姆的套利原则......在这63年间，大盘的年均回报率（含股息）略低于10%。这意味着当初投入的1,000美元，如果全部收益都再投资的话，现在会变成40.5万美元。但如果年回报率是20%，现在就会变成9,700万美元。在我们看来，这是一个统计上显著的差异，完全可以激起人们的好奇心。"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-07"
+    text: |
+      "我在1984年第一次公开讨论沃尔特的卓越纪录。当时，'有效市场理论'是大多数顶级商学院投资课程的核心......那么，当学术界接触到这一全新而重要的证据时，他们做了什么？不幸的是，他们的反应太过人性化了：他们不是敞开心扉去思考，而是选择闭上了眼睛。据我所知，没有一家教授有效市场理论的商学院曾试图研究沃尔特的业绩表现。"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "2006 巴菲特致股东信"
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-09"
+    text: |
+      "于是，成千上万的学生被送入社会，坚信每一只股票每一天的价格都是'正确的'，而试图评估企业——也就是股票——是徒劳无功的。与此同时，沃尔特继续跑赢市场，那些年轻人所接受的错误教导反而让他的工作更轻松了。毕竟，如果你从事航运业，你所有的潜在竞争者都被教导地球是平的，对你来说可是天大的好事。"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "2006 巴菲特致股东信"
+    source_letter_year: 2006
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-10"
+    text: |
+      "格雷厄姆的市场先生寓言，在当今的投资世界里也许显得有些过时——毕竟大多数专业人士和学者满口都是有效市场、动态对冲和贝塔系数。他们对这些东西感兴趣是可以理解的，因为笼罩着神秘面纱的技术对于投资建议的推销者来说，显然是有价值的。毕竟，有哪位巫医能靠'吃两片阿司匹林'这种简单建议就声名鹊起、财源广进的？"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-有效市场-11"
+    text: |
+      "经济学家在思想方面最为节俭：他们把研究生院学到的东西用上了一辈子。大学金融系往往也是如此。看看在整个1970年代和1980年代，几乎所有人都多么顽固地坚守有效市场理论，轻蔑地将那些强有力的反面事实称为'异常现象'。（我一向很喜欢这种解释方式：地平说学会大概也会把轮船环球航行视为一个恼人但无关紧要的异常现象吧。）"
+    source_page: "concepts/有效市场"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["有效市场", "学术理论"]
+    attribution: "2010 巴菲特致股东信"
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-01"
+    text: |
+      "为了得到你并不需要的东西，而拿你已经拥有和真正需要的东西去冒险，那简直是疯了。"
+    source_page: "concepts/杠杆"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2017 巴菲特致股东信"
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-02"
+    text: |
+      "投资没有百分之百确定的事。因此，使用杠杆是危险的。一串绝妙的数字乘以零，永远等于零。别指望能发两次财。"
+    source_page: "concepts/杠杆"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-03"
+    text: |
+      "我们很少大量举债，即使不得不借债，也尽量以长期固定利率来安排。我们宁可放弃有吸引力的机会，也不愿过度透支资产负债表。"
+    source_page: "concepts/杠杆"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-04"
+    text: |
+      "判断一家公司经营管理层绩效好坏的首要标准，应该是看它在不过度使用杠杆、不玩会计把戏的前提下，能否取得高水平的股本回报率。"
+    source_page: "concepts/杠杆"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "1979 巴菲特致股东信"
+    source_letter_year: 1979
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-05"
+    text: |
+      "一串绝妙的数字乘以零，永远等于零。别指望能发两次财。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-06"
+    text: |
+      "多年来，我们对杠杆的厌恶确实拖累了回报率。但查理和我睡得很踏实。我们都认为，为了得到你并不需要的东西，而拿你已经拥有和真正需要的东西去冒险，那简直是疯了。50年前，当我们各自经营着由几位信任我们的亲朋好友出资组建的投资合伙企业时，我们就持有这样的理念。如今，伯克希尔已经拥有了上百万'合伙人'，我们的理念一如当初。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2017 巴菲特致股东信"
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-08"
+    text: |
+      "我们很少举债。需要指出的是，许多管理者会不同意这一政策，他们认为大量举债可以提升股东回报。而且这些更敢冒险的CEO在大多数时候是对的。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-09"
+    text: |
+      "之后，如果一切顺利，股权开始回升，杠杆收购机构往往会寻求用新的借贷再次加杠杆。他们通常会把部分所得用来支付巨额股息，把股东权益急剧压低，有时甚至压成负数。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-杠杆-10"
+    text: |
+      "任何一家公司的盈利能力取决于三个因素：(1) 资产的回报率；(2) 负债的成本；(3) '杠杆'的运用程度——也就是资产中有多大比例是由负债而非股东权益来支撑的。多年来，我们在第(1)点上做得相当不错。但我们同样受益于极低的负债成本。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "1995 巴菲特致股东信"
+    source_letter_year: 1995
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-杠杆-11"
+    text: |
+      "判断一家公司经营管理层绩效好坏的首要标准，应该是看它在不过度使用杠杆、不玩会计把戏的前提下，能否取得高水平的股本回报率，而不是看每股收益是否持续增长。"
+    source_page: "concepts/杠杆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["杠杆", "风险"]
+    attribution: "1979 巴菲特致股东信"
+    source_letter_year: 1979
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-01"
+    text: |
+      "经济特许经营权产生于这样的产品或服务：(1) 它是被需要或被渴望的；(2) 顾客认为找不到近似的替代品；(3) 不受价格管制。"
+    source_page: "concepts/特许经营权"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-02"
+    text: |
+      "特许经营权能容忍糟糕的管理。无能的管理者虽然会降低特许经营的盈利能力，但不会造成致命伤害。"
+    source_page: "concepts/特许经营权"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-03"
+    text: |
+      "在永远剧烈变化的经济领域中，很难建立起堡垒般的特许经营权。而这种特许经营权，通常才是持续高回报的关键。"
+    source_page: "concepts/特许经营权"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-04"
+    text: |
+      "我们在某些股票投资上赚到了可观的收益，正是因为在喜诗身上学到的关于如何评估特许经营权的功课。"
+    source_page: "concepts/特许经营权"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-05"
+    text: |
+      "我们拥有保险行业最优秀的管理团队，而且在大多数情况下，他们管理着根基深厚、价值非凡的特许经营权。"
+    source_page: "concepts/特许经营权"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-06"
+    text: "经济特许经营权产生于这样的产品或服务：(1) 它是被需要或被渴望的；(2) 顾客认为找不到近似的替代品；(3) 不受价格管制。"
+    source_page: "concepts/特许经营权"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-07"
+    text: |
+      相比之下，"普通企业"只有在它是低成本运营商或者其产品/服务供不应求时，才能获得超额利润。但供给紧张通常持续不了多久。
+    source_page: "concepts/特许经营权"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-08"
+    text: "那种刀枪不入的特许经营权和取之不尽的丰裕暴利的时代，已经一去不复返了。"
+    source_page: "concepts/特许经营权"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-特许经营权-09"
+    text: "拥有喜诗让我们学到了很多关于如何评估特许经营权的知识。我们在某些股票投资上赚到了可观的收益，正是因为在喜诗身上学到的这些功课。"
+    source_page: "concepts/特许经营权"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["特许经营权", "护城河"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-01"
+    text: |
+      "我们检验留存收益是否明智的标准是：随着时间推移，每留存1美元是否能为股东带来至少1美元的市场价值。到目前为止，这个标准尚能达到。我们将继续以每五年为一个滚动周期来检验。随着净资产的增长，明智地运用留存收益将越来越难。"
+    source_page: "concepts/留存收益"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-02"
+    text: |
+      "当资本回报率平平无奇时，靠投入更多资本来赚更多钱算不上什么了不起的管理成就。你坐在摇椅上也能做到这一点
+    source_page: "concepts/留存收益"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "只要把存进银行的资金翻两番，利息收入也会翻两番。\"——1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-03"
+    text: |
+      "只要每一美元留存收益能为股东创造超过一美元的市场价值，伯克希尔就不分红。"
+    source_page: "concepts/留存收益"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "2014 副董事长的思考"
+
+  - id: "web-concepts-留存收益-04"
+    text: |
+      "那些未入账的留存收益通常正在为伯克希尔创造价值
+    source_page: "concepts/留存收益"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "而且是大量的价值。被投资公司用留存的资金扩张业务、进行收购、偿还债务，还经常回购自家股票（这一举动增加了我们在它们未来收益中的份额）。留存收益贯穿美国历史，推动着美国企业向前发展。\"——2020 巴菲特致股东信"
+    source_letter_year: 2020
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-05"
+    text: |
+      "我们的股东将继续通过公司留存收益来积累财富、日益兴旺。"
+    source_page: "concepts/留存收益"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-06"
+    text: |
+      "我们认为崇高的意图应当定期接受结果的检验。我们检验留存收益是否明智的标准是：随着时间推移，每留存1美元是否能为股东带来至少1美元的市场价值。到目前为止，这个标准尚能达到。我们将继续以每五年为一个滚动周期来检验。"
+    source_page: "concepts/留存收益"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-07"
+    text: |
+      "作为你们资本的管理人，伯克希尔的董事们选择了保留全部收益不做分配。事实上，2015年和2016年，伯克希尔的留存收益金额在美国企业中均位列第一，每年的再投资金额比第二名多出数十亿美元。这些再投资的资金必须赚回自己的存在价值。"
+    source_page: "concepts/留存收益"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "2016 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-留存收益-08"
+    text: |
+      "报告收益很难准确反映伯克希尔的经济进步，部分原因在于表中列示的数字仅包括被投资公司分配给我们的股利
+    source_page: "concepts/留存收益"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["留存收益", "资本配置"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-科技与互联网-01"
+    text: |
+      "我们不持有科技股，尽管我们和大家一样认为科技产品和服务将深刻改变我们的社会。我们的问题在于，我们无法判断科技行业中的哪些参与者拥有真正持久的竞争优势。"
+    source_page: "concepts/科技与互联网"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["科技", "行业"]
+    attribution: "1999 巴菲特致股东信"
+    source_letter_year: 1999
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-科技与互联网-02"
+    text: |
+      "如果说我们有什么本事的话，那就是我们清楚知道自己什么时候在能力圈内游刃有余，什么时候正在接近边界。"
+    source_page: "concepts/科技与互联网"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["科技", "行业"]
+    attribution: "1999 巴菲特致股东信"
+    source_letter_year: 1999
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-科技与互联网-03"
+    text: |
+      "简单易懂的商业模式（如果涉及大量高科技，我们搞不明白）。"
+    source_page: "concepts/科技与互联网"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["科技", "行业"]
+    attribution: "1988 巴菲特致股东信"
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-税收效率-01"
+    text: |
+      "从经济实质来看，这笔负债更像是美国财政部给我们的一笔无息贷款，而且到期日由我们自己说了算。"
+    source_page: "concepts/税收效率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["税收效率", "资本配置"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-税收效率-02"
+    text: |
+      "造成如此惊人差距的唯一原因，就是纳税时间的不同。有趣的是，政府在方案二中的收益也是完全相同的27:1的比例
+    source_page: "concepts/税收效率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["税收效率", "资本配置"]
+    attribution: "当然，政府得等上更长时间才能拿到这笔钱。\""
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-税收效率-03"
+    text: |
+      "查理跟我认为伯克希尔缴纳巨额税款完全天经地义。我们对社会的贡献，充其量也只是与社会对我们的贡献成正比而已。"
+    source_page: "concepts/税收效率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["税收效率", "资本配置"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-税收效率-04"
+    text: |
+      "对所有需要纳税的股东而言，'分红法'的税收后果不如
+    source_page: "concepts/税收效率"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["税收效率", "资本配置"]
+    attribution: "通常远不如——'卖出法'。\""
+    source_letter_year: 2012
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-竞争优势-02"
+    text: |
+      "在核心业务
+    source_page: "concepts/竞争优势"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+    attribution: "低成本汽车和住宅保险——方面，盖可保险拥有重大且可持续的竞争优势。这在商业领域是一种稀缺资产，在金融服务领域更是几乎不存在。\""
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-竞争优势-03"
+    text: |
+      "我们这种罕见而难以复制的管理架构，赋予了伯克希尔真正的竞争优势。"
+    source_page: "concepts/竞争优势"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+    attribution: "2007 巴菲特致股东信"
+    source_letter_year: 2007
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-竞争优势-04"
+    text: |
+      "在物色新的独立业务时，我们寻找的关键品质包括：持久的竞争优势；有能力且品格高尚的管理层；运营所需净有形资产的良好回报率；以诱人的回报率实现内部增长的机会；以及最后
+    source_page: "concepts/竞争优势"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+    attribution: "合理的收购价格。\""
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-竞争优势-05"
+    text: |
+      "长期以来，企业集团通常只做一件事：整体收购其他企业。然而，这个策略带来了两个大问题。第一个无法解决：大多数真正伟大的企业根本不愿意被任何人收购。因此，饥渴的收购者们不得不将目标瞄准那些缺乏重要且持久竞争优势的平庸公司。那可不是一个钓鱼的好池塘。"
+    source_page: "concepts/竞争优势"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+    attribution: "2020 巴菲特致股东信"
+    source_letter_year: 2020
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-竞争优势-06"
+    text: |
+      "我们愿意以部分或全部股权的方式买入具有竞争优势的企业，再加上对买入价格的合理自律，应该能给我们实现这一目标的良好机会。"
+    source_page: "concepts/竞争优势"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+
+  - id: "web-concepts-竞争优势-07"
+    text: |
+      "品牌的力量、产品的特质和分销体系的优势赋予了它们巨大的竞争优势，犹如一道宽阔的护城河保卫着它们的经济城堡。相比之下，普通企业每天都要在没有任何类似保护的情况下厮杀求生。"
+    source_page: "concepts/竞争优势"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+
+  - id: "web-concepts-竞争优势-08"
+    text: |
+      "持久的竞争优势；有能力且品格高尚的管理层；运营所需净有形资产的良好回报率；以诱人的回报率实现内部增长的机会；以及最后——合理的收购价格。"
+    source_page: "concepts/竞争优势"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+
+  - id: "web-concepts-竞争优势-09"
+    text: |
+      "在核心业务——低成本汽车和住宅保险——方面，盖可保险拥有重大且可持续的竞争优势。这在商业领域是一种稀缺资产，在金融服务领域更是几乎不存在。"
+    source_page: "concepts/竞争优势"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+
+  - id: "web-concepts-竞争优势-10"
+    text: |
+      "我们面临的最大劣势是规模：在早年，我们只需要好的投资点子，但现在我们需要的是又大又好的投资点子。不幸的是，找到这类机会的难度与我们的财务成功成正比，这个问题持续侵蚀着我们的竞争优势。"
+    source_page: "concepts/竞争优势"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["竞争优势", "护城河"]
+
+  - id: "web-concepts-管理层-02"
+    text: |
+      "我们被投资公司之所以能拥有如此多的额外价值，完全要归功于正在管理它们的这批经理人。查理跟我可以毫不心虚地夸耀这支团队，因为他们所具备的才能跟我们一点关系都没有。我们的工作只不过是发现有才华的经理人，并为他们提供一个可以大展身手的环境。"
+    source_page: "concepts/管理层"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+    attribution: "1990 巴菲特致股东信"
+    source_letter_year: 1990
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-管理层-03"
+    text: |
+      "在伯克希尔，经理人可以专注于经营各自的业务：他们不用参加总部会议，不用操心融资，也不用应付华尔街的骚扰……我们信任的是人，而不是流程。'招好人，少管理'这条准则对他们和我都适用。"
+    source_page: "concepts/管理层"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+    attribution: "2010 巴菲特致股东信"
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-管理层-04"
+    text: |
+      "要想赢得好经理人的名声，关键是要收购好企业。"
+    source_page: "concepts/管理层"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+    attribution: "汤姆·墨菲，引自2019 巴菲特致股东信"
+    source_letter_year: 2019
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-管理层-05"
+    text: |
+      "之所以能取得这样的成果，要归功于一支卓越的经理人团队
+    source_page: "concepts/管理层"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+    attribution: "是他们在一些看似平凡的业务中创造了非凡的成绩。凯西·斯坦格尔把管理棒球队形容为'靠着别人打出的全垒打来领薪水'。这也正是我在伯克希尔的讨巧之处。\""
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-管理层-06"
+    text: |
+      "一个企业所有者——或投资者——如果能与这样的人在经济特质良好的企业中联手，就能创造奇迹。反过来，无论一家公司的前景多么诱人，我们都不愿与缺乏令人钦佩品质的管理者为伍。跟坏人做生意永远不会有好结果。"
+    source_page: "concepts/管理层"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+
+  - id: "web-concepts-管理层-07"
+    text: |
+      "他经营公司的感觉就好像那是'他自己的'事业一样——这种态度正是我们在伯克希尔最为珍视的。"
+    source_page: "concepts/管理层"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+
+  - id: "web-concepts-管理层-08"
+    text: |
+      "出于充分的理由，我一直在赞扬我们旗下经理人的成就。他们确实是全明星，经营各自的企业就像那是自己家族唯一的资产一样。"
+    source_page: "concepts/管理层"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+
+  - id: "web-concepts-管理层-09"
+    text: |
+      "在伯克希尔，经理人可以专注于经营各自的业务：他们不用参加总部会议，不用操心融资，也不用应付华尔街的骚扰。他们只是每两年收到我的一封信，有事的时候给我打个电话。"
+    source_page: "concepts/管理层"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["管理层", "企业治理"]
+
+  - id: "web-concepts-纺织业务-01"
+    text: |
+      "一份优异的管理记录（以经济回报衡量），与其说取决于你划船的技术有多好，不如说取决于你上了哪条船。"
+    source_page: "concepts/纺织业务"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-02"
+    text: |
+      "我花了整整20年才搞明白买好企业有多重要。在那之前，我一直在寻找'便宜货'
+    source_page: "concepts/纺织业务"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "不幸的是还真被我找到了一些。\""
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-03"
+    text: |
+      "查理
+    source_page: "concepts/纺织业务"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "加上我在伯克希尔接手纺织业务后长达20年的苦苦挣扎——最终让我确信，拥有一家出色企业的非控股权，比百分之百控股一家勉强赚钱的企业更赚钱、更愉快，而且工作量少得多。\""
+    source_letter_year: 2020
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-04"
+    text: |
+      "合并后的九年里，伯克希尔的股东们眼睁睁看着公司的净资产从5,140万美元暴跌至2,210万美元......新英格兰纺织业已经悄悄步入了一场漫长而不可逆转的死亡行军。"
+    source_page: "concepts/纺织业务"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "2021 巴菲特致股东信"
+    source_letter_year: 2021
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-05"
+    text: |
+      "我们纺织业务最近一次供不应求的时期——那已经是好多年前的事了——大概持续了一个上午的大部分时间。"
+    source_page: "concepts/纺织业务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "1982 巴菲特致股东信"
+    source_letter_year: 1982
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-06"
+    text: |
+      "纺织投资所许诺的收益只是一种幻象。我们许多国内外的竞争对手都在进行同样的投资，一旦足够多的公司这样做了，降低的成本就变成了全行业降价的基准。单独来看，每家公司的资本投资决策看起来都合乎成本效益、都很理性；但从整体来看，这些决策相互抵消，变得完全不理性——就好比每个看游行的人都觉得踮起脚尖就能看得更清楚一样。每一轮投资过后，所有参与者在游戏中投入了更多的钱，但回报依然少得可怜。"
+    source_page: "concepts/纺织业务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-07"
+    text: |
+      "这对股东来说是毁灭性的结局，它说明了当大量的智力和精力被投入到一个错误的前提上时会发生什么。这情景让人想起塞缪尔·约翰逊的那匹马：'一匹会数到十的马是一匹了不起的马——但不是一个了不起的数学家。'同样地，一家在本行业中能够出色配置资本的纺织公司是一家了不起的纺织公司——但不是一家了不起的企业。"
+    source_page: "concepts/纺织业务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-08"
+    text: |
+      "当一个以管理才能著称的管理层遇上一家基本面糟糕的企业时，保持完好无损的是企业的名声。"
+    source_page: "concepts/纺织业务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "1985 巴菲特致股东信"
+    source_letter_year: 1985
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-纺织业务-09"
+    text: |
+      "我希望这门生意能成功，于是一厢情愿地做出了一连串糟糕的决定。（我甚至又买了一家新英格兰纺织厂。）但一厢情愿只在迪士尼电影里能梦想成真；在商业上，它是毒药。"
+    source_page: "concepts/纺织业务"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["纺织", "伯克希尔"]
+    attribution: "2012 巴菲特致股东信"
+    source_letter_year: 2012
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股东导向-01"
+    text: |
+      "虽然我们的形式是公司制，但我们的态度是合伙关系。查理·芒格跟我把股东视为所有者合伙人，而我们自己则是执行合伙人。"
+    source_page: "concepts/股东导向"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+    attribution: "1983 巴菲特致股东信"
+    source_letter_year: 1983
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股东导向-02"
+    text: |
+      "虽然我们的首要目标是让全体伯克希尔股东从持股中获取的总收益最大化，但我们同样希望尽量减少某些股东以牺牲其他股东利益来获利的情形。"
+    source_page: "concepts/股东导向"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股东导向-03"
+    text: |
+      "我们不断寻找那些业务容易理解、经济特征持久且令人垂涎、由有能力且以股东利益为导向的管理层经营的大型企业。"
+    source_page: "concepts/股东导向"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+    attribution: "1991 巴菲特致股东信"
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股东导向-04"
+    text: |
+      "没有哪家公司会比伯克希尔更重视股东利益。30多年来，我们每年都会重申我们的《股东原则》，开头总是那句话：'虽然我们的形式是公司制，但我们的态度是合伙制。'这个与你们之间的承诺是刻在石头上的。"
+    source_page: "concepts/股东导向"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-股东导向-05"
+    text: |
+      "在极少数Murph的个人利益与股东利益有所偏差的时候，他毫不犹豫地站在股东这边。"
+    source_page: "concepts/股东导向"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+    attribution: "1995 巴菲特致股东信，评价汤姆·墨菲"
+    source_letter_year: 1995
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股东导向-06"
+    text: |
+      "虽然我们的形式是公司制，但我们的态度是合伙关系。查理·芒格跟我把股东视为所有者合伙人，而我们自己则是执行合伙人。我们并不把公司本身视为企业资产的最终拥有者，而是将公司看作一个渠道——通过这个渠道，股东们拥有这些资产。"
+    source_page: "concepts/股东导向"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+
+  - id: "web-concepts-股东导向-07"
+    text: |
+      "秉持这种所有者导向，我们的董事全部都是伯克希尔的主要股东。五位董事中至少有四位，其家族净资产的一半以上都是伯克希尔的股份。我们自己吃自己做的菜。"
+    source_page: "concepts/股东导向"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+
+  - id: "web-concepts-股东导向-08"
+    text: |
+      "虽然我们的首要目标是让全体伯克希尔股东从持股中获取的总收益最大化，但我们同样希望尽量减少某些股东以牺牲其他股东利益来获利的情形。这正是我们经营一家家族合伙企业时会追求的目标。"
+    source_page: "concepts/股东导向"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+
+  - id: "web-concepts-股东导向-09"
+    text: |
+      "一位妖娆的美女款款走向一位CEO，用那湿润的双唇娇声道：'只要你开口，我什么都愿意做——什么都行。'这位总裁毫不犹豫地回答：'那帮我把股票期权重新定价吧。'"
+    source_page: "concepts/股东导向"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+
+  - id: "web-concepts-股东导向-10"
+    text: |
+      "CEO们完全明白这道数学题，他们知道每派出一分钱的红利，所有已发行期权的价值就减少一分。但我从来没有在要求批准固定价格期权计划的股东委托书材料中，看到过对这种管理层与股东利益冲突的说明。"
+    source_page: "concepts/股东导向"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股东导向", "公司治理"]
+
+  - id: "web-concepts-股息-01"
+    text: |
+      "不受限制的收益只有在以下情况下才应当留存：有合理的前景表明公司每留存一美元，至少能为股东创造一美元的市值。"
+    source_page: "concepts/股息"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "1984 巴菲特致股东信"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-02"
+    text: |
+      "伯克希尔目前不派发股息，股票回购完全自主决定。每年到期的债务也微不足道。"
+    source_page: "concepts/股息"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-03"
+    text: |
+      "1994年我们从可口可乐收到的现金股息是7,500万美元。到2022年，这笔股息增长到了7.04亿美元。年年增长，跟过生日一样确定。"
+    source_page: "concepts/股息"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-04"
+    text: |
+      "请注意一个促成这项破纪录税款的关键因素：在1965年至2024年的同一时期内，伯克希尔股东仅收到过一次现金分红......我不记得当初为什么向伯克希尔董事会提出这个建议。现在想来简直像一场噩梦。"
+    source_page: "concepts/股息"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "2024 巴菲特致股东信"
+    source_letter_year: 2024
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-05"
+    text: |
+      "不受限制的收益只有在以下情况下才应当留存：有合理的前景——最好有历史业绩佐证——表明公司每留存一美元，至少能为股东创造一美元的市值。"
+    source_page: "concepts/股息"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "1984 巴菲特致股东信"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-06"
+    text: |
+      "如果当时这几家公司把赚到的钱全都发掉，我们现在几乎可以肯定一分钱也赚不到——甚至可能连本钱都没有了。"
+    source_page: "concepts/股息"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "1984 巴菲特致股东信"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-股息-07"
+    text: |
+      "1994年我们从可口可乐收到的现金股息是7,500万美元。到2022年，这笔股息增长到了7.04亿美元。年年增长，跟过生日一样确定。查理和我需要做的全部事情就是去兑现可口可乐的季度股息支票。"
+    source_page: "concepts/股息"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["股息", "股东回报"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能力圈-01"
+    text: |
+      "以极其务实的态度界定自己的专业能力圈，并在能力圈内果断行事；对于能力圈之外的提议
+    source_page: "concepts/能力圈"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能力圈", "投资纪律"]
+    attribution: "无论多么诱人——一概不予理会。\""
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能力圈-02"
+    text: |
+      "错过自己能力圈以外的大好机会并没有什么罪过。但有几次天大的好机会简直是送到了我嘴边，而且我完全有能力理解其价值，却还是错过了。"
+    source_page: "concepts/能力圈"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能力圈", "投资纪律"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能力圈-03"
+    text: |
+      "你只需要能够评估你能力圈之内的公司就够了。能力圈的大小并不重要；但清楚地知道它的边界在哪里，至关重要。"
+    source_page: "concepts/能力圈"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能力圈", "投资纪律"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能力圈-05"
+    text: |
+      "至关重要的是，我们要认清自己'能力圈'的边界，并老老实实呆在里面。即便如此，我们在股票和企业收购方面仍然会犯一些错误。但这些错误不会是那种灾难性的。"
+    source_page: "concepts/能力圈"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能力圈", "投资纪律"]
+    attribution: "2013 巴菲特致股东信"
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能源-01"
+    text: |
+      "查理和我对公用事业业务兴致勃勃。该业务去年创出了盈利新高，而且蓄势待发。在这个资本密集型行业中，新项目的投资规模往往很大。这类项目让伯克希尔有机会将大笔资金投入到回报率不错的地方。"
+    source_page: "concepts/能源"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能源", "行业"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能源-02"
+    text: |
+      "我们在现有运营区域的表现，将决定新的监管区域是否欢迎我们。"
+    source_page: "concepts/能源"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能源", "行业"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-能源-03"
+    text: |
+      "说到风能，爱荷华州就是美国的沙特阿拉伯。"
+    source_page: "concepts/能源"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["能源", "行业"]
+    attribution: "2016 巴菲特致股东信"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-航空业-01"
+    text: |
+      "投资者一次又一次地往国内航空业砸钱，为其无利可图的增长买单。对这些投资者来说，如果当年奥维尔·莱特在小鹰镇没能飞起来就好了：这个行业越发展壮大，投资者亏得越惨。"
+    source_page: "concepts/航空业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["航空业", "行业"]
+    attribution: "1992 巴菲特致股东信"
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-航空业-02"
+    text: |
+      "理查德·布兰森被问到如何才能变成百万富翁时说：'先成为一个亿万富翁，然后去买一家航空公司就行了。'你们的董事长不信这个邪。"
+    source_page: "concepts/航空业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["航空业", "行业"]
+    attribution: "1996 巴菲特致股东信"
+    source_letter_year: 1996
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-航空业-03"
+    text: |
+      "还记得我们在全美航空和所罗门兄弟的险些灾难中死里逃生吗？我可记得清清楚楚。"
+    source_page: "concepts/航空业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["航空业", "行业"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-01"
+    text: |
+      "对于金融衍生品及其相关交易，查理和我的看法完全一致：我们视之为定时炸弹，不论对参与交易的各方还是整个经济体系而言都是如此。"
+    source_page: "concepts/衍生品"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-02"
+    text: |
+      "衍生品就是大规模杀伤性金融武器，其危险目前虽然潜伏，但具有致命的杀伤力。"
+    source_page: "concepts/衍生品"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-03"
+    text: |
+      "就像地狱一样，衍生品交易易进难出。（当然还有很多别的相似之处。）"
+    source_page: "concepts/衍生品"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2004 巴菲特致股东信"
+    source_letter_year: 2004
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-04"
+    text: |
+      "一个试图揪着猫尾巴把猫扛回家的人，会学到一个用其他任何方式都学不到的教训。如果马克·吐温还在世，他也许会试试去清算一个衍生品业务。"
+    source_page: "concepts/衍生品"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-07"
+    text: |
+      "涉及多个参考变量和遥远结算日期的合约，给交易双方使用天马行空的假设提供了最大的空间......在极端情况下，所谓的'按模型计价'就沦为了我所说的'按神话计价'。"
+    source_page: "concepts/衍生品"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-08"
+    text: |
+      "一个参与者可能自认为很谨慎，认为自己的大额信用风险已经充分分散，因此不构成危险。但在某些情况下，导致A公司应收款变坏的外部事件，同样会影响B公司到Z公司的应收款。历史教训告诉我们，在太平盛世时看似互不相干的问题，在危机来临时往往会以做梦也想不到的方式相互关联。"
+    source_page: "concepts/衍生品"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2002 巴菲特致股东信"
+    source_letter_year: 2002
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-09"
+    text: |
+      "一个试图揪着猫尾巴把猫扛回家的人，会学到一个用其他任何方式都学不到的教训。如果马克·吐温还在世，他也许会试试去清算一个衍生品业务。过不了几天，他就会觉得还是揪猫尾巴更好。"
+    source_page: "concepts/衍生品"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2005 巴菲特致股东信"
+    source_letter_year: 2005
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-10"
+    text: |
+      "我们长期以来一直投资于查理和我认为定价有误的衍生品合约，正如我们努力投资于定价有误的股票和债券一样。"
+    source_page: "concepts/衍生品"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2009 巴菲特致股东信"
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-衍生品-11"
+    text: |
+      "我们永远不会从事可能导致突然需要大笔资金的运营或投资活动。这意味着我们不会让伯克希尔暴露在大额短期到期债务之下，也不会签订可能引发大规模追加担保品的衍生品合约或其他商业安排。"
+    source_page: "concepts/衍生品"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["衍生品", "风险"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-诚信-01"
+    text: |
+      "我们可以承受亏损
+    source_page: "concepts/诚信"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["诚信", "管理层"]
+    attribution: "甚至是巨额亏损。但我们不能失去声誉——哪怕是一丝一毫的声誉。\""
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-诚信-02"
+    text: |
+      "以合理的价格买进具有良好经济基础、同时由诚实且能干的人经营的企业
+    source_page: "concepts/诚信"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["诚信", "管理层"]
+    attribution: "在将来一样能够获得不错的回报。\""
+    source_letter_year: 1994
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-诚信-03"
+    text: |
+      "无论一家公司的前景多么诱人，我们都不愿与缺乏令人钦佩品质的管理者为伍。跟坏人做生意永远不会有好结果。"
+    source_page: "concepts/诚信"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["诚信", "管理层"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-诚信-04"
+    text: |
+      "正是因为不愿立即面对坏消息，所罗门公司一个原本很容易化解的问题，才演变成了几乎让一家拥有8,000名员工的公司倒闭的大祸。"
+    source_page: "concepts/诚信"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["诚信", "管理层"]
+    attribution: "2010 巴菲特致股东信"
+    source_letter_year: 2010
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-账面价值-01"
+    text: |
+      "在现任管理层接手的22年以来，每股账面价值由19.46美元增长到2,073.06美元，年复合增长率为23.3%。在计算每股账面价值时，分子与分母同样重要：过去22年间，公司净资产增长了106倍，而流通在外的股份却增加不到1%。"
+    source_page: "concepts/账面价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "1986 巴菲特致股东信"
+    source_letter_year: 1986
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-账面价值-02"
+    text: |
+      "当然，真正重要的是每股内在价值，而非账面价值。账面价值是一个会计概念，衡量的是一家企业投入的资本，包括留存收益在内。内在价值则是对一家企业在其剩余寿命中所能产出的现金流的折现估计值。"
+    source_page: "concepts/账面价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-账面价值-03"
+    text: |
+      "以那个价格买入这只股票，就像捡起一根别人扔掉的、只剩最后一口的雪茄烟蒂。烟蒂虽然又丑又湿，但这最后一口是免费的。然而，享受过那片刻愉悦之后，就再没什么可指望的了。"
+    source_page: "concepts/账面价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "2014 伯克希尔的过去现在与未来"
+    source_letter_year: 2014
+    source_letter_category: "special-letter"
+
+  - id: "web-concepts-账面价值-04"
+    text: |
+      "BNSF在资产负债表上记录着700亿美元的账面价值，但我估计要复制这些资产至少需要5,000亿美元和几十年时间。"
+    source_page: "concepts/账面价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-账面价值-05"
+    text: |
+      "账面价值这张记分卡越来越脱离经济现实。"
+    source_page: "concepts/账面价值"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-账面价值-06"
+    text: |
+      "会计准则要求我们旗下的运营企业以远低于其当前价值的金额计入账面价值，这种偏差近年来越来越大。随着时间推移，伯克希尔很可能将成为自身股票的重要回购方，而回购价格将高于账面价值但低于我们估计的内在价值。这种回购的数学原理很简单：每一笔交易都会使每股内在价值上升，而每股账面价值下降。两者结合的结果，是账面价值这张记分卡越来越脱离经济现实。"
+    source_page: "concepts/账面价值"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["账面价值", "估值"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-01"
+    text: |
+      "资本配置对企业和投资管理至关重要。正因如此，我们认为管理层和股东都应当认真思考：在什么情况下应该留存收益，在什么情况下应该分配收益。"
+    source_page: "concepts/资本配置"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "1984 巴菲特致股东信"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-02"
+    text: |
+      "大多数老板之所以能爬到高位，是因为他们在营销、生产、工程、行政管理或者
+    source_page: "concepts/资本配置"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "有时候——公司政治等领域出类拔萃。一旦成为CEO，他们面对的却是一项全新的职责——资本配置。\"——1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-03"
+    text: |
+      "我说的这'一门课'就是资本配置，而我1999年的成绩毫无疑问只有D。"
+    source_page: "concepts/资本配置"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "1999 巴菲特致股东信"
+    source_letter_year: 1999
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-04"
+    text: |
+      "有时候，我在评估伯克希尔收购企业的未来经济前景时会判断失误
+    source_page: "concepts/资本配置"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "每一次都是资本配置上的差错。\"——2024 巴菲特致股东信"
+    source_letter_year: 2024
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-05"
+    text: |
+      "我们在资本配置上的灵活性
+    source_page: "concepts/资本配置"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "愿意将大笔资金被动投资于非控股企业——使我们相比那些只做自己能运营的收购的公司，拥有显著优势。\"——2013 巴菲特致股东信"
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-06"
+    text: |
+      "查理跟我在伯克希尔的活儿其实很轻松：我们几乎什么都不做，除了配置资本。即便如此，我们也不是特别勤快。不过我们有一个借口：在资本配置领域，做得多并不等于做得好。事实上，在投资和并购领域，过于疯狂的行动往往适得其反。因此，查理跟我通常就是静静地坐着等电话铃响。"
+    source_page: "concepts/资本配置"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "1998 巴菲特致股东信"
+    source_letter_year: 1998
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-07"
+    text: |
+      "有时候我们能够买到符合标准的公司的控制权。但更多时候，我们在上市公司中找到我们所需的特质，通常买入5%到10%的股权。我们这种双管齐下的大规模资本配置方法在美国企业界很少见，但它有时会给我们带来重要的优势。"
+    source_page: "concepts/资本配置"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "2018 巴菲特致股东信"
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-资本配置-08"
+    text: |
+      "在这个国家，能真正对伯克希尔产生实质影响的公司只剩下屈指可数的几家，而且它们早已被我们和别人反复筛选过了。有些我们能估值，有些不能。即便能估值，价格也得有足够的吸引力。在美国之外，对伯克希尔来说基本没有什么有意义的资本配置选项。总而言之，我们不可能再有令人瞠目的表现。"
+    source_page: "concepts/资本配置"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["资本配置", "资本运用"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-透视盈余-01"
+    text: |
+      "在我们看来，衡量伯克希尔基本盈利能力的最佳方法是'透视收益'法，即在我们自己的报告经营收益基础上，加上被投资公司留存收益中属于我们的份额，两种情况下均不包括资本利得。"
+    source_page: "concepts/透视盈余"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["透视盈余", "会计"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-透视盈余-02"
+    text: |
+      "我认为衡量我们收益最好的方法是用'透视收益'的概念，计算方式如下：取2.5亿美元，这大约是我们在1990年应占的被投资公司保留经营收益；扣除3,000万美元
+    source_page: "concepts/透视盈余"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["透视盈余", "会计"]
+    attribution: "如果这2.5亿美元以股息形式支付给我们，我们需要额外缴纳的税款；将余下的2.2亿美元加上我们3.71亿美元的报告经营收益。这样，我们1990年的'透视收益'大约为5.9亿美元。\"——1990 巴菲特致股东信"
+    source_letter_year: 1990
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-透视盈余-03"
+    text: |
+      "虽然没有任何单一数字能做到完美，但我们相信透视收益比GAAP数字更能准确反映伯克希尔的真实盈利状况。"
+    source_page: "concepts/透视盈余"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["透视盈余", "会计"]
+    attribution: "1992 巴菲特致股东信"
+    source_letter_year: 1992
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-透视盈余-04"
+    text: |
+      "要使伯克希尔的内在价值平均每年增长15%，我们的透视收益也必须以大致相同的速度增长。我们需要现有被投资公司给予大力支持，同时也需要不时增添新的成员，才能达到这15%的目标。"
+    source_page: "concepts/透视盈余"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["透视盈余", "会计"]
+    attribution: "1989 巴菲特致股东信"
+    source_letter_year: 1989
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-透视盈余-06"
+    text: |
+      "你必须判断的是，这些未分配的收益对我们的价值，是否等同于我们已经入账的那些收益。我们相信它们是同等价值的——甚至可能更有价值。之所以得出这个'一鸟在林胜于二鸟在手'的结论，原因在于这些被投资公司的留存收益，是由才华横溢、以股东利益为导向的管理者在运用，他们有时能在自己的业务中找到比我们更好的资金用途。"
+    source_page: "concepts/透视盈余"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["透视盈余", "会计"]
+
+  - id: "web-concepts-通货膨胀-01"
+    text: |
+      "高通胀率相当于对资本额外征了一次税，使得大部分企业投资变得不明智......一般纳税投资者现在就好比在一台不断加速向下滑动的自动扶梯上拼命往上跑，结果净进步为零。"
+    source_page: "concepts/通货膨胀"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-02"
+    text: |
+      "政府决定了货币的最终价值，而系统性力量有时会驱使政府采取导致通货膨胀的政策。这些政策时不时就会失控。"
+    source_page: "concepts/通货膨胀"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-03"
+    text: |
+      "如果财政上胡来，纸币的价值可以灰飞烟灭......固定利息的债券无法抵御失控的通货膨胀。"
+    source_page: "concepts/通货膨胀"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "2024 巴菲特致股东信"
+    source_letter_year: 2024
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-04"
+    text: |
+      "伯克希尔也能在一定程度上抵御通货膨胀的失控，但这个属性远非完美。巨额且根深蒂固的财政赤字是有后果的。"
+    source_page: "concepts/通货膨胀"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2022
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-05"
+    text: |
+      "高通胀率相当于对资本额外征了一次税，使得大部分企业投资变得不明智——至少以给股东创造正的实际投资回报这个标准来衡量的话。"
+    source_page: "concepts/通货膨胀"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-06"
+    text: |
+      "因为企业的平均股本回报率已被通胀对资本征收的隐性税和对股利及留存收益增值征收的显性税完全抵销。"
+    source_page: "concepts/通货膨胀"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "1980 巴菲特致股东信"
+    source_letter_year: 1980
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-07"
+    text: |
+      "这种受青睐的企业必须具备两个特征：(1) 能够相当轻松地提价（即使产品需求平稳、产能尚未充分利用），而不必担心市场份额或销量的大幅流失；(2) 只需少量额外的资本投入，便能承受营业额的大幅增长（这种增长更多来自通胀而非实际产量）。"
+    source_page: "concepts/通货膨胀"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "1981 巴菲特致股东信"
+    source_letter_year: 1981
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-通货膨胀-08"
+    text: |
+      "过去一个世纪，这些投资工具摧毁了很多国家投资者的购买力，即使这些持有人按时收到了利息和本金。而且，这种丑陋的结果将来一定会反复重现。政府决定了货币的最终价值，而系统性力量有时会驱使政府采取导致通货膨胀的政策。"
+    source_page: "concepts/通货膨胀"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["通货膨胀", "宏观"]
+    attribution: "2011 巴菲特致股东信"
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-铁路运输-01"
+    text: |
+      "铁路对美国经济的未来至关重要。从成本、燃料消耗和碳排放强度来看，铁路显然是将重型货物运送到遥远目的地的最高效方式。没有铁路，这个国家就运转不了。"
+    source_page: "concepts/铁路运输"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["铁路", "行业"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-铁路运输-02"
+    text: |
+      "要复制这些资产至少需要5,000亿美元和几十年时间……这也解释了为什么2010年我们能以重置价值的一小部分就买下了BNSF。"
+    source_page: "concepts/铁路运输"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["铁路", "行业"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-铁路运输-03"
+    text: |
+      "一百年后，BNSF仍将是这个国家和伯克希尔的重要资产。你们尽管放心。"
+    source_page: "concepts/铁路运输"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["铁路", "行业"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-银行业-01"
+    text: |
+      "银行业不必是一个糟糕的生意。如果管理层能够管好贷款和控制成本，净资产收益率可以达到20%或更高。但如果管理层犯下严重错误
+    source_page: "concepts/银行业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["银行业", "行业"]
+    attribution: "这在银行业并不罕见——股东就会血本无归。\""
+    source_letter_year: 1991
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-银行业-02"
+    text: |
+      "我还犯了一些其他已经显而易见的错误。2008年我花了2.44亿美元买了两家在我看来很便宜的爱尔兰银行的股票。到年底亏损89%。网球场上的人会管我这种失误叫'非受迫性失误'。"
+    source_page: "concepts/银行业"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["银行业", "行业"]
+    attribution: "2008 巴菲特致股东信"
+    source_letter_year: 2008
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-长期持有-01"
+    text: |
+      "当我们持有既拥有出色业务又拥有出色管理层的公司股份时，我们最喜欢的持有期限是
+    source_page: "concepts/长期持有"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+    attribution: "永远。\""
+    source_letter_year: 1988
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-长期持有-02"
+    text: |
+      "我们不会仅仅因为股价上涨了或者我们已经持有了很长时间就卖出。（在华尔街的种种格言中，最愚蠢的莫过于'赚到钱的人不会破产。'）"
+    source_page: "concepts/长期持有"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+    attribution: "1987 巴菲特致股东信"
+    source_letter_year: 1987
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-长期持有-03"
+    text: |
+      "符合这些标准的股票，我们打算长期持有；事实上，我们最大的一笔股权投资是467,150股华盛顿邮报B股，成本约1060万美元，我们计划永久持有。"
+    source_page: "concepts/长期持有"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+    attribution: "1975 巴菲特致股东信"
+    source_letter_year: 1975
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-长期持有-04"
+    text: |
+      "可口可乐和运通给我们的启示是什么？当你找到一家真正优秀的企业，紧紧抓住它。耐心总有回报，一家优秀的企业足以抵消一堆不可避免的平庸决策。"
+    source_page: "concepts/长期持有"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-长期持有-06"
+    text: |
+      每当查理和我为伯克希尔旗下的保险公司购买普通股时，我们的态度就好像是在收购一家私营企业的全部股权一样。我们考察的是这家企业的经济前景、负责经营的管理层，以及我们必须支付的价格。我们从不设定卖出的时间或价格。事实上，只要预期企业的内在价值能以令人满意的速度增长，我们愿意无限期地持有一只股票。在做投资时，我们把自己定位为企业分析师——而非市场分析师、宏观经济分析师，甚至也不是证券分析师。
+    source_page: "concepts/长期持有"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+
+  - id: "web-concepts-长期持有-07"
+    text: |
+      不过我们需要强调的是，我们不会仅仅因为股价上涨了或者我们已经持有了很长时间就卖出。（在华尔街的种种格言中，最愚蠢的莫过于"赚到钱的人不会破产。"）只要所持企业预期的股本回报率令人满意、管理层能干且正直、市场没有过度高估，我们非常乐意无限期地持有一只股票。
+    source_page: "concepts/长期持有"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+
+  - id: "web-concepts-长期持有-08"
+    text: |
+      整个2023年，我们没有买卖一股运通或可口可乐——延续了我们如瑞普·凡·温克尔般的酣睡，如今已经持续了远超二十年。去年两家公司再次通过增加利润和分红来回报我们的"不作为"。事实上，2023年我们在运通上对应的收益已经大大超过了当初购买它时花的13亿美元。
+    source_page: "concepts/长期持有"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+
+  - id: "web-concepts-长期持有-09"
+    text: "可口可乐和运通给我们的启示是什么？当你找到一家真正优秀的企业，紧紧抓住它。耐心总有回报，一家优秀的企业足以抵消一堆不可避免的平庸决策。"
+    source_page: "concepts/长期持有"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["长期持有", "投资策略"]
+
+  - id: "web-concepts-集中投资-01"
+    text: |
+      "如果你的后宫有四十个女人，你永远也不会真正了解她们中的任何一个。"
+    source_page: "concepts/集中投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+    attribution: "1984 巴菲特致股东信（引用比利·罗斯）"
+    source_letter_year: 1984
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-集中投资-02"
+    text: |
+      "我们相信，集中持股的策略完全可以降低风险，前提是它能促使投资者在买入之前更加深入地思考一项业务，并对其经济特征有更高的舒适度。"
+    source_page: "concepts/集中投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-集中投资-03"
+    text: |
+      "能够同时满足这些条件的投资机会并不多见，这也是我们集中持股的原因之一。我们实在找不到一百只符合我们投资要求的股票。但集中持有少数我们认定具有吸引力的标的，我们感到十分踏实。"
+    source_page: "concepts/集中投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+    attribution: "1976 巴菲特致股东信"
+    source_letter_year: 1976
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-集中投资-04"
+    text: |
+      "我个人超过99%的身家都押在伯克希尔身上，而且很乐意让我的太太或基金会继续保持这种集中投资。"
+    source_page: "concepts/集中投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+    attribution: "2003 巴菲特致股东信"
+    source_letter_year: 2003
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-集中投资-05"
+    text: |
+      "当'笨钱'认识到自己的局限时，它就不再笨了。"
+    source_page: "concepts/集中投资"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+    attribution: "1993 巴菲特致股东信"
+    source_letter_year: 1993
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-concepts-集中投资-06"
+    text: |
+      "我们的投资选择立足长期，所考量的因素与100%收购一家企业时并无二致：（1）良好的长期经济特质；（2）称职且诚实的管理层；（3）以私有化标准衡量具有吸引力的买入价格；（4）我们所熟悉的行业，且有能力判断其长期商业特征。能够同时满足这些条件的投资机会并不多见，这也是我们集中持股的原因之一。我们实在找不到一百只符合我们投资要求的股票。"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-集中投资-07"
+    text: |
+      "我们采取的策略与标准的分散化教条背道而驰。因此很多专家会说我们的策略一定比传统投资者的风险更高。我们不同意。我们相信，集中持股的策略完全可以降低风险，前提是它能促使投资者在买入之前更加深入地思考一项业务，并对其经济特征有更高的舒适度。在表达这个观点时，我们对风险的定义与字典一样，就是'遭受损失或伤害的可能性'。"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-集中投资-08"
+    text: |
+      "按照贝塔理论，一只相对于大盘大幅下跌的股票——就像1973年我们买入华盛顿邮报时那样——在低价位时反而比在高价位时'风险更高'。如果有人以极低的价格把整家公司卖给你，难道你也会觉得这笔交易风险更高吗？"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-集中投资-09"
+    text: |
+      "另一种需要广泛分散的情况是：一个投资者虽然看不懂具体行业的经济特征，但相信长期持有美国整体产业是有利的。这样的投资者应该广泛持有大量公司的股票，并把买入时间拉长。例如，通过定期投资指数基金，一个什么都不懂的投资者往往能跑赢大多数投资专家。矛盾的是，当'笨钱'认识到自己的局限时，它就不再笨了。"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-集中投资-10"
+    text: |
+      "如果你的后宫有四十个女人，你永远也不会真正了解她们中的任何一个。"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-集中投资-11"
+    text: |
+      "我个人超过99%的身家都押在伯克希尔身上，而且很乐意让我的太太或基金会继续保持这种集中投资。"
+    source_page: "concepts/集中投资"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["集中投资", "投资策略"]
+
+  - id: "web-concepts-零售与消费-02"
+    text: |
+      "当你找到一家真正优秀的企业，紧紧抓住它。耐心总有回报，一家优秀的企业足以抵消一堆不可避免的平庸决策。"
+    source_page: "concepts/零售与消费"
+    type: "web-quote"
+    extraction_source: "website"
+    tags: ["零售", "消费"]
+    attribution: "2023 巴菲特致股东信"
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-B夫人-01"
+    text: |
+      "B夫人简单地告诉我公司的实际情况，她的话对我来说就够了。"
+    source_page: "people/B夫人"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["B夫人", "经理人"]
+    attribution: "2013 巴菲特致股东信
+\"她89岁时把股份卖给了我，一直工作到103岁。退休后第二年她就去世了。我经常把这个事例告诉伯克希尔任何一个动了退休念头的经理人。\""
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-托德·库姆斯-01"
+    text: |
+      "找到这两位简直是中了大奖。2012年，他们两位都以两位数的优势跑赢了标普500指数。就连我也被远远甩在了身后。"
+    source_page: "people/托德·库姆斯"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["库姆斯", "投资经理"]
+    attribution: "2012 巴菲特致股东信
+\"雇用这两个人是我做过的最好的决定之一。\""
+    source_letter_year: 2012
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-格雷厄姆-01"
+    text: |
+      "我19岁读到本杰明·格雷厄姆的《聪明的投资者》以来，这种思维方式就一直是我投资行为的基石。那时候我恍然大悟，眼前的迷雾一扫而空。"
+    source_page: "people/格雷厄姆"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["格雷厄姆", "导师"]
+    attribution: "2004 巴菲特致股东信
+\"本杰明·格雷厄姆，我的老师也是我的朋友，很久以前描述过一种面对市场波动的心态，我认为这是对投资成功最有帮助的一番话。他说，你可以把股票市场的报价想象成来自一位异常殷勤的先生——市场先生——的出价。\""
+    source_letter_year: 2004
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-格雷格·阿贝尔-01"
+    text: |
+      "阿吉特和格雷格都有罕见的才华，伯克希尔的血液流淌在他们的血管里。"
+    source_page: "people/格雷格·阿贝尔"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["阿贝尔", "继任者"]
+    attribution: "2018 巴菲特致股东信
+\"格雷格·阿贝尔将于年底接任掌门人。他是一位杰出的管理者、勤勉不懈的实干家，也是坦诚直率的沟通者。祝愿他任期长久。\""
+    source_letter_year: 2018
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-泰德·韦施勒-01"
+    text: |
+      "两位都拥有杰出的投资才能，而且对伯克希尔全心全意。他们具备的头脑、判断力和品格，完全能够在查理和我不再管理伯克希尔时接管我们的整个投资组合。"
+    source_page: "people/泰德·韦施勒"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["韦施勒", "投资经理"]
+    attribution: "2011 巴菲特致股东信
+\"找到这两位简直是中了大奖。2012年，他们两位都以两位数的优势跑赢了标普500指数。就连我也被远远甩在了身后。\""
+    source_letter_year: 2011
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-芒格-01"
+    text: |
+      "查理才是今天这个伯克希尔的'建筑师'，而我只是执行他蓝图的'总承包商'，日复一日地搬砖施工。"
+    source_page: "people/芒格"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["芒格", "合伙人"]
+    attribution: "2023 巴菲特致股东信
+\"他给我的蓝图很简单：忘掉你那套以好价格买平庸生意的门道，反过来，要以合理的价格买入伟大的生意。\""
+    source_letter_year: 2023
+    source_letter_category: "shareholder-letter"
+
+  - id: "web-people-阿吉特·贾恩-01"
+    text: |
+      "如果查理、阿吉特和我同在一条正在下沉的船上——而你只能救一个人——请游向阿吉特。"
+    source_page: "people/阿吉特·贾恩"
+    type: "web-blockquote"
+    extraction_source: "website"
+    tags: ["贾恩", "保险"]
+    attribution: "2009 巴菲特致股东信
+\"我们第一次见面是在一个周六早上，我赶紧问阿吉特有什么保险行业经验。他回答说：'没有。'我说：'没有人是完美的。'然后就聘用了他。那天真是我的幸运日。\""
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "local-companies-bank-of-america-md-01"
+    text: |
+      "我们很可能会在期权到期前购入。同时，请大家了解，美国银行实际上是我们的第五大股票投资，我们非常看重它。"——2013 巴菲特致股东信 "未列入上表——*但很重要*——的是我们持有的50亿美元美国银行优先股。这些优先股每年为我们带来3亿美元的股息，同时附带一份价值可观的认股权证。"——2016 巴菲特致股东信 "截至2022年底，伯克希尔是其中八家巨头的最大股东：美国运通、美国银行、雪佛龙、可口可乐、惠普、穆迪、西方石油和派拉蒙全球。"
+    source_page: "companies/bank-of-america.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["美国银行（Bank of America）"]
+    page_title: "美国银行（Bank of America）"
+    attribution: "2022 巴菲特致股东信"
+    source_letter_year: 2013
+    source_letter_category: "shareholder-letter"
+
+  - id: "local-concepts-compound-interest-md-03"
+    text: "就这样开始了我们通往2023年的旅程。这是一条颠簸的路，一路上汇聚了几重因素：我们股东*持续*的储蓄（也就是利润的留存再投资），复利的力量，对*重大*失误的规避——以及最重要的——美国顺风。没有伯克希尔，美国照样行；反过来可*不成*。"
+    source_page: "concepts/compound-interest.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["复利（Compounding）"]
+    page_title: "复利（Compounding）"
+
+  - id: "local-concepts-long-term-holding-md-04"
+    text: "可口可乐和运通给我们的启示是什么？当你找到一家真正优秀的企业，紧紧抓住它。*耐心*总有回报，一家优秀的企业足以抵消一堆不可避免的平庸决策。"
+    source_page: "concepts/long-term-holding.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["长期持有（Buy and Hold）"]
+    page_title: "长期持有（Buy and Hold）"
+
+  - id: "local-concepts-mr-market-md-02"
+    text: |
+      事实上，真正的投资者*欢迎*波动还来不及呢。本杰明·格雷厄姆在《聪明的投资者》第八章做过解释。他在书中介绍了"市场先生"——一个殷勤的家伙，每天都会出现在你面前，随时愿意买你的股票或卖给你，任君选择。这位老兄越是喜怒无常，投资者的机会就越多。道理很简单：市场剧烈波动意味着好公司时不时会出现不合理的低价。很难想象，为什么这种低价的出现会被视为增加了投资者的风险。
+    source_page: "concepts/mr-market.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["市场先生（Mr. Market）"]
+    page_title: "市场先生（Mr. Market）"
+
+  - id: "local-partnership-letters-1957-md-01"
+    text: |
+      我认为股市整体定价高于内在价值，尤其是蓝筹股。如果判断属实，则所有股票——不论估值高低——都面临大幅下跌的可能。不管怎样，我认为五年后回头再看，人们不太可能觉得现在的价格是便宜的。即便全面熊市来袭，我们的套利类（work-outs）投资的市场价值受到的冲击也应该相当有限。 如果整体市场回归低估状态，我们可能会把全部资金都押在低估类（general issues）上，届时或许还会借钱加仓。反之，若市场继续大幅走高，我们的策略是在低估类获利时逐步了结，同时加大套利类投资组合的比重。 以上这些话并不是想说市场分析是我考虑问题的首要出发点。无论何时，我的主要精力始终放在寻找严重低估的证券上。
+    source_page: "partnership-letters/1957.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1957", "信件"]
+    page_title: "1957年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1957
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1958-md-01"
+    text: |
+      "相对而言，我们在熊市里应该比牛市里表现更好。所以看我们今年的成绩，要考虑到这本来就是适合我们发挥的年份。在大盘整体大幅上涨的年份，只要能跟上指数涨幅，我就心满意足了。"
+    source_page: "partnership-letters/1958.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1958", "信件"]
+    page_title: "1958年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1958
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1959-md-01"
+    text: |
+      "尽管我们非常看好自己的投资组合，但Tri-Continental的持仓在1959年的市场表现还是让我们失望了。1959年这样的市场，投资者的情绪与热情主导一切，受过价值投资训练、以长期视角操作的基金经理在这种环境里步履维艰。也许我们的太空靴还没调试好。不过我们认为，Tri-Continental这样的机构受托管理的是股东的资金，承担风险是有边界的
+    source_page: "partnership-letters/1959.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1959", "信件"]
+    page_title: "1959年巴菲特致合伙人信（中文全文）"
+    attribution: "我们相信目前的投资组合已经为来年做好了准备。\""
+    source_letter_year: 1959
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1962-mid-year-md-01"
+    text: |
+      **一个预测** 老读者（我这是王婆卖瓜，自卖自夸了）看到我开口预测，肯定觉得我反常。预测这件事，我一向敬而远之，现在也是——通常意义上如此。 我肯定不会预测明后两年的宏观经济或股市走向，因为我完全不知道。 不过有一点我相当确定：今后十年里，有几年大盘会涨20%到25%，有几年会跌差不多的幅度，其余大多数年份则夹在中间。哪年涨、哪年跌，我毫无头绪，长期投资者也不必太在意。 放眼足够长的时间，我认为道指含股息和市值增长的年复合收益率大概在5%到7%之间。这几年大市涨得不少，但要是期望大市长期能超过这个水平，恐怕要失望了。 我们的工作是年复一年积累相对道指的超额收益，不必太纠结某一年的绝对结果是正还是负。一年里，若我们跌15%而道指跌25%，在我看来，比我们和道指都涨20%的年份要好得多。我和合伙人一再强调这一点，也亲眼看着他们点头，有人深信不疑，有人半信半疑。 这一点对我非常重要：我希望你不仅在脑子里认同这个逻辑，更要打心底里接受它。 正如在介绍我们投资方法时所说的，我们相对道指最出色的年份，很可能出现在下跌或横盘的市场里。因此，我们取得的超额优势会时多时少，差异相当大。有些年份我们肯定会落后道指，但如果从长期来看，我们能平均每年跑赢道指10个百分点，我就认为这是令人满意的结果。 具体而言：如果某年市场下跌35%或40%（今后十年里某一年出现这种情况的概率相当大，但谁也不知道是哪年），我们应该只跌15%或20%；如果道指基本持平，我们应该能涨约10个百分点；如果道指涨超20%，我们很难跟上。长期保持这样的表现，假设道指年复合收益率在5%到7%，我们的目标是每年15%到17%。 这些预期听起来或许有些大胆，等到1965年或1970年回头来看，很可能显得更加大胆
+    source_page: "partnership-letters/1962-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1962-mid-year", "信件"]
+    page_title: "1962年巴菲特致合伙人信（中文全文）"
+    attribution: "也可能完全证明是错的。但我认为合伙人有权知道我的真实想法，尽管这一行的特点就是让预期很容易出错。单独某一年，波动可能相当剧烈。1961年正是如此，幸运的是，波动的方向是向上的。可不能每次都这么走运！"
+    source_letter_year: 1962
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-01"
+    text: |
+      （1）按道指年度涨跌计算，含当年股息。 （2）1957—1961年数据为之前全年管理的所有有限合伙人账户的综合业绩，已扣除经营费用，未计入有限合伙人利息及普通合伙人分成。 （3）1957—1961年数据根据前列合伙基金收益率计算得出，已按现行合伙协议扣除普通合伙人分成。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-02"
+    text: |
+      **低估类（Generals）**——这类投资是低估的股票，判断标准以定量分析为主，但定性因素同样受到高度重视。通常来说，这类投资几乎看不出近期股价上涨的具体催化剂。这些股票既不光鲜，也没有市场追捧。它们唯一的优势就是价格低廉——通过审慎分析可以看出，公司的市值远低于产业资本对其的合理估值。我再次强调：定量分析是第一位的、是根本，但定性同样重要。我们喜欢优秀的管理层，喜欢有前途的行业，也希望看到某种"催化剂"能打破原本死气沉沉的管理层或股东群体的惰性——但归根结底，我们要买得值。低估类与道指的走势高度同步：道指大幅下跌时，低估类也会跟着大跌；反之，在市场强劲上行的年份，低估类应该表现最为出色。长期来看，我们期望它能帮助我们实现领先道指的目标。 **套利类（Workouts）**——这类投资是有时间表可循的。机会来自各类公司行动——出售、并购、重组、分拆等等。我们做这类投资，不依赖传闻或"内幕消息"，只看公司的公开公告。在报纸上白纸黑字读到了，我们才会出手。套利类投资有时也会受大盘影响，但主要风险不是市场涨跌，而是中途出现意外导致预期进展落空——常见的意外包括反垄断等政府干预、股东否决、税收政策限制等。许多套利投资的账面毛利看起来不高。一位朋友说，这是在别人已经赚了9角5分之后，再去捡最后那几分钱。但正因为确定性高、持有时间短，年化收益率算下来其实相当不错。套利类每年贡献的绝对利润比低估类更稳定。在市场下跌的年份，套利类积少成多，能帮我们积累起相当大的领先优势；在牛市中，它则会拖累我们的整体业绩。长期来看，我认为套利类能与低估类一样实现我们跑赢道指的目标。 **控制类（Controls）**——这类投资比较罕见，但一旦出手，规模往往不小。有的是一开始就通过大宗交易建立控制性持股；有的则是从低估类发展而来——某只低估股的价格在低位徘徊太久，让我们得以持续买入，最终取得部分或完全控股的地位，能够对公司施加影响。到了这个阶段，我们是主动介入还是保持相对被动，取决于我们对公司前景和管理层能力的判断。最近几个月，我们一直在大量买入一只低估类股票，这家公司管理层优秀、策略合理。如果我们持续买入后在某个时点实现了控股，我们大概率会保持非常被动的姿态，不会干预公司的日常经营。 我们不愿为了主动而主动。在其他条件相同的情况下，我更乐意放手让别人去干。不过，如果必须主动介入才能让资本得到最优配置，大家尽管放心——我们绝不会袖手旁观。 不论主动还是被动，控制类投资有一点是必须做到的：买入时就要把利润锁定在里面。这类投资的先决条件是一个有吸引力的买入价格。一旦取得控股权，我们投资价值的高低，就不再取决于市场那时常失去理智的报价，而是企业本身的价值。 我们有意愿、也有财力去取得控股地位，这使我们在低估类的很多持仓上都具备了进退自如的灵活性：如果市场回心转意，股价自然会上涨；如果市场仍然视而不见，我们就继续买入，直到公司成为我们的，届时评判我们判断正确与否的，是公司本身，而不是市场。 衡量控制类的投资回报，至少需要几年时间。按部就班地买入本身就需要时间，此后还可能需要改善管理层、重新配置资本、推动出售或并购等——这一切都决定了控制类投资必须以年而非月来度量。也正因如此，在控制类投资中，我们要求利润空间必须足够大；如果看起来空间有限，我们就直接放弃。 在买入阶段，控制类的走势与道指基本同步；进入后期阶段，其表现则更接近套利类。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-03"
+    text: |
+      （1）一封税务函，其中包含申报1963年联邦所得税所需的全部巴菲特合伙基金数据。税务申报请以本函为唯一依据。 （2）毕马威会计师事务所出具的1963年审计报告，其中载有巴菲特合伙基金的运营情况、财务状况以及各合伙人的资本账户数据。 （3）一封由我签署的函件，证明您在1964年1月1日的巴菲特合伙基金权益金额，该数字与审计报告中的数字完全一致。 （4）合伙协议附件"A"，其中列有全体合伙人名单。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-04"
+    text: |
+      （1）利率6.5%的债券，赎回价104.25。在卖盘完成前持续计息，完成时予以赎回。在外流通总额650万美元，交易完成前，我们买入了其中面值264,000美元的债券。 （2）普通股约370万股，其中高管和董事持有约40%。委托书估算清算后每股可得7.42美元。从交易宣布到最终完成的约六个月时间里，我们共买入64,035股。 （3）认股权证650,000份，行权价每股3.50美元。以委托书估算的7.42美元清算价计算，每份认股权证的套利收益约为3.92美元。六个月内，我们买到了83,200份认股权证，约占总发行量的13%。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-05"
+    text: |
+      6月18日，董秘表示："联合石油已收到通知，国税局初步拟定了有利裁定，但还需经过更多审批人员的核准。公司仍期待7月内收到裁定。" 7月24日，公司总裁表示，他预计"下周初"就能收到国税局裁定。 8月13日，公司财务主管告知，德州国家石油、联合石油和南加州大学的代表已齐聚华盛顿，共同推动裁定落地。 9月18日，公司财务主管告知："没有新消息，不过国税局说裁定下周就能出来。"
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-06"
+    text: |
+      （1）债券部分：我们投入了260,773美元，平均持有时间不足五个月。我们收到了6.5%的利息，并实现了14,446美元的资本利得，综合年化收益率约为20%。 （2）股票和认股权证部分：我们已实现资本利得89,304美元，还有目前估值约2,946美元的少量尾款尚未收到。4月份初始投入146,000美元，持仓陆续增加，至10月份总投入达731,000美元。按资金实际使用时间计算，年化收益率约为22%。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-07"
+    text: |
+      （1）将存货从逾400万美元（其中大量是周转极慢的滞销品）压缩至100万美元以下，大幅降低了存货持有成本，也极大地减少了商品过时淘汰的风险； （2）腾出资金用于投资有价证券，由此获得超过40万美元的收益； （3）将销售及管理费用从每月150,000美元削减至75,000美元； （4）将工厂间接制造费用从每直接工时6美元降至4.50美元； （5）关闭五家亏损分公司（保留三家盈利的），以效率更高的分销商取而代之； （6）整顿了内布拉斯加州哥伦布市一家配件工厂长期存在的乱象； （7）砍掉了消耗大量资金却贡献零利润的承包业务（释放出的资金可投入证券获利）； （8）调整了维修配件的定价，在几乎不影响销量的前提下，估计多增加了200,000美元的利润；以及最重要的—— （9）通过以上种种措施，使登普斯特的盈利能力恢复到与所用资本规模相称的水平。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1963-md-08"
+    text: |
+      （1）我们做的这门生意，需要耐心。它和一个装满风头正劲的热门股的投资组合几乎没有共同点——在后者大行其道的岁月里，我们可能看起来格外沉闷。 对于我们正在买入的股票，它们的价格几个月甚至几年纹丝不动，这对我们来说其实是好事。这也说明，评判我们的业绩，需要足够的时间维度。我们认为，最少要看三年。 （2）我们不能谈论我们正在进行的投资。这种开口就说的做法，绝不可能改善我们的结果，在某些情况下甚至会造成严重损害。因此，不论是谁——包括合伙人在内——如果问我们是否看好某只股票，我们只能援引"宪法第五修正案"，保持沉默。
+    source_page: "partnership-letters/1963.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1963", "信件"]
+    page_title: "1963年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1963
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-mid-year-md-01"
+    text: |
+      (1) 根据道指年度涨跌计算，其中包含股息。表格中为合伙基金整年运作的年份。 (2) 1957-61 年的数据是之前全年管理的所有有限合伙人账户的综合业绩，其中扣除了经营费用，未计算有限合伙人利息和普通合伙人分成。 (3) 1957-61 年的数据按前一列合伙基金收益率计算得出，按照当前合伙协议扣除了普通合伙人分成，未计算有限合伙人的每月提现。
+    source_page: "partnership-letters/1964-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964-mid-year", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-mid-year-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1964 年穆迪银行与金融手册（Moody's Bank & Finance Manual）1957-63 年数据。1964 年上半年数据为估算值。"
+    source_page: "partnership-letters/1964-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964-mid-year", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1964 年穆迪银行与金融手册（Moody's Bank & Finance Manual）1957-63 年数据。1964 年数据为估算值。"
+    source_page: "partnership-letters/1964.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-md-03"
+    text: |
+      (1) 寿命长（在金融大牛的行话里，这个叫"玛士撒拉效应"（Methuselah Technique）——玛士撒拉是《圣经》中据称活了 969 岁的先祖） (2) 复合增长率高 (3) 上述两者兼而有之（本文作者特别推荐）
+    source_page: "partnership-letters/1964.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-md-04"
+    text: |
+      (1) 按照这么高的收益率复合增长，任何规模可观的资金都会以惊人的速度膨胀，迅速逼近国债规模。 (2) 合伙基金成立这八年以来，由于股票整体价值重估，股票投资实现了很高的整体收益率，这个水平在未来数十年无法持续。在我们基金的短短历史中，道指收益率是 11.1%。我认为把时间拉长到二三十年，道指更合理的长期年均收益率应该在 6%-7% 之间。这一个因素就会把我们的年化复合收益率拉低约 4 个百分点。只要 1965 年道指下跌 20.5%，它九年的平均收益率就会降至 7%。对于这样幅度的下跌，甚至更大的下跌，长期持有股票的投资者都应该早有思想准备。如果你持有的股票（比如你在合伙基金中的权益）市值下跌 20% 或 30%，你就会遭受情感创伤或陷入财务困境，那你就不适合投资股票。借用"诗人"哈里·杜鲁门（Harry Truman）的话说："受不了热，就别进厨房。"（If you can't stand the heat, stay out of the kitchen.）最好在进"厨房"之前先想清楚。 (3) 我们认为，从长期来看，不可能始终保持合伙基金领先道指 16.6 个百分点的优势，或有限合伙人领先道指 11.2 个百分点的优势。合伙基金已经连续八年跑赢道指，尽管其中有一年扣除利润提成后，有限合伙人没能跑赢。我们肯定会有合伙基金落后于道指的年份，而且肯定不止一年。发生这种情况时，我作为普通合伙人一定会气得咬牙切齿（希望各位有限合伙人不要太懊恼）。届时，我们的平均相对优势会大幅下降。我也相信，有些年份我们仍然会取得明显的领先。迄今为止，我们没有一年的业绩是平庸或糟糕的，这让我们的平均收益率显得很高，但期望这种好运永久持续显然是不现实的。
+    source_page: "partnership-letters/1964.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-md-05"
+    text: |
+      (1) 道指长期整体收益率（含股息）平均约为每年 7%，但各年振幅极大——极端情况下可能跌 40% 或涨 50%，大多数年份在跌 10% 到涨 20% 之间。 (2) 扣除普通合伙人分成之前，合伙基金长期年均领先道指约 10 个百分点——领先优势同样剧烈波动：形势不利时可能落后 10 个百分点，一切顺风顺水时可能领先 25 个百分点。 (3) 综合以上两点，合伙基金的长期年均收益率约为 17%，有限合伙人约为 14%。各年收益率会相差悬殊，具体振幅取决于（1）和（2）两个变量的相互作用。
+    source_page: "partnership-letters/1964.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1964-md-06"
+    text: |
+      (1) 一份税务信函，其中列有申报 1964 年联邦所得税所需的全部合伙基金信息。此信函是唯一具有税务效力的文件。 (2) 毕马威会计师事务所出具的 1964 年度审计报告，载明合伙基金的运营情况和财务状况，以及各合伙人的资本账户数据。 (3) 一份由我签署的证明文件，注明您于 1965 年 1 月 1 日持有合伙基金权益的状况，数据与审计报告一致。 (4) 合伙协议附件"A"，列示全体合伙人名单。
+    source_page: "partnership-letters/1964.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1964", "信件"]
+    page_title: "1964年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1964
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1965-mid-year-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1965 Moody's Bank & Finance Manual for 1957-64。1965 年上半年数据为估算值。"
+    source_page: "partnership-letters/1965-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1965-mid-year", "信件"]
+    page_title: "1965年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1965
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1965-november-md-01"
+    text: |
+      (1) 两份 1966 年承诺书，一份由你保留，一份寄还给我们。承诺书可于 12 月 31 日零点之前修改，所以请尽早返还给我们。如果需要更改，提前写信或打电话给我们即可。12 月 31 日，承诺书最终生效后不可更改。投入资金起始时间为 1 月 1 日。每年 1 月份的第一周，都会有许多合伙人打来电话，询问能否追加 1 月 1 日投入的资金。逾期无法追加。 (2) 一份每年必备的“基本原则”(The Ground Rules)[^1]。所有合伙人务必认同其中的每一条原则。如果你有不同意见，没问题，你说的可能更对，但是合伙基金不适合你。请特别注意第七条基本原则。经过深思熟虑，我的想法略有改变，所以今年增加了这一条。这一条所说的做法在我们的投资活动中符合逻辑，但是与常规做法大相径庭，所以我请各位特别注意。
+    source_page: "partnership-letters/1965-november.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1965-november", "信件"]
+    page_title: "1965年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1965
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1965-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1965 Moody's Bank & Finance Manual for 1957-64。1965 年数据为估算值。"
+    source_page: "partnership-letters/1965.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1965", "信件"]
+    page_title: "1965年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1965
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1965-md-03"
+    text: |
+      1. 一份包含税收数据的信函，其中列有申报1965 年联邦所得税所需的所有巴菲特合伙基金信息。 2. 毕马威会计师事务所出具的1965年审计报告，其中包含巴菲特合伙基金的运营数据和财务状况以及合伙人资本账户的信息。 3. 一份由我签署的、证明您于1966年1月1日持有巴菲特合伙基金权益的文件，其中的权益数据与审计报告中列出的数据一致。
+    source_page: "partnership-letters/1965.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1965", "信件"]
+    page_title: "1965年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1965
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-mid-year-md-01"
+    text: |
+      1. 根据道指年度涨跌计算，其中包含股息。表格中为合伙基金整年运作的年份。 2. 1957-61 年的数据是之前全年管理的所有有限合伙人账户的综合业绩，其中扣除了经营费用，未计算有限合伙人利息和普通合伙人分成。 3. 1957-61 年的数据按前一列合伙基金收益率计算得出，按照当前合伙协议，扣除了普通合伙人分成。
+    source_page: "partnership-letters/1966-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966-mid-year", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-mid-year-md-02"
+    text: |
+      a. 世界上最大的汽车公司（通用汽车）； b. 世界上最大的石油公司（新泽西标准石油）； c. 世界上最大的零售公司（西尔斯罗巴克）； d. 世界上最大的化学公司（杜邦）； e. 世界上最大的钢铁公司（美国钢铁）； f. 世界上最大的上市保险公司（安泰保险）； g. 世界上最大的公用事业公司（美国电话电报）； h. 世界上最大的银行（美国银行）。
+    source_page: "partnership-letters/1966-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966-mid-year", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-mid-year-md-03"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1966 Moody's Bank & Finance Manual for 1957-65。1966 年上半年数据为估算值。"
+    source_page: "partnership-letters/1966-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966-mid-year", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1966 Moody's Bank & Finance Manual for 1957-65。1966 年数据为估算值。"
+    source_page: "partnership-letters/1966.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-md-03"
+    text: |
+      1. 1965 年 1 月 18 日的信中介绍了上述各个投资类别。如果你需要回顾一下，在附近的报刊亭又买不到便携版，欢迎向我们索取。 2. 分类不是严丝合缝的。一笔投资归在哪个类别，事后不会更改，但最初归类时多少有些主观因素。 3. 计算合伙基金收益率时，我们以年初投资金额为基准。上述表格记录的是各类投资的平均投资金额，这样计算出来的收益率比实际低。例如，一只股票，我们 1 月 1 日以 100 美元买入，到 12 月 31 日，它上涨到 150 美元，则平均投资金额是 125 美元，收益率是 40%，而按照常用的计算方法，收益率则是 50%。换言之，上表中的平均投资金额是以每月的平均市值计算的。 4. 所有数字均按照 100% 自有资金、无杠杆的基础计算。利息和日常费用从总收益中扣除，不分摊到各个类别。与具体某笔投资直接相关的费用，例如，因做空股票而支付的股息，直接从相应类别中扣除。在涉及融券做空的情况下，计算平均投资金额时，用多头仓位减去空头仓位得出净投资金额。 5. 上述表格用处有限。各个投资类别的收益都主要是一两笔投资贡献的。如果你收集了大量稳定的数据（例如，美国男性的死亡率），就可以从中得出一些结论和预测，但我们的投资不是这么回事。我们在投资中面临的是一系列不知何时出现、各有不同特点的事件，我们要前思后想，琢磨各种可能性，然后做出决定。 6. 最后，我们在进行上述计算时不像数钱时那么上心，再说这也算不上纯粹的自检，所以里面可能有笔误或计算错误。
+    source_page: "partnership-letters/1966.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1966-md-04"
+    text: |
+      1. 一份包含税收数据的信函，其中列有申报 1966 年联邦所得税所需的所有巴菲特合伙基金信息。 2. 毕马威会计师事务所出具的 1966 年审计报告，其中包含巴菲特合伙基金的运营数据和财务状况以及合伙人资本账户的信息。 3. 一份由我签署的、证明您于 1967 年 1 月 1 日持有巴菲特合伙基金权益的文件，其中的权益数据与审计报告中列出的数据一致。
+    source_page: "partnership-letters/1966.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1966", "信件"]
+    page_title: "1966年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1966
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-mid-year-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1967 Moody&# 39;s Bank & Finance Manual for 1957-1966。1967 年上半年数据为估算值。"
+    source_page: "partnership-letters/1967-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967-mid-year", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-october-md-01"
+    text: |
+      1. 过去十年里，市场环境日渐改变，用定量分析方法判断，一眼看上去就很便宜的股票骤然减少。 2. 人们一窝蜂地追逐投资业绩（几年前，倡导衡量投资业绩的人没几个，我是其中之一，没想到现在变成了这样），市场变得极度亢奋，我的分析方法没了用武之地。 3. 我们的资产规模已经达到 6500 万美元，好的投资机会却如同一条日渐干涸的小溪，越来越少。这个问题我在 1967 年 1 月的信中讲过的，它一直困扰着我们。 4. 当年的我，比现在年轻、比现在穷，为了追求高超的投资业绩不顾一切，现在我对高超业绩的追求已不复当年那么强烈。
+    source_page: "partnership-letters/1967-october.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967-october", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-october-md-02"
+    text: |
+      “在证券投资中，预测市场走势，忽略商业估值的行为经常盛行。我们不会效仿。近年来，这种投资风气经常能迅速赚大钱，就在我写这封信的这个月就是如此。这个投资方法是否合理？我无法证实，也无法否认。我的理智（或许是我的偏见）不完全认同这种投资方法，我的秉性也绝对不适合这种投资方法。我不会拿自己的钱这么投资，也绝对不会拿各位的钱这么投资。”
+    source_page: "partnership-letters/1967-october.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967-october", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1967 Moody's Bank & Finance Manual for 1957-1966。1967 年数据为估算值。"
+    source_page: "partnership-letters/1967.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-md-03"
+    text: "“有一些基金和一些私募机构，它们创造的业绩记录远远高于道指，其中有些也远远高于巴菲特合伙基金。它们的投资方法一般和我们不一样，不在我的能力范围之内。”"
+    source_page: "partnership-letters/1967.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-md-04"
+    text: |
+      “……套利类投资有时间表可循。套利投资机会出现在出售、并购、重组、分拆等公司活动中。我们做套利投资不听传闻或“内幕消息”，只看公司的公告。在白纸黑字上读到了，我们才会出手。套利类投资有时也受大盘影响，但主要风险不是大盘涨跌，而是中途出现意外，预期的进展没有实现。”
+    source_page: "partnership-letters/1967.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1967-md-05"
+    text: |
+      1. 一份包含税收数据的信函，其中列有申报 1967 年联邦所得税所需的所有巴菲特合伙基金信息。 2. 毕马威会计师事务所（今年他们的工作仍然很出色）出具的 1967 年审计报告，其中包含巴菲特合伙基金的运营数据和财务状况以及合伙人资本账户的信息。 3. 一份由我签署的、证明您于 1968 年 1 月 1 日持有巴菲特合伙基金权益的文件，其中的权益数据与审计报告中列出的数据一致。
+    source_page: "partnership-letters/1967.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1967", "信件"]
+    page_title: "1967年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1967
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1968-mid-year-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源：1968 Moody's Bank & Finance Manual for 1957-1966。1968 年上半年数据为估算值。"
+    source_page: "partnership-letters/1968-mid-year.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1968-mid-year", "信件"]
+    page_title: "1968年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1968
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1968-md-02"
+    text: "(1) 计算包括资产价值变化以及当年持有人获得的分红。 (2) 来源:1968 Moody's Bank & Finance Manual for 1957-1967。1968 年数据为估算值。"
+    source_page: "partnership-letters/1968.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1968", "信件"]
+    page_title: "1968年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1968
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1968-md-03"
+    text: "“国内国际经济环境日益复杂，资产管理已成为全天候工作。一位称职的基金经理研究证券不能只看每周或每天的情况。研究证券，必须关注每一分钟的动向。”"
+    source_page: "partnership-letters/1968.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1968", "信件"]
+    page_title: "1968年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1968
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1968-md-04"
+    text: |
+      1. 1965 年 1 月 18 日的信中介绍了上述各个投资类别。如果你需要回顾一下，在附近的报刊亭又买不到便携版，请向我们索取。 2. 分类不是严丝合缝的。一笔投资归在哪个类别，事后不会更改的，但最初归类时多少有些主观因素。有些投资不太好归类，例如，有的套利投资失败后，我仍然持有，但持有的理由已经和最初买入的理由不完全相同了(可能是因为固执)。 3. 计算合伙基金收益率时，我们以年初投资金额为基准。上述表格记录的是各类投资的平均投资金额，这样计算出来的收益率比实际要低。例如，一只股票，我们 1 月 1 日以 100 美元买入，到 12 月 31 日，它上涨到 200 美元，则平均投资金额是 150 美元，收益率是 66.66%，而按照常用的计算方法，收益率则是 100%。换言之，上表中的平均投资金额是以每月的平均市值计算的。 4. 所有数字均按照 100% 自有资金、无杠杆的基础计算。利息和日常费用从总收益中扣除，不分摊到各个类别。与具体某笔投资直接相关的费用，例如，因做空股票而支付的股息，直接从相应类别中扣除。在涉及融券做空的情况下，计算平均投资金额时，用多头仓位减去空头仓位得出净投资金额。 5. 上述表格用处有限。各个投资类别的收益都主要来自一两笔投资。如果收集了大量稳定的数据 (例如，美国男性的死亡率)，那么可以从中得出一些结论和预测，但我们的投资不是这么回事。我们在投资中面临的是一系列不知何时出现、各有不同特点的事件，我们要前思后想，琢磨各种可能性，然后做出决定。 6. 最后，我们在进行上述计算时不像数钱时那么上心，再说这也算不上纯粹的自检，所以里面可能有笔误或计算错误。
+    source_page: "partnership-letters/1968.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1968", "信件"]
+    page_title: "1968年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1968
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1968-md-05"
+    text: |
+      1. 一份包含税收数据的信函，其中列有申报1968年联邦所得税所需的所有巴菲特合伙基金信息。 2. 毕马威会计师事务所（今年他们的工作仍然很出色）出具的1968年审计报告，其中包含巴菲特合伙基金的运营数据和财务状况以及合伙人资本账户的信息。 3. 一份由我签署的、证明您于1969年1月1日持有巴菲特合伙基金权益的文件，其中的权益数据与审计报告中列出的数据一致。
+    source_page: "partnership-letters/1968.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1968", "信件"]
+    page_title: "1968年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1968
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1969-may-md-01"
+    text: |
+      1. 最重要的一件事是，有许多合伙人不想自己打理资产，我要为他们推荐一个资产管理的途径。有些合伙人自己就有很多选择，他们对自己的选择很自信、也很放心。但是，有些合伙人则不然，我不能就把钱还给他们，说声“好运”，就完了。我打算向他们推荐另外一位资产管理人。无论是我的亲戚，还是我一生要为其提供投资建议的其他人，我都会放心的把他们的资金交给这个人管理。他人品和能力都很好，他将来的业绩可能和我继续做下去差不多（但肯定不如他或者我过去取得的业绩）。我们的任何合伙人都可以投资给他，没有账户最低金额的限制。将来，我会和他保持一定的联系，对他的投资情况有个大概了解，但只是偶尔关注，而且我提建议的话，基本上也只限于否定意见。 2. 我希望所有合伙人都可以自由选择，愿意获得现金的可以获得现金，愿意获得有价证券的可以获得有价证券。有价证券中应该只有一只是可以随时卖出变现的。这些股票的前景和价格，是我都非常看好的，但是合伙人可以自由选择是否将有价证券变成现金。 3. 我也希望所有合伙人能有这个选择，即按权益比例相应获得我们的两家控股公司（多元零售公司和伯克希尔哈撒韦公司）和一家规模较小的“受限制的”公司的股份。因为这些股票的公允价值完全是我估算的，所以我认为一定要给各位这个选择权，如果愿意的话，各位可以根据我的估值，按权益比例获得控股公司的相应股份。 - 但是，这些股票并不能在市场上自由买卖（SEC 对控股股东的股票和未注册上市的股票有各种限制规定），而且在很长时间里可能也不能转让、不能带来收入。在清算过程中，我希望给各位提供自由选择权：留下受限制的股票或获得等价的现金。我特别欣赏我们的控股公司的经营者（我们又多了两个新成员：伊利诺伊国民银行 (Illinois National Bank) 和罗克福德信托公司 (Trust Company of Rockford)。伊利诺伊国民银行是一家资产规模在 1 亿美元以上、经营特别出色的银行，是伯克希尔哈撒韦今年年初收购的），希望和他们的关系可以地久天长。控股公司有我欣赏和敬佩的经营者，就算别人出价再高，我都无意出售。但是，在特定情况下，可能会出售控股公司下面的某个业务部门。
+    source_page: "partnership-letters/1969-may.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1969-may", "信件"]
+    page_title: "1969年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1969
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1969-october-md-01"
+    text: |
+      (1) 在这封信里，我会给大家介绍比尔·鲁安 (Bill Ruane)。综合考虑人品、能力以及是否能长期接纳我们的所有合伙人，在我认识的所有资产管理人中，比尔·鲁安是最佳人选。我还会分析一下在当前情况下如何决定债券和股票的配比，以及各种决策的预期。 (2) 11 月末：我会按照合同规定，提前 30 天正式通知各位，就我在年底从合伙基金退休的打算发出声明。 (3) 12 月初：我会将我们的控股公司的公开资料寄给各位并进行一些简单的介绍。我们的两家控股公司是伯克希尔哈撒韦 (Berkshire Hathaway Inc.)（拥有纺织业务、伊利诺伊国民银行、罗克福德信托公司、国民赔偿公司、国民火灾与海事保险公司以及太阳报业）和多元零售公司 (Diversified Retailing Company)（拥有霍赫希尔德•科恩公司和联合棉布商店）。控股公司的股票会在 1 月份分配给大家。在各位决定持有、卖出或买入之前，我希望各位能有足够的时间研究这些公司的相关材料。到时候，我会向各位合伙人征集问题，请各位合伙人以书面的形式将问题发送给我（为保证所有合伙人都获得一样的信息，我不会与各位单独讨论这些公司）。12 月末，我会再写一封信给各位，集中解答收到的所有问题。我预计我们会作出安排，如果合伙人愿意的话，可以将控股公司股份立即变现。 (4) 1 月 5 日左右：(a) 将现金分配给合伙人，分配比例为各位合伙人 1969 年 1 月 1 日资本的 56% 以上（如果年末之前能将更多的股份卖出，现金分配比例会更高），其中会扣除 1969 年向合伙人每月发放的利息或贷款；(b) 将多元零售公司和伯克希尔哈撒韦公司的股份按权益比例分配给合伙人。如果合伙人将自己分配到的控股公司股份卖出，可获得其 1969 年 1 月 1 日资本的 30% - 35%（我会在年末给出控股公司的估值）。 在年末之前，我们卖出的股票数量可能远远高于预期，1 月初的现金分配比例可能高于上述的 56%。如果卖出股票的数量未达到预期，我们将先分配一部分现金，并在 1970 年上半年继续卖出。我们将选择合适的时机卖出剩余资产，预计 1970 年 6 月 30 日之后，我们剩余的资产价值将不到当前资产价值的 10%。在所有资产和负债都清理完毕后，我们将进行一次最终分配。 1969 年，除非市场出现大跌，我仍然认为，不计算每月的利息，我们的收益会持平。我们运气很好，如果不是今年清算了，我们的业绩会差很多。之前，我发现了一些“长期”看好的机会。到目前为止，这些机会整体表现欠佳。在我们持有的仓位中，现在规模较大的股票只剩两只了。其中一只，在我写这封信时，我们正在卖出。另外一只是蓝筹印花 (Blue Chip Stamps)，我们持有它流通股的 7.5%，它现在流动性有限，但是今年年末可能会发行上市，到时看市场情况如何，我们可能会把这部分股票卖出。 (5) 1970 年 3 月 1 日：约翰•哈丁将离开巴菲特合伙基金，为 Ruane, Cunniff & Stires公司在奥马哈开设办事处。比尔•斯科特和我会留在我们的办公室，帮助有需要的合伙人购买免税或应税债券。我们会把三月份的时间留出来，免费帮助希望购买债券的合伙人。我们有分析和购买债券的经验，而且我们买债券的手续费低，所以我们应该能帮合伙人选出比较好的债券，而且还能省不少费用。4 月 1 日之后，我们将不再提供任何私人咨询服务。 (6) 1970 年 3 月以后：比尔和我仍然会留在基威特大厦的办公室，只拿出很少的时间来完成巴菲特合伙基金清算收尾工作，包括申报 1970 年的税项，可能还要在 1971 年继续处理剩余的一小部分资产和负债。
+    source_page: "partnership-letters/1969-october.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1969-october", "信件"]
+    page_title: "1969年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1969
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1969-october-md-02"
+    text: |
+      (1) 在我讲的情况中，我是以联邦所得税税档为 40% 并且需要缴纳所在州所得税的个人为例。税法改革正在进行，将来税法改革后，按照现在的税法计算的免税收入、资本利得以及其他投资收益可能会减少。税法改革会越来越深入。整体而言，将来税法改革后，也不会影响我对当前免税债券与股票税后收益的对比预期，甚至会对我的预期有微小的推动作用。 (2) 我这里说的预期是今后十年，不是今后几个星期或几个月。在一个较长的时间里会发生什么，这个比较容易想明白。要知道短期内会发生什么，就比较难了。正如本•格雷厄姆所说：“长期看，股市是称重机。短期看，股市是投票器。”重量是基本面决定的，这个比较容易评估。投票是心理决定的，这个比较难以捉摸。 (3) 目前，被动投资免税债券可以获得 6.5% 的收益率。相应标的的质地特别好，而且想买多长时间的都可以。等到三月份，比尔和我帮大家挑选债券的时候不一定还存在这个情况，但现在是这样。 (4) 今后十年，股票投资的整体收益率可能不会超过 9%，其中包括 3% 的分红，以及 6% 的价值提升。国民生产总值每年的增长速度不会超过 6%，公司利润的增长速度不可能比国民生产总值增速高多少，在市盈率不变的情况下（按上述假设以及当前利率，市盈率应该不会变），美国公司的整体价值的长期复合增长率应该不会超过每年 6%。按照这个股市整体水平，对于上述纳税人而言，股息税后收益率是 1.75%，资本利得税后收益率是 4.75%，整体税后收益率是 6.5%。股息和资本利得的税前收益率也有可能分别是 4% 和 5%，这样的话，整体税后收益率就要更低一些。历史水平大致如此，而且我认为将来税法可能会规定征收更高的资本利得税。 (5) 今后十年，在所有投资股票的资金中，或许有一半将由职业基金经理掌管。投资者把资产交给基金经理掌管，他们获得的整体业绩不可能和平均水平有多大差别（即税后 6.5%，如果我的假设正确的话）。 我的判断是：在未来整个十年里，在职业基金经理掌管的资金中，不到 10%（领先的这部分资金规模约 400 亿美元）能超过整体预期水平，每年平均领先两个百分点。那些风格激进的基金的收益率不太可能比一般基金的收益率高多少。目前，各种风格基金的基金掌管着 500 亿美元，规模是十年前类似风格基金的 100 倍。500 亿的规模根本不可能取得超额收益。 如果你运气特别好，选到的基金经理能把业绩做到全国最高的 1% 到 2%（因为他们业绩太优秀了，必然会管理大量资金），我觉得你每年的收益率最多也就比整体预期水平高 4 个点。比尔•鲁安有很大的概率，能成为这些最优秀基金经理中的一员。按我的估算，在今后十年中，真正特别优秀的基金经理能为“一般纳税人”带来 1.75% 的股息税后收益率和 7.75% 的资本利得税后收益率，即整体收益率为 9.5%。 (6) 于是，我们可以得出这样一个令人吃惊的结论：与历史相比，当今的情况不同寻常，被动投资于免税债券取得的收益率，与职业基金经理投资股票的预期收益率完全不相上下，只比最优秀的股票投资收益率略为逊色。 (7) 关于通货膨胀：通货膨胀与上述计算无关，但是与上面假设的国民生产总值 6% 的增长率有关，而且也是当前免税债券收益率达到 6.5% 的原因之一。如果股票的税后收益率是 8%，而债券的收益率是 4%，无论股价上涨下跌，还是横盘不动，持有股票都比持有债券好。但是，当债券的税后收益率是 6.5%，而股票的收益率是 6% 时，那就反过来了。有一个最简单、最实际的道理：无论美元上涨下跌，还是横盘不动，我们最应当关注的都是哪个投资的预期税后收益率最高。
+    source_page: "partnership-letters/1969-october.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1969-october", "信件"]
+    page_title: "1969年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1969
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1970-february-md-01"
+    text: |
+      （1）收费公路、电力、水务等拥有巨额收入的大型公共事业公司发行的债券。许多此类债券的市场活跃程度非常高，很容易对发行主体进行定量分析，有的设有偿债基金，有的还具有其他有利因素，但被市场忽略了，没得到公允估值。 （2）政府工业发展债券。有的政府部门将资产租赁给私营公司，这些政府部门可以发行此类债券。例如，俄亥俄州洛兰市拥有一个8000万美元的项目，租赁给了美国钢铁公司。政府发展部门发行债券筹集项目所需资金，并与美国钢铁公司签订绝对净租赁合约，用于偿还债券款项。为此类债券做信用背书的不是相关城市或州，这些债券的信用如何，主要取决于承租的公司。此类债券规模有几十亿，背后是许多大公司在支持，但是由于税法的变化，新发行的此类债券规模很小（每个项目平均不到500万美元）。在很长一段时间里，由于人们对此类债券存在很大的偏见，与信用状况类似的债券相比，它们的收益率高得多。人们的这种偏见在逐渐减弱，此类债券的溢价收益率也在降低，但是我觉得它们的收益率还是相当高的。我们的保险公司持有的大部分债券都是这个类型的。 （3）如果你希望购买评级最高的免税债券，可以选择公共住房管理局发行的品种。这些债券由美国政府担保，它们的评级都是AAA。在有些州，受当地税法影响，本州发行的品种具有溢价，而且前两类债券都不符合你的需求，我会向你推荐公共住房管理局发行的品种，我不会从其他债券中选择，因为我不了解它们的信用状况。要是各位要求我购买你们所在州的债券，提前知会各位一下，我可能购买大量公共住房管理局发行的品种。此类品种用不着分散，它们的信用评级是最高的。 （4）州政府直接或间接承担的债务。
+    source_page: "partnership-letters/1970-february.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1970-february", "信件"]
+    page_title: "1970年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1970
+    source_letter_category: "partnership-letter"
+
+  - id: "local-partnership-letters-1970-february-md-02"
+    text: |
+      （1）是否出于本地征税原因考虑，只希望购买本州发行的债券； （2）是否只想购买足额息票债券，还是允许我们自由选择最佳品种； （3）在10年到20年的范围内，你打算购买多少年期限的，还是允许我们 替你选择； （4）你要投资的金额是多少，我们买入的金额可能略低于你指定的数字，但不 会超过你所说的金额； （5）债券应该交付到哪个银行。
+    source_page: "partnership-letters/1970-february.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["1970-february", "信件"]
+    page_title: "1970年巴菲特致合伙人信（中文全文）"
+    source_letter_year: 1970
+    source_letter_category: "partnership-letter"
+
+  - id: "local-shareholder-letters-2009-md-01"
+    text: |
+      客户："谢谢你帮我在5块钱买入了XYZ股票，我听说现在涨到18块了。" 经纪人："是的，这才刚刚开始。事实上，这家公司现在表现这么好，18块钱买入比你当初5块钱买入还划算。" 客户："该死，我就知道当初应该再等等。"
+    source_page: "shareholder-letters/2009.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["2009", "信件"]
+    page_title: "2009年巴菲特致股东信（中文全文）"
+    source_letter_year: 2009
+    source_letter_category: "shareholder-letter"
+
+  - id: "local-shareholder-letters-2016-md-01"
+    text: |
+      从2008年1月1日开始到2017年12月31日结束的十年期间，标普500指数的表现将超过一组对冲基金的基金组合——以扣除费用、成本和开支后的净值来衡量。 许多非常聪明的人试图在证券市场上取得超越平均水平的业绩。我们称他们为主动投资者。 与他们相对的是被动投资者，按定义他们的业绩大致等于市场平均水平。总体来看，他们的持仓大致等同于一只指数基金。因此，市场中的另一方——主动投资者——整体业绩也必须大致等于平均水平。然而，主动投资者将承担远高于被动投资者的成本。所以，总体而言，扣除这些成本后，他们的整体业绩将不如被动投资者。 当高昂的年度管理费、高额的绩效提成和频繁交易的成本全部加到主动投资者的等式中时，成本就会飙升。FOF基金更是加剧了成本问题，因为它们在底层对冲基金收取的高额费用之上又叠加了自己的费用。 有许多聪明的人在运营对冲基金。但在很大程度上，他们的努力互相抵消了，而且他们的高智商无法克服他们强加给投资者的成本。平均而言，随着时间推移，投资低成本指数基金的表现将优于一组FOF基金。
+    source_page: "shareholder-letters/2016.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["2016", "信件"]
+    page_title: "2016年巴菲特致股东信（中文全文）"
+    source_letter_year: 2016
+    source_letter_category: "shareholder-letter"
+
+  - id: "local-shareholder-letters-2017-md-01"
+    text: |
+      "如果所有人都失去理智，你却能保持冷静…… 如果你能耐心等待，而不急不躁…… 如果你能审慎思考，而不以思考为目的…… 如果众人对你心存猜疑，你仍能自信如常…… 那么，你拥有的将是整个世界和世间万物。"
+    source_page: "shareholder-letters/2017.md"
+    type: "blockquote"
+    extraction_source: "local-md"
+    tags: ["2017", "信件"]
+    page_title: "2017年巴菲特致股东信（中文全文）"
+    source_letter_year: 2017
+    source_letter_category: "shareholder-letter"

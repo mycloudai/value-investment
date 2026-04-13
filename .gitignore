@@ -1,0 +1,55 @@
+# ─── 依赖 ───────────────────────────────────────────
+node_modules/
+.npm/
+
+# ─── Python ──────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+
+# ─── Build 产物（由 node build.mjs 生成，不需要提交）───
+# site/content/ 从 content/ 复制而来，属 build 产物
+site/content/
+site/assets/data/manifest.json
+site/assets/data/search-index.json
+site/assets/data/graph-data.json
+site/assets/data/server-search-index.json
+site/assets/data/buffett-skill.json
+site/assets/data/quotes-data.json
+# 从 content/skills/buffett-skill.md 编译
+functions/api/_buffett-skill.js
+# 由 scripts/cross-ref.mjs 生成
+data/cross-references.json
+
+# ─── Wrangler / Cloudflare ───────────────────────────
+.wrangler/
+# 本地开发环境变量（含 API Key 等敏感信息）
+.dev.vars
+
+# ─── 测试产物（脚本本身保留，产物不提交）───────────────
+tests/qa-report.md
+tests/screenshots/
+
+# ─── 备份文件 ────────────────────────────────────────
+*.bak
+*.backup
+*.distill-backup
+
+# ─── 日志 ────────────────────────────────────────────
+*.log
+/tmp/
+
+# ─── playwright-cli 工作目录（快照、日志等临时产物）────
+.playwright-cli/
+
+# ─── 系统文件 ────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+._*
+
+# ─── IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,60 @@
+name: QA Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install playwright-cli
+        run: npm install -g @playwright/cli@latest
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Build site
+        run: node build.mjs
+
+      - name: Start local server
+        run: node tests/serve.mjs &
+
+      - name: Wait for server
+        run: sleep 3 && curl -f http://localhost:8788/ || exit 1
+
+      - name: Run QA tests (headless)
+        run: |
+          bash tests/run-qa.sh --headless \
+            --openai-key="${{ secrets.OPENAI_API_KEY }}" \
+            --claude-key="${{ secrets.CLAUDE_API_KEY }}" \
+            --openai-base-url="${{ secrets.OPENAI_BASE_URL }}" \
+            --claude-base-url="${{ secrets.CLAUDE_BASE_URL }}" \
+            --openai-model="${{ secrets.OPENAI_MODEL }}" \
+            --claude-model="${{ secrets.CLAUDE_MODEL }}"
+        env:
+          BASE_URL: http://localhost:8788
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: |
+            tests/qa-report.md
+            tests/screenshots/
+          retention-days: 7

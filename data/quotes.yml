@@ -1,0 +1,307 @@
+# ⚠️  已归档 · 请勿编辑
+# 此文件是历史迁移产物，已由 scripts/reorganize-quotes.py 一次性转换为
+# content/**/{slug}-quotes.md 文件（153 个）。
+# 网站构建（build.mjs）直接读取 {slug}-quotes.md，不使用此文件。
+# 如需新增/修改金句，请编辑对应的 content/{category}/{slug}-quotes.md。
+#
+# 巴菲特金句精选
+# 所有金句均从 content/ 目录下的MD文件正文中提取
+# 格式说明：
+#   id: 唯一标识符（主题-年份-序号）
+#   text: 原文（中文翻译）
+#   source_category: shareholder-letter | partnership-letter | special-letter
+#   source_year: 年份
+#   source_slug: 对应MD文件的slug
+#   tags: 主题标签列表
+
+quotes:
+  # ===== 护城河 / 竞争优势 =====
+  - id: "moat-1986-01"
+    text: "盖可保险与竞争对手之间的成本差距，就像是一条护城河，保卫着一座价值连城、人人觊觎的商业城堡。"
+    source_category: "shareholder-letter"
+    source_year: 1986
+    source_slug: "1986"
+    tags: ["护城河", "竞争优势", "盖可保险"]
+
+  - id: "moat-1991-01"
+    text: "我们不断寻找那些业务容易理解、经济特征持久且令人垂涎、由有能力且以股东利益为导向的管理层经营的大型企业。"
+    source_category: "shareholder-letter"
+    source_year: 1991
+    source_slug: "1991"
+    tags: ["护城河", "管理层", "选股标准"]
+
+  - id: "moat-1996-01"
+    text: "我们寻找的都是那些我们认为十年或二十年后几乎可以肯定仍拥有巨大竞争优势的企业。快速变化的行业环境或许可以让人大赚一笔，但它无法提供我们所追求的确定性。"
+    source_category: "shareholder-letter"
+    source_year: 1996
+    source_slug: "1996"
+    tags: ["护城河", "长期投资", "确定性"]
+
+  # ===== 内在价值 =====
+  - id: "intrinsic-value-1992-01"
+    text: "今天任何一只股票、债券或一家企业的价值，取决于在其剩余存续期间预期发生的现金流入和流出——以适当的利率折现后的现值。"
+    source_category: "shareholder-letter"
+    source_year: 1992
+    source_slug: "1992"
+    tags: ["内在价值", "估值", "现金流折现"]
+
+  - id: "intrinsic-value-1992-02"
+    text: "对大多数投资者而言，重要的不是他们知道多少，而是他们能多么务实地界定自己不知道什么。投资者只要能避免犯大错，就不需要做太多正确的事。"
+    source_category: "shareholder-letter"
+    source_year: 1992
+    source_slug: "1992"
+    tags: ["内在价值", "能力圈", "风险管理"]
+
+  # ===== 安全边际 =====
+  - id: "margin-of-safety-1990-01"
+    text: "在《聪明的投资者》最后一章中，本杰明·格雷厄姆有力地驳斥了这种匕首论：'如果要我把稳健投资的秘诀浓缩成四个字，我斗胆提出这个座右铭——安全边际。'读到这篇文章42年后，我仍然深信这四个字就是正确答案。"
+    source_category: "shareholder-letter"
+    source_year: 1990
+    source_slug: "1990"
+    tags: ["安全边际", "格雷厄姆", "价值投资"]
+
+  - id: "margin-of-safety-1992-01"
+    text: "我们坚持在买入价格上留有安全边际。如果我们计算出一只普通股的价值仅仅略高于其价格，我们就不会感兴趣。我们相信恩师本杰明·格雷厄姆极力强调的安全边际原则，是投资成功最关键的基石。"
+    source_category: "shareholder-letter"
+    source_year: 1992
+    source_slug: "1992"
+    tags: ["安全边际", "格雷厄姆", "价值投资"]
+
+  # ===== 市场先生 =====
+  - id: "mr-market-1987-01"
+    text: "你可以把股票市场的报价想象成来自一位异常殷勤的先生——市场先生——的出价，他是你在一家私营企业中的合伙人。每天，市场先生都会如期而至，给你报一个价格，要么买下你的股份，要么把他的股份卖给你。"
+    source_category: "shareholder-letter"
+    source_year: 1987
+    source_slug: "1987"
+    tags: ["市场先生", "市场心理", "格雷厄姆"]
+
+  - id: "mr-market-1987-02"
+    text: "市场先生是来为你服务的，不是来引导你的。对你有用的是他的钱包，而不是他的智慧。如果某天他以一种格外愚蠢的姿态出现，你可以选择无视他，也可以好好利用他，但如果你受了他的影响，那就是灾难。"
+    source_category: "shareholder-letter"
+    source_year: 1987
+    source_slug: "1987"
+    tags: ["市场先生", "投资心理", "独立思考"]
+
+  # ===== 能力圈 =====
+  - id: "circle-competence-1996-01"
+    text: "你不需要成为每家公司的专家，甚至不需要懂很多家。你只需要能够评估你能力圈之内的公司就够了。能力圈的大小并不重要；但清楚地知道它的边界在哪里，至关重要。"
+    source_category: "shareholder-letter"
+    source_year: 1996
+    source_slug: "1996"
+    tags: ["能力圈", "投资方法", "自知之明"]
+
+  - id: "circle-competence-1996-02"
+    text: "如果你不愿意持有一只股票十年，那就连持有十分钟都不要考虑。"
+    source_category: "shareholder-letter"
+    source_year: 1996
+    source_slug: "1996"
+    tags: ["长期持有", "能力圈", "投资纪律"]
+
+  # ===== 长期持有 / 复利 =====
+  - id: "holding-forever-1988-01"
+    text: "当我们持有既拥有出色业务又拥有出色管理层的公司股份时，我们最喜欢的持有期限是——永远。"
+    source_category: "shareholder-letter"
+    source_year: 1988
+    source_slug: "1988"
+    tags: ["长期持有", "永远持有", "优质企业"]
+
+  - id: "compounding-2017-01"
+    text: "短期来看，市场是一台投票机；但从长远来看，它是一台称重机。"
+    source_category: "shareholder-letter"
+    source_year: 2017
+    source_slug: "2017"
+    tags: ["复利", "长期投资", "格雷厄姆", "市场先生"]
+
+  - id: "compounding-2017-02"
+    text: "在过去53年里，公司通过将收益进行再投资、让复利施展魔力来创造价值。我们年复一年向前迈进。"
+    source_category: "shareholder-letter"
+    source_year: 2017
+    source_slug: "2017"
+    tags: ["复利", "再投资", "长期持有"]
+
+  - id: "time-friend-1989-01"
+    text: "时间是好公司的朋友，却是烂公司最大的敌人。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["长期投资", "复利", "企业质量"]
+
+  # ===== 管理层与行业 =====
+  - id: "management-industry-1980-01"
+    text: "当一个以卓越著称的管理者遇上一个以糟糕的基本面著称的行业时，最终安然无恙的是那个行业的名声。"
+    source_category: "shareholder-letter"
+    source_year: 1980
+    source_slug: "1980"
+    tags: ["管理层", "行业选择", "商业模式"]
+
+  - id: "management-1989-01"
+    text: "以合理的价格买入一家好公司，远远好过以便宜的价格买入一家普通的公司。查理很早就明白这个道理；我的反应比较迟钝。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["管理层", "企业质量", "查理·芒格", "价值投资"]
+
+  - id: "turnaround-1979-01"
+    text: "所谓的'困境反转'很少真的能反转，同样的精力和才华，花在以合理价格买入好公司上，远比花在以便宜价格买入烂公司上要值得。"
+    source_category: "shareholder-letter"
+    source_year: 1979
+    source_slug: "1979"
+    tags: ["困境反转", "企业质量", "投资教训"]
+
+  # ===== 贪婪与恐惧 =====
+  - id: "fear-greed-1986-01"
+    text: "我们只是在别人贪婪时尽量让自己恐惧，在别人恐惧时尽量让自己贪婪。"
+    source_category: "shareholder-letter"
+    source_year: 1986
+    source_slug: "1986"
+    tags: ["逆向投资", "投资心理", "市场波动"]
+
+  # ===== 股本回报率 =====
+  - id: "roe-1977-01"
+    text: "除非是特殊情况，我们认为股本回报率才是衡量管理层经济表现更合理的指标。"
+    source_category: "shareholder-letter"
+    source_year: 1977
+    source_slug: "1977"
+    tags: ["股本回报率", "管理层", "绩效评估"]
+
+  # ===== 裸泳 =====
+  - id: "naked-swimming-1992-01"
+    text: "只有在退潮的时候，你才知道谁一直在裸泳。"
+    source_category: "shareholder-letter"
+    source_year: 1992
+    source_slug: "1992"
+    tags: ["风险管理", "危机", "保险业"]
+
+  - id: "naked-swimming-2007-01"
+    text: "随着房价下跌，大量愚蠢的金融行为被曝光。只有退潮的时候，你才知道谁在裸泳——而我们在一些最大金融机构所目睹的景象，实在是惨不忍睹。"
+    source_category: "shareholder-letter"
+    source_year: 2007
+    source_slug: "2007"
+    tags: ["金融危机", "风险", "裸泳"]
+
+  # ===== 有效市场 =====
+  - id: "emt-1988-01"
+    text: "他们正确地观察到市场经常是有效率的，便错误地推论出市场永远是有效率的。这两个命题之间的差别，简直如同黑夜与白昼。"
+    source_category: "shareholder-letter"
+    source_year: 1988
+    source_slug: "1988"
+    tags: ["有效市场", "市场效率", "格雷厄姆"]
+
+  # ===== 纺织业教训 =====
+  - id: "textile-1979-01"
+    text: "纺织业务也在持续产生一些现金，但相对于投入的资本来说回报偏低。这不是管理层的问题，而是行业本身的问题。"
+    source_category: "shareholder-letter"
+    source_year: 1979
+    source_slug: "1979"
+    tags: ["纺织业", "行业选择", "资本回报率"]
+
+  # ===== 保险浮存金 =====
+  - id: "float-1977-01"
+    text: "保险业务的表现——在菲尔·利舍领导的国民保险公司管理团队的出色带领下——甚至超出了我们最乐观的预期。"
+    source_category: "shareholder-letter"
+    source_year: 1977
+    source_slug: "1977"
+    tags: ["保险业", "管理层", "保险承保"]
+
+  # ===== 合伙人时期 =====
+  - id: "partnership-benchmark-1962-01"
+    text: "我们做得好不好，不能看某一年是盈是亏。衡量标准是与市场整体业绩的对比，包括道琼斯工业指数和主要投资公司。只要我们的业绩优于这些标准，无论盈亏，我们都认为这一年干得不错。"
+    source_category: "partnership-letter"
+    source_year: 1962
+    source_slug: "1962"
+    tags: ["业绩衡量", "道琼斯", "投资纪律"]
+
+  - id: "partnership-relative-1962-01"
+    text: "我们的工作，就是年复一年地积累相对道指的优势，不必太在意某一年的绝对收益是正是负。在我看来，道指下跌25%而我们只下跌15%的年份，比我们与道指都上涨20%的年份要好得多。"
+    source_category: "partnership-letter"
+    source_year: 1962
+    source_slug: "1962"
+    tags: ["相对收益", "风险管理", "长期投资"]
+
+  - id: "partnership-conservative-1962-01"
+    text: "检验投资方法是否保守，最客观的测试就是看市场下跌时的业绩表现。"
+    source_category: "partnership-letter"
+    source_year: 1962
+    source_slug: "1962"
+    tags: ["风险管理", "保守投资", "业绩衡量"]
+
+  - id: "partnership-concentration-1966-01"
+    text: "我不愿为了追求更高的长期收益，去承受严重的本金永久损失风险。"
+    source_category: "partnership-letter"
+    source_year: 1966
+    source_slug: "1966"
+    tags: ["集中投资", "风险管理", "本金安全"]
+
+  # ===== 可口可乐 =====
+  - id: "coca-cola-1996-01"
+    text: "我最近在研读可口可乐1896年的年报。当时可口可乐虽然已是饮料行业的领导者，但问世也不过才十年光景。然而其未来百年的蓝图在当时就已经画好了。"
+    source_category: "shareholder-letter"
+    source_year: 1996
+    source_slug: "1996"
+    tags: ["可口可乐", "品牌护城河", "长期投资"]
+
+  # ===== 烟蒂投资法 =====
+  - id: "cigar-butt-1989-01"
+    text: "在路边捡到的烟蒂头可能只剩最后一口，抽不了多少过瘾的，但'廉价买入'让这最后一口也全是利润。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["烟蒂投资法", "格雷厄姆", "低价买入"]
+
+  # ===== 诚信 =====
+  - id: "integrity-1989-01"
+    text: "在犯了其他一些错误之后，我学会了只跟我们喜欢、信任和钦佩的人做生意。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["诚信", "管理层", "投资原则"]
+
+  # ===== 鸭子与牛市 =====
+  - id: "duck-1997-01"
+    text: "牛市中，大家一定要避免成为那只暴风雨后呱呱大叫的骄傲鸭子，以为是自己高超的泳技让它浮上了天。"
+    source_category: "shareholder-letter"
+    source_year: 1997
+    source_slug: "1997"
+    tags: ["牛市", "谦虚", "投资心理"]
+
+  # ===== 别人恐惧时贪婪 2004版 =====
+  - id: "fear-greed-2004-01"
+    text: "投资者应当牢记，兴奋和费用是他们的大敌。如果他们执意要择时进出股市，那就应该努力做到：别人贪婪时恐惧，别人恐惧时贪婪。"
+    source_category: "shareholder-letter"
+    source_year: 2004
+    source_slug: "2004"
+    tags: ["逆向投资", "投资心理", "费用"]
+
+  # ===== 投票机与称重机 1993版 =====
+  - id: "voting-machine-1993-01"
+    text: "短期来看，市场是一台投票机——参加投票的资格只需要钱，不需要智慧或情绪控制——但长期来看，市场是一台称重机。"
+    source_category: "shareholder-letter"
+    source_year: 1993
+    source_slug: "1993"
+    tags: ["市场先生", "格雷厄姆", "长期投资"]
+
+  # ===== 历史与图书管理员 =====
+  - id: "history-1990-01"
+    text: "小心金融领域里那些基于历史业绩的'证明'：如果历史书是致富的钥匙，福布斯400富豪榜上应该全是图书馆员才对。"
+    source_category: "shareholder-letter"
+    source_year: 1990
+    source_slug: "1990"
+    tags: ["风险管理", "历史业绩", "投资陷阱"]
+
+  # ===== 好骑师好马 =====
+  - id: "jockey-horse-1989-01"
+    text: "好骑师在好马上才能跑出好成绩，骑上劣马就不行了。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["管理层", "行业选择", "企业质量"]
+
+  # ===== 收购标准 =====
+  - id: "acquisition-criteria-1989-01"
+    text: "表现出持续稳定的盈利能力（我们对未来美好预期或困境反转的公司没有兴趣）。"
+    source_category: "shareholder-letter"
+    source_year: 1989
+    source_slug: "1989"
+    tags: ["收购标准", "盈利能力", "困境反转"]
+
+  # 继续添加更多金句...

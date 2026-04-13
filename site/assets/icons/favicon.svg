@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1628;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景圆角方块 -->
+  <rect width="64" height="64" rx="12" ry="12" fill="url(#bg)"/>
+
+  <!-- 折线图（价值投资上升趋势） -->
+  <polyline
+    points="8,48 20,38 30,42 42,24 56,14"
+    fill="none"
+    stroke="url(#line)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- 趋势线上的节点 -->
+  <circle cx="8"  cy="48" r="2.5" fill="#38BDF8"/>
+  <circle cx="20" cy="38" r="2.5" fill="#38BDF8"/>
+  <circle cx="30" cy="42" r="2.5" fill="#38BDF8"/>
+  <circle cx="42" cy="24" r="2.5" fill="#60A5FA"/>
+  <circle cx="56" cy="14" r="3"   fill="#FFFFFF"/>
+
+  <!-- 字母 M（MyCloudAI 首字母） -->
+  <text
+    x="32"
+    y="62"
+    font-family="Georgia, serif"
+    font-size="7"
+    font-weight="bold"
+    fill="#38BDF8"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >MCA</text>
+</svg>
