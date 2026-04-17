@@ -875,6 +875,74 @@ else
   fail "10.3d: /api/chat 非 SSE 响应提示" "text=$CHAT_HTML_ERROR"
 fi
 
+# 10.3e /api/chat list_models 必须返回 JSON（不能返回 SSE event:...）
+MODEL_PROXY_TMP="/tmp/model-proxy-$$.body"
+MODEL_PROXY_HEADERS=$(curl -sS -D - -o "$MODEL_PROXY_TMP" -X POST "$BASE_URL/api/chat" \
+  -H "Content-Type: application/json" \
+  --data '{"action":"list_models","provider":"openai","apiKey":"sk-test-proxy","baseUrl":"http://127.0.0.1:9"}' | tr -d '\r')
+MODEL_PROXY_BODY=$(cat "$MODEL_PROXY_TMP" 2>/dev/null || true)
+rm -f "$MODEL_PROXY_TMP"
+
+if grep -qi 'content-type: application/json' <<< "$MODEL_PROXY_HEADERS" && grep -q '"error"\|"details"\|"models"' <<< "$MODEL_PROXY_BODY"; then
+  pass "10.3e: /api/chat?action=list_models 返回 JSON（避免 Unexpected token 解析错误）"
+else
+  fail "10.3e: list_models JSON 代理" "headers=$(echo "$MODEL_PROXY_HEADERS" | head -1) body=$(echo "$MODEL_PROXY_BODY" | head -c 180)"
+fi
+
+# 10.3f 工具检索后，参考原文应显示结果且不应一直停留“搜索中...”
+REF_PANEL_STATE=$(playwright-cli --raw run-code "async page => {
+  return await page.evaluate(async () => {
+    localStorage.setItem('mycloudai-settings', JSON.stringify({
+      provider: 'openai',
+      apiKey: 'sk-test-key-placeholder',
+      baseUrl: 'https://api.deepseek.com/v1',
+      model: 'deepseek-chat'
+    }));
+
+    const originalFetch = window.fetch;
+    const streamBody = [
+      'event: tool_call\\ndata: {\"query\":\"护城河\"}\\n\\n',
+      'event: tool_result\\ndata: {\"query\":\"护城河\",\"refs\":[{\"title\":\"1984年巴菲特致股东信（中文全文）\",\"content\":\"测试片段\",\"route\":\"/shareholder-letters/1984\",\"query\":\"护城河\"}]}\\n\\n',
+      'event: chunk\\ndata: {\"text\":\"这是测试回复\"}\\n\\n',
+      'event: done\\ndata: {}\\n\\n'
+    ].join('');
+
+    window.fetch = function(url) {
+      if (url === '/api/chat') {
+        return Promise.resolve(new Response(streamBody, {
+          status: 200,
+          headers: { 'Content-Type': 'text/event-stream' }
+        }));
+      }
+      return originalFetch.apply(window, arguments);
+    };
+
+    try {
+      const input = document.getElementById('chat-input');
+      const sendBtn = document.getElementById('send-btn');
+      if (!input || !sendBtn) return 'missing-elements';
+      input.value = '什么是护城河';
+      sendBtn.click();
+      await new Promise(resolve => setTimeout(resolve, 250));
+
+      const refPanel = document.getElementById('ref-content');
+      const text = refPanel ? refPanel.textContent : '';
+      const hasRefLink = !!(refPanel && refPanel.querySelector('a[href*=\"/shareholder-letters/1984\"]'));
+      const stuckSearching = text.includes('搜索中...');
+      return JSON.stringify({ hasRefLink, stuckSearching, text: text.slice(0, 120) });
+    } finally {
+      window.fetch = originalFetch;
+      sessionStorage.removeItem('chatHistory');
+    }
+  });
+}" 2>/dev/null)
+
+if echo "$REF_PANEL_STATE" | grep -q '"hasRefLink":true' && ! echo "$REF_PANEL_STATE" | grep -q '"stuckSearching":true'; then
+  pass "10.3f: 参考原文在检索后正确显示并可跳转，不会一直停留在搜索中"
+else
+  fail "10.3f: 参考原文展示状态" "state=$REF_PANEL_STATE"
+fi
+
 
 # 10.4 AI Integration tests (conditional)
 if [ -n "$OPENAI_MODEL" ] && [ -n "$OPENAI_API_KEY" ]; then

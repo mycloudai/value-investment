@@ -57,12 +57,43 @@
     }
     var h = '';
     for (var i = 0; i < results.length; i++) {
+      var route = results[i].route || '';
+      var query = results[i].query || '';
+      var title = escapeHtml(results[i].title || '未命名来源');
+      var snippet = escapeHtml((results[i].content || '').substring(0, 220));
+      var href = route;
+      if (route && query) {
+        href = route + (route.indexOf('?') >= 0 ? '&' : '?') + 'highlight=' + encodeURIComponent(query);
+      }
       h += '<div class="ref-item">';
-      h += '<div class="ref-item-title">\u{1F4C4} ' + results[i].title.substring(0, 30) + '</div>';
-      h += '<div class="ref-item-text">' + results[i].content.substring(0, 150) + '...</div>';
+      if (href) {
+        h += '<div class="ref-item-title">\u{1F4C4} <a href="' + href + '" data-route="' + route + '" target="_blank" rel="noopener noreferrer">' + title + '</a></div>';
+      } else {
+        h += '<div class="ref-item-title">\u{1F4C4} ' + title + '</div>';
+      }
+      h += '<div class="ref-item-text">' + snippet + '...</div>';
       h += '</div>';
     }
     el.innerHTML = h;
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  var _chatMarkedConfigured = false;
+  function getChatMarked() {
+    if (!window.marked || typeof window.marked.parse !== 'function') return null;
+    if (!_chatMarkedConfigured && typeof window.marked.setOptions === 'function') {
+      window.marked.setOptions({ gfm: true, breaks: true });
+      _chatMarkedConfigured = true;
+    }
+    return window.marked;
   }
 
   // ─── API Calls ────────────────────────────────────
@@ -95,11 +126,14 @@
   }
 
   function formatMsg(text) {
-    return text
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/`(.+?)`/g, '<code>$1</code>')
-      .replace(/\n/g, '<br>');
+    var raw = String(text || '');
+    try {
+      var md = getChatMarked();
+      if (md) {
+        return md.parse(raw);
+      }
+    } catch (_) {}
+    return '<pre class="msg-plain">' + escapeHtml(raw) + '</pre>';
   }
 
   // ─── Send Message ─────────────────────────────────
@@ -201,6 +235,14 @@
             }
             // Update reference panel
             updateRefPanel([{ title: '搜索中...', content: data.query || '' }]);
+            } else if (event === 'tool_result') {
+              if (searchIndicator) {
+                searchIndicator.remove();
+                searchIndicator = null;
+              }
+              if (data && data.refs && data.refs.length) {
+                updateRefPanel(data.refs);
+              }
           } else if (event === 'chunk') {
             // Remove search indicator on first text chunk
             if (searchIndicator) {

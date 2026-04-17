@@ -49,14 +49,24 @@ function getFallbackSkill() {
 // ─── BM25-style keyword search ───────────────────────────────────
 function searchKnowledge(index, query, topK) {
   topK = topK || 5;
-  if (!index || index.length === 0) return '未找到相关内容。知识库加载中，请稍后再试。';
+  if (!index || index.length === 0) {
+    return {
+      context: '未找到相关内容。知识库加载中，请稍后再试。',
+      refs: []
+    };
+  }
 
   var terms = query.toLowerCase()
     .replace(/[，。？！、；：""''（）《》\s]+/g, ' ')
     .split(/\s+/)
     .filter(function(t) { return t.length > 1; });
 
-  if (terms.length === 0) return '搜索关键词为空。';
+  if (terms.length === 0) {
+    return {
+      context: '搜索关键词为空。',
+      refs: []
+    };
+  }
 
   var scored = [];
   for (var i = 0; i < index.length; i++) {
@@ -87,10 +97,36 @@ function searchKnowledge(index, query, topK) {
   scored.sort(function(a, b) { return b.score - a.score; });
   var results = scored.slice(0, topK);
 
-  if (results.length === 0) return '未找到与"' + query + '"相关的内容。';
+  if (results.length === 0) {
+    return {
+      context: '未找到与"' + query + '"相关的内容。',
+      refs: []
+    };
+  }
 
   var nl = '\n';
-  return results.map(function(item) {
+  var refs = results.map(function(item) {
+    var doc = item.doc;
+    var route = '';
+    if (doc.category === 'shareholder-letter') route = '/shareholder-letters/' + doc.slug;
+    else if (doc.category === 'partnership-letter') route = '/partnership-letters/' + doc.slug;
+    else if (doc.category === 'special-letter') route = '/special-letters/' + doc.slug;
+    else if (doc.category === 'concept') route = '/concepts/' + doc.slug;
+    else if (doc.category === 'company') route = '/companies/' + doc.slug;
+    else if (doc.category === 'person') route = '/people/' + doc.slug;
+
+    return {
+      title: doc.title || (doc.slug || '未命名来源'),
+      content: (doc.content || '').slice(0, 220),
+      route: route,
+      query: query,
+      category: doc.category,
+      year: doc.year,
+      score: item.score
+    };
+  });
+
+  var context = results.map(function(item) {
     var doc = item.doc;
     var src;
     if (doc.year && doc.category === 'shareholder-letter') {
@@ -108,6 +144,11 @@ function searchKnowledge(index, query, topK) {
     }
     return '### 来源：' + src + nl + (doc.content || '').slice(0, 600);
   }).join(nl + nl + '---' + nl + nl);
+
+  return {
+    context: context,
+    refs: refs
+  };
 }
 
 // ─── Tool Definitions ────────────────────────────────────────────
@@ -148,6 +189,14 @@ function getClaudeTools() {
 // ─── SSE Helpers ─────────────────────────────────────────────────
 function sseEvent(event, data) {
   return 'event: ' + event + '\ndata: ' + JSON.stringify(data) + '\n\n';
+}
+
+async function emitChunkedText(write, text, chunkSize) {
+  if (!text) return;
+  var size = chunkSize || 28;
+  for (var i = 0; i < text.length; i += size) {
+    await write(sseEvent('chunk', { text: text.slice(i, i + size) }));
+  }
 }
 
 var CORS_HEADERS = {
@@ -215,6 +264,7 @@ export async function onRequestPost(context) {
   }
 
   var apiKey = body.apiKey;
+  var action = body.action || '';
   var provider = body.provider || 'openai';
   var baseUrl = body.baseUrl;
   var model = body.model;
@@ -225,6 +275,41 @@ export async function onRequestPost(context) {
       status: 400,
       headers: Object.assign({ 'Content-Type': 'application/json' }, CORS_HEADERS)
     });
+  }
+
+  // JSON mode: model list proxy (used by settings panel fetchModels)
+  if (action === 'list_models') {
+    if (provider === 'claude') {
+      return new Response(JSON.stringify({
+        models: [
+          'claude-opus-4-5-20250514',
+          'claude-sonnet-4-5-20250514',
+          'claude-haiku-4-5-20250514',
+          'claude-3-5-sonnet-20241022',
+          'claude-3-opus-20240229',
+          'claude-3-haiku-20240307'
+        ]
+      }), {
+        status: 200,
+        headers: Object.assign({ 'Content-Type': 'application/json' }, CORS_HEADERS)
+      });
+    }
+
+    try {
+      var models = await fetchModelList(apiKey, baseUrl || 'https://api.openai.com/v1');
+      return new Response(JSON.stringify({ models: models }), {
+        status: 200,
+        headers: Object.assign({ 'Content-Type': 'application/json' }, CORS_HEADERS)
+      });
+    } catch (e) {
+      return new Response(JSON.stringify({
+        error: '获取模型列表失败',
+        details: (e && e.message) ? e.message : 'unknown error'
+      }), {
+        status: 502,
+        headers: Object.assign({ 'Content-Type': 'application/json' }, CORS_HEADERS)
+      });
+    }
   }
 
   // Load skill and search index concurrently
@@ -306,7 +391,7 @@ async function streamOpenAICompatibleResponse(base, headers, model, messages, wr
     var fallbackChoice = fallbackData.choices && fallbackData.choices[0];
     var fallbackMessage = fallbackChoice && fallbackChoice.message;
     var fallbackContent = (fallbackMessage && fallbackMessage.content) || '';
-    if (fallbackContent) await write(sseEvent('chunk', { text: fallbackContent }));
+    if (fallbackContent) await emitChunkedText(write, fallbackContent);
     await write(sseEvent('done', {}));
     return true;
   }
@@ -347,7 +432,13 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     'Content-Type': 'application/json'
   };
   var tools = getOpenAITools();
-  var currentMessages = [{ role: 'system', content: skillPrompt }].concat(messages);
+  var currentMessages = [
+    { role: 'system', content: skillPrompt },
+    {
+      role: 'system',
+      content: '当你根据检索结果引用原文时，必须在对应句末标注来源，格式示例：\u3010来源：1984年致股东信\u3011。若有多处事实，分别标注来源。'
+    }
+  ].concat(messages);
   var toolRound = 0;
 
   while (toolRound < MAX_TOOL_ROUNDS) {
@@ -388,14 +479,15 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
         var query = args.query || '';
         await write(sseEvent('tool_call', { query: query }));
         var result = searchKnowledge(searchIndex, query);
-        currentMessages.push({ role: 'tool', tool_call_id: tc.id, content: result });
+        await write(sseEvent('tool_result', { query: query, refs: result.refs || [] }));
+        currentMessages.push({ role: 'tool', tool_call_id: tc.id, content: result.context || '' });
       }
       toolRound++;
       continue;
     }
 
     if ((msg && msg.content) && typeof msg.content === 'string') {
-      await write(sseEvent('chunk', { text: msg.content }));
+      await emitChunkedText(write, msg.content);
       await write(sseEvent('done', {}));
       return;
     }
@@ -416,7 +508,10 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     'anthropic-version': '2023-06-01'
   };
   var tools = getClaudeTools();
-  var claudeMessages = messages.filter(function(m) { return m.role !== 'system'; });
+  var claudeMessages = [{
+    role: 'user',
+    content: '当你根据检索结果引用原文时，必须在对应句末标注来源，格式示例：【来源：1984年致股东信】。若有多处事实，分别标注来源。'
+  }].concat(messages.filter(function(m) { return m.role !== 'system'; }));
   var toolRound = 0;
 
   while (toolRound < MAX_TOOL_ROUNDS) {
@@ -450,7 +545,8 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
         var query = (block.input && block.input.query) || '';
         await write(sseEvent('tool_call', { query: query }));
         var result = searchKnowledge(searchIndex, query);
-        toolResults.push({ type: 'tool_result', tool_use_id: block.id, content: result });
+        await write(sseEvent('tool_result', { query: query, refs: result.refs || [] }));
+        toolResults.push({ type: 'tool_result', tool_use_id: block.id, content: result.context || '' });
       }
       claudeMessages.push({ role: 'user', content: toolResults });
       toolRound++;
@@ -473,7 +569,7 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     if (!streamRes.ok) {
       var textBlocks = (data.content || []).filter(function(b) { return b.type === 'text'; });
       var fullText = textBlocks.map(function(b) { return b.text; }).join('');
-      if (fullText) await write(sseEvent('chunk', { text: fullText }));
+      if (fullText) await emitChunkedText(write, fullText);
       await write(sseEvent('done', {}));
       return;
     }

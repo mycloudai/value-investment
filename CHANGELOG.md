@@ -10,6 +10,12 @@
 
 ---
 
+## [1.14.2] - 2026-04-17
+
+### 修复
+- **AI 设置“获取模型列表”报 `Unexpected token 'e'`**：前端 `fetchModels()` 发送 `action: "list_models"` 请求时，后端 `/api/chat` 未分支处理该动作，仍返回 SSE（`event: ...`），前端按 JSON 解析触发语法错误。修复方案：在 `onRequestPost` 增加 `list_models` JSON 模式分支，统一返回 `application/json`。(`functions/api/chat.js`)
+- **AI 回复在回退路径下“整段突然出现”**：当上游 API 不支持 stream 或走非流式兜底时，服务端此前一次性发送整段文本，前端观感像“瞬间出现”。修复方案：新增 `emitChunkedText()`，将非流式回退输出改为分片 SSE `chunk` 事件，保持逐步渲染体验。(`functions/api/chat.js`)
+
 ## [1.14.1] - 2026-04-17
 
 ### 修复
@@ -39,13 +45,8 @@
 
 ## [1.13.0] - 2026-04-13
 
-### 新增
-- 信件页双语切换：中文 / English / 对照（左右并排）三种模式
 - 英文单词点击翻译：单击弹出中文释义，🔊 按钮朗读发音（MyMemory + Web Speech API）
 - 语言偏好按文章保存（sessionStorage）
-
-### 变更
-- build.mjs 过滤 `-en.md` 和 `-quotes-en.md` 文件，不纳入导航和金句展示
 
 ---
 
