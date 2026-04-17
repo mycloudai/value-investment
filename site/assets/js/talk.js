@@ -89,8 +89,19 @@
   var _chatMarkedConfigured = false;
   function getChatMarked() {
     if (!window.marked || typeof window.marked.parse !== 'function') return null;
-    if (!_chatMarkedConfigured && typeof window.marked.setOptions === 'function') {
-      window.marked.setOptions({ gfm: true, breaks: true });
+    if (!_chatMarkedConfigured) {
+      var renderer = new window.marked.Renderer();
+      // Make internal links SPA-navigable
+      renderer.link = function(href, title, text) {
+        // Handle marked v5+ object argument
+        if (typeof href === 'object') { title = href.title; text = href.text; href = href.href; }
+        var isInternal = href && href.charAt(0) === '/' && href.indexOf('//') !== 0;
+        if (isInternal) {
+          return '<a href="' + href + '" data-route="' + href + '" class="chat-link">' + (text || href) + '</a>';
+        }
+        return '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + (text || href) + '</a>';
+      };
+      window.marked.setOptions({ gfm: true, breaks: true, renderer: renderer });
       _chatMarkedConfigured = true;
     }
     return window.marked;
@@ -223,18 +234,16 @@
             receivedEvent = true;
 
             if (event === 'tool_call') {
-              // Show search indicator
+              // Show animated thinking indicator
               if (!searchIndicator) {
               searchIndicator = document.createElement('div');
-              searchIndicator.className = 'search-indicator';
+              searchIndicator.className = 'thinking-indicator';
               var bubble = aiDiv ? aiDiv.querySelector('.msg-bubble') : null;
               if (bubble) bubble.appendChild(searchIndicator);
             }
             if (searchIndicator) {
-              searchIndicator.innerHTML = '\uD83D\uDD0D 正在检索：' + (data.query || '...');
+              searchIndicator.innerHTML = '<span class="thinking-dots"><span></span><span></span><span></span></span> 正在思考检索：' + escapeHtml(data.query || '...');
             }
-            // Update reference panel
-            updateRefPanel([{ title: '搜索中...', content: data.query || '' }]);
             } else if (event === 'tool_result') {
               if (searchIndicator) {
                 searchIndicator.remove();

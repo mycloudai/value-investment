@@ -9,7 +9,9 @@
 //     -> BM25 search against server-search-index.json
 //     -> Stream final answer back as SSE
 
-const MAX_TOOL_ROUNDS = 5;
+const MAX_TOOL_ROUNDS = 20;
+const MAX_RETRIES = 2;
+const RETRY_DELAY_MS = 1000;
 
 // ─── Search Index (cached in worker memory) ─────────────────────
 async function loadSearchIndex(requestUrl) {
@@ -128,7 +130,15 @@ function searchKnowledge(index, query, topK) {
 
   var context = results.map(function(item) {
     var doc = item.doc;
+    var route = '';
     var src;
+    if (doc.category === 'shareholder-letter') { route = '/shareholder-letters/' + doc.slug; }
+    else if (doc.category === 'partnership-letter') { route = '/partnership-letters/' + doc.slug; }
+    else if (doc.category === 'special-letter') { route = '/special-letters/' + doc.slug; }
+    else if (doc.category === 'concept') { route = '/concepts/' + doc.slug; }
+    else if (doc.category === 'company') { route = '/companies/' + doc.slug; }
+    else if (doc.category === 'person') { route = '/people/' + doc.slug; }
+
     if (doc.year && doc.category === 'shareholder-letter') {
       src = doc.year + '年致股东信';
     } else if (doc.year && doc.category === 'partnership-letter') {
@@ -142,7 +152,8 @@ function searchKnowledge(index, query, topK) {
     } else {
       src = doc.title;
     }
-    return '### 来源：' + src + nl + (doc.content || '').slice(0, 600);
+    var routeHint = route ? '（路由：' + route + '）' : '';
+    return '### 来源：' + src + routeHint + nl + (doc.content || '').slice(0, 600);
   }).join(nl + nl + '---' + nl + nl);
 
   return {
@@ -432,37 +443,56 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     'Content-Type': 'application/json'
   };
   var tools = getOpenAITools();
+  var citationPrompt = '重要：当你引用检索结果时，请用Markdown链接标注来源。检索结果中会标注文章路由（如 /shareholder-letters/1984），你必须用这些路由生成链接。\n'
+    + '格式：[来源名称](路由)，例如：[1984年致股东信](/shareholder-letters/1984)、[护城河](/concepts/moat)\n'
+    + '在引用事实的句末插入链接，如：巴菲特在1984年指出... ([1984年致股东信](/shareholder-letters/1984))\n'
+    + '若有多处事实来自不同来源，分别标注。不要使用【】括号格式。';
   var currentMessages = [
     { role: 'system', content: skillPrompt },
-    {
-      role: 'system',
-      content: '当你根据检索结果引用原文时，必须在对应句末标注来源，格式示例：\u3010来源：1984年致股东信\u3011。若有多处事实，分别标注来源。'
-    }
+    { role: 'system', content: citationPrompt }
   ].concat(messages);
+  var allRefs = [];
   var toolRound = 0;
 
   while (toolRound < MAX_TOOL_ROUNDS) {
-    var res = await fetch(base + '/chat/completions', {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({
-        model: model || 'gpt-4o',
-        messages: currentMessages,
-        tools: tools,
-        tool_choice: 'auto',
-        stream: false
-      })
-    });
-
-    if (!res.ok) {
-      var streamed = await streamOpenAICompatibleResponse(base, headers, model || 'gpt-4o', currentMessages, write);
-      if (streamed) return;
-      var errText = await res.text();
-      await write(sseEvent('error', { message: 'API Error ' + res.status + ': ' + errText.substring(0, 300) }));
-      return;
+    var res = null;
+    var data = null;
+    for (var retry = 0; retry <= MAX_RETRIES; retry++) {
+      try {
+        res = await fetch(base + '/chat/completions', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            model: model || 'gpt-4o',
+            messages: currentMessages,
+            tools: tools,
+            tool_choice: 'auto',
+            stream: false
+          })
+        });
+        if (res.ok) {
+          data = await res.json();
+          break;
+        }
+        // Retryable server errors (429, 500, 502, 503, 529)
+        var isRetryable = [429, 500, 502, 503, 529].indexOf(res.status) >= 0;
+        if (!isRetryable || retry >= MAX_RETRIES) {
+          var streamed = await streamOpenAICompatibleResponse(base, headers, model || 'gpt-4o', currentMessages, write);
+          if (streamed) return;
+          var errText = await res.text();
+          await write(sseEvent('error', { message: 'API Error ' + res.status + ': ' + errText.substring(0, 300) }));
+          return;
+        }
+        await new Promise(function(r) { setTimeout(r, RETRY_DELAY_MS * (retry + 1)); });
+      } catch (fetchErr) {
+        if (retry >= MAX_RETRIES) {
+          await write(sseEvent('error', { message: '网络错误: ' + (fetchErr.message || 'fetch failed') }));
+          return;
+        }
+        await new Promise(function(r) { setTimeout(r, RETRY_DELAY_MS * (retry + 1)); });
+      }
     }
-
-    var data = await res.json();
+    if (!data) { await write(sseEvent('error', { message: 'API 响应异常' })); return; }
     var choice = data.choices && data.choices[0];
     if (!choice) {
       await write(sseEvent('error', { message: '无效的API响应' }));
@@ -479,24 +509,65 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
         var query = args.query || '';
         await write(sseEvent('tool_call', { query: query }));
         var result = searchKnowledge(searchIndex, query);
-        await write(sseEvent('tool_result', { query: query, refs: result.refs || [] }));
+        if (result.refs && result.refs.length) {
+          for (var ri = 0; ri < result.refs.length; ri++) allRefs.push(result.refs[ri]);
+        }
+        await write(sseEvent('tool_result', { query: query, refs: allRefs }));
         currentMessages.push({ role: 'tool', tool_call_id: tc.id, content: result.context || '' });
       }
       toolRound++;
       continue;
     }
 
+    // Final answer - stream it
     if ((msg && msg.content) && typeof msg.content === 'string') {
+      // Got a non-streamed final answer, emit as chunks then try re-emitting refs
       await emitChunkedText(write, msg.content);
+      if (allRefs.length) await write(sseEvent('tool_result', { refs: allRefs }));
       await write(sseEvent('done', {}));
       return;
     }
 
+    // Stream the final answer
     await streamOpenAICompatibleResponse(base, headers, model || 'gpt-4o', currentMessages, write);
+    if (allRefs.length) await write(sseEvent('tool_result', { refs: allRefs }));
     return;
   }
 
-  await write(sseEvent('error', { message: '工具调用轮次超过上限' }));
+  // Safety: if we somehow exhaust rounds, still try to get a final answer
+  await write(sseEvent('tool_call', { query: '生成最终回答...' }));
+  // Remove tools to force a text response
+  var finalRes = await fetch(base + '/chat/completions', {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify({ model: model || 'gpt-4o', messages: currentMessages, stream: true })
+  });
+  if (finalRes.ok) {
+    var rdr = finalRes.body.getReader();
+    var dec2 = new TextDecoder();
+    var fbuf = '';
+    while (true) {
+      var fchunk = await rdr.read();
+      if (fchunk.done) break;
+      fbuf += dec2.decode(fchunk.value, { stream: true });
+      var flines = fbuf.split('\n');
+      fbuf = flines.pop() || '';
+      for (var fli = 0; fli < flines.length; fli++) {
+        var fline = flines[fli].trim();
+        if (!fline || !fline.startsWith('data: ')) continue;
+        var fjson = fline.substring(6);
+        if (fjson === '[DONE]') continue;
+        try {
+          var fp = JSON.parse(fjson);
+          if (fp.choices && fp.choices[0] && fp.choices[0].delta && fp.choices[0].delta.content) {
+            await write(sseEvent('chunk', { text: fp.choices[0].delta.content }));
+          }
+        } catch(e) {}
+      }
+    }
+  }
+  if (allRefs.length) await write(sseEvent('tool_result', { refs: allRefs }));
+  await write(sseEvent('done', {}));
 }
 
 // ─── Claude Agentic Loop ────────────────────────────────────────
@@ -508,33 +579,55 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     'anthropic-version': '2023-06-01'
   };
   var tools = getClaudeTools();
+  var citationPrompt = '重要：当你引用检索结果时，请用Markdown链接标注来源。检索结果中会标注文章路由（如 /shareholder-letters/1984），你必须用这些路由生成链接。\n'
+    + '格式：[来源名称](路由)，例如：[1984年致股东信](/shareholder-letters/1984)、[护城河](/concepts/moat)\n'
+    + '在引用事实的句末插入链接，如：巴菲特在1984年指出... ([1984年致股东信](/shareholder-letters/1984))\n'
+    + '若有多处事实来自不同来源，分别标注。不要使用【】括号格式。';
   var claudeMessages = [{
     role: 'user',
-    content: '当你根据检索结果引用原文时，必须在对应句末标注来源，格式示例：【来源：1984年致股东信】。若有多处事实，分别标注来源。'
+    content: citationPrompt
   }].concat(messages.filter(function(m) { return m.role !== 'system'; }));
+  var allRefs = [];
   var toolRound = 0;
 
   while (toolRound < MAX_TOOL_ROUNDS) {
-    var res = await fetch(base + '/v1/messages', {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({
-        model: model || 'claude-sonnet-4-20250514',
-        max_tokens: 4096,
-        system: skillPrompt,
-        messages: claudeMessages,
-        tools: tools,
-        stream: false
-      })
-    });
-
-    if (!res.ok) {
-      var errText = await res.text();
-      await write(sseEvent('error', { message: 'Claude API Error ' + res.status + ': ' + errText.substring(0, 300) }));
-      return;
+    var res = null;
+    var data = null;
+    for (var retry = 0; retry <= MAX_RETRIES; retry++) {
+      try {
+        res = await fetch(base + '/v1/messages', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            model: model || 'claude-sonnet-4-20250514',
+            max_tokens: 4096,
+            system: skillPrompt,
+            messages: claudeMessages,
+            tools: tools,
+            stream: false
+          })
+        });
+        if (res.ok) {
+          data = await res.json();
+          break;
+        }
+        var isRetryable = [429, 500, 502, 503, 529].indexOf(res.status) >= 0;
+        if (!isRetryable || retry >= MAX_RETRIES) {
+          var errText = await res.text();
+          await write(sseEvent('error', { message: 'Claude API Error ' + res.status + ': ' + errText.substring(0, 300) }));
+          return;
+        }
+        await new Promise(function(r) { setTimeout(r, RETRY_DELAY_MS * (retry + 1)); });
+      } catch (fetchErr) {
+        if (retry >= MAX_RETRIES) {
+          await write(sseEvent('error', { message: '网络错误: ' + (fetchErr.message || 'fetch failed') }));
+          return;
+        }
+        await new Promise(function(r) { setTimeout(r, RETRY_DELAY_MS * (retry + 1)); });
+      }
     }
+    if (!data) { await write(sseEvent('error', { message: 'API 响应异常' })); return; }
 
-    var data = await res.json();
     var toolUseBlocks = (data.content || []).filter(function(b) { return b.type === 'tool_use'; });
 
     if (toolUseBlocks.length > 0 && data.stop_reason === 'tool_use') {
@@ -545,7 +638,10 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
         var query = (block.input && block.input.query) || '';
         await write(sseEvent('tool_call', { query: query }));
         var result = searchKnowledge(searchIndex, query);
-        await write(sseEvent('tool_result', { query: query, refs: result.refs || [] }));
+        if (result.refs && result.refs.length) {
+          for (var ri = 0; ri < result.refs.length; ri++) allRefs.push(result.refs[ri]);
+        }
+        await write(sseEvent('tool_result', { query: query, refs: allRefs }));
         toolResults.push({ type: 'tool_result', tool_use_id: block.id, content: result.context || '' });
       }
       claudeMessages.push({ role: 'user', content: toolResults });
@@ -600,7 +696,43 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     return;
   }
 
-  await write(sseEvent('error', { message: '工具调用轮次超过上限' }));
+  // Safety: exhausted rounds, force a final text answer without tools
+  var finalRes = await fetch(base + '/v1/messages', {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify({
+      model: model || 'claude-sonnet-4-20250514',
+      max_tokens: 4096,
+      system: skillPrompt,
+      messages: claudeMessages,
+      stream: true
+    })
+  });
+  if (finalRes.ok) {
+    var rdr = finalRes.body.getReader();
+    var dec2 = new TextDecoder();
+    var fbuf = '';
+    while (true) {
+      var fchunk = await rdr.read();
+      if (fchunk.done) break;
+      fbuf += dec2.decode(fchunk.value, { stream: true });
+      var flines = fbuf.split('\n');
+      fbuf = flines.pop() || '';
+      for (var fli = 0; fli < flines.length; fli++) {
+        var fline = flines[fli].trim();
+        if (!fline || !fline.startsWith('data: ')) continue;
+        var fjson = fline.substring(6);
+        try {
+          var fp = JSON.parse(fjson);
+          if (fp.type === 'content_block_delta' && fp.delta && fp.delta.text) {
+            await write(sseEvent('chunk', { text: fp.delta.text }));
+          }
+        } catch(e) {}
+      }
+    }
+  }
+  if (allRefs.length) await write(sseEvent('tool_result', { refs: allRefs }));
+  await write(sseEvent('done', {}));
 }
 
 // Handle CORS preflight
