@@ -97,7 +97,7 @@
         if (typeof href === 'object') { title = href.title; text = href.text; href = href.href; }
         var isInternal = href && href.charAt(0) === '/' && href.indexOf('//') !== 0;
         if (isInternal) {
-          return '<a href="' + href + '" data-route="' + href + '" class="chat-link">' + (text || href) + '</a>';
+          return '<a href="' + href + '" class="chat-link" target="_blank" rel="noopener noreferrer">' + (text || href) + '</a>';
         }
         return '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + (text || href) + '</a>';
       };
