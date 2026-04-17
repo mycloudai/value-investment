@@ -13,6 +13,7 @@
 ## [1.14.1] - 2026-04-17
 
 ### 修复
+- **Cloudflare Pages 部署报错 `workers-site/index.js` 找不到**：`wrangler.toml` 中使用了旧版 Workers Sites 的 `[site] bucket` 配置，触发 wrangler 寻找不存在的 `workers-site/index.js`。修复方案：移除 `[site]` 块，改用 Cloudflare Pages 的 `pages_build_output_dir = "./site"`。(`wrangler.toml`)
 - **CI 构建 ENOENT 错误**：`buildServerSearchIndex` 在写入 `site/assets/data/server-search-index.json` 前未确保目录存在，而 `ensureDir` 调用在更晚的步骤执行，导致 CI（GitHub Actions）环境报 `ENOENT`。修复方案：在写文件前显式调用 `fs.mkdirSync(..., { recursive: true })`。(`build.mjs`)
 - **QA 脚本 CI 路径硬编码**：`run-qa.sh` 中 `PROJECT_DIR` 硬编码为本地绝对路径 `/Users/RVTYadmin/...`，在 CI 环境（`/home/runner/work/...`）下导致 `mkdir` 权限错误、`qa-report.md` 无法创建、截图路径超出 playwright-cli 允许根目录。修复方案：改为动态解析脚本位置 `$(cd "$(dirname "$0")/.." && pwd)`。(`tests/run-qa.sh`)
 - **Section 14 缓存测试路径硬编码**：`run-qa.sh` 内 Section 14 的 `HEADERS_FILE` 变量仍残留硬编码绝对路径，导致 CI 中 `site/_headers` 找不到，缓存规则检测全部报失败。修复方案：改为 `"$PROJECT_DIR/site/_headers"`。(`tests/run-qa.sh`)
