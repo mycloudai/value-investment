@@ -10,6 +10,19 @@
 
 ---
 
+## [1.14.4] - 2026-04-17
+### 修复
+- **聊天 Markdown 渲染改为库优先且不再手写规则**：`talk.js` 现统一使用现有 `marked` 库解析 Markdown；当库不可用时仅做纯文本转义兜底（`<pre>`），不再使用自定义正则“仿 Markdown”渲染。(`site/assets/js/talk.js`)
+
+### 修复
+- **AI 设置首次获取模型报未填写**：`fetchModels()` 不再只读 `localStorage`，首次打开设置时直接读取当前表单中的 API Key、Base URL、Provider 和 Model，保存前也能立即拉取模型列表。(`site/assets/js/talk.js`)
+- **兼容接口模型列表改走站内代理**：OpenAI 兼容提供商的模型列表不再从浏览器直接请求第三方 `/models`，而是通过 `/api/chat` 代理，并在后端按通用规则尝试 `.../models` 与 `.../v1/models`，减少 CORS、网关和版本路径差异导致的失败。(`site/assets/js/talk.js`、`functions/api/chat.js`)
+- **AI 对话“没有反应”问题**：当前端拿到的 `/api/chat` 响应其实是 HTML 页面或其他非 SSE 内容时，会明确提示本地站点未以 Pages Functions 模式启动，而不再悄悄显示空白回复。(`site/assets/js/talk.js`)
+- **AI 聊天输入框初始不在底部**：将对话页主区域高度约束到剩余视口，并让 `#app-content` / `.talk-container` / `.talk-body` 正确传递 `flex` 高度，避免页面额外滚动导致输入框首屏不可见；移动端同步保留满屏高度。(`site/assets/css/style.css`)
+- **Spotlight 搜索跳转段落不准**：顶部搜索结果不再拼接错误的 `#chunk-N` 锚点，统一改为 `?highlight=` 高亮跳转，避免服务端字符分块编号与客户端 DOM 段落编号不一致时滚到错误位置。(`site/assets/js/search.js`)
+- **概念页「致股东信」链接跳转位置不准**：右侧面板点击关联信件链接后，URL 中曾携带 `#chunk-N` 锚点，该编号取自服务端搜索索引的按字符分块序号（400 字/块），与客户端渲染时按块级元素（`p`/`blockquote`/`ul`/`ol`/`table`/`pre`）递增的 `id="chunk-N"` 编号完全不对应，导致页面滚动到与关键词无关的段落。**根本原因**：`buildServerSearchIndex`（`build.mjs`）使用字符偏移分块，`renderContent`（`app.js`）使用 DOM 元素编号，两套计数系统互不兼容。**修复方案**：`showScopedSearchModal` 构造 URL 时移除 `#chunk-N` 锚点，仅保留 `?highlight=keyword` 参数；`applyHighlightFromURL` 在无锚点时自动高亮所有匹配词并滚动到第一个 `<mark>` 元素，始终精准定位。(`site/assets/js/app.js`)
+- **同年份信件路由解析修复**：概念/公司/人物页在渲染「致股东信」关联列表时，`buildCrossRefPanel` 先将 `"shareholder-letters/1966"` 拆分为裸 slug `"1966"`，再调用 `resolveSlugs(["1966"])`，导致 manifest 中先出现的同年份信件（如 `partnership-letters/1966`）被错误匹配。修复：改为传入完整路径 `"shareholder-letters/1966"`，`resolveSlugs` 通过 `targetRoute` 精确匹配，彻底消除年份重名冲突。(`site/assets/js/app.js`)
+
 ## [1.14.2] - 2026-04-17
 
 ### 修复
@@ -31,18 +44,7 @@
 ### 移除
 - **语言选择功能彻底移除**：信件页（股东信/合伙人信/特别信件）不再显示中文/English/对照切换栏及英文单词气泡翻译。项目目前不支持多语言，相关 UI、客户端逻辑（`initBilingualToggle`、`injectBilingualToggle`、`processEnglishWords`、`showWordTooltip` 等函数）及对应 CSS 一并删除，核心信件渲染保持不变。(`site/assets/js/app.js`、`site/assets/css/style.css`)
 - **HELP.md 双语阅读章节移除**：与移除功能一致，删除「🌐 双语阅读」及「英文单词翻译」说明小节。
-
-### 修复
-- **AI 设置首次获取模型报未填写**：`fetchModels()` 不再只读 `localStorage`，首次打开设置时直接读取当前表单中的 API Key、Base URL、Provider 和 Model，保存前也能立即拉取模型列表。(`site/assets/js/talk.js`)
-- **兼容接口模型列表改走站内代理**：OpenAI 兼容提供商的模型列表不再从浏览器直接请求第三方 `/models`，而是通过 `/api/chat` 代理，并在后端按通用规则尝试 `.../models` 与 `.../v1/models`，减少 CORS、网关和版本路径差异导致的失败。(`site/assets/js/talk.js`、`functions/api/chat.js`)
-- **AI 对话“没有反应”问题**：当前端拿到的 `/api/chat` 响应其实是 HTML 页面或其他非 SSE 内容时，会明确提示本地站点未以 Pages Functions 模式启动，而不再悄悄显示空白回复。(`site/assets/js/talk.js`)
-- **AI 聊天输入框初始不在底部**：将对话页主区域高度约束到剩余视口，并让 `#app-content` / `.talk-container` / `.talk-body` 正确传递 `flex` 高度，避免页面额外滚动导致输入框首屏不可见；移动端同步保留满屏高度。(`site/assets/css/style.css`)
-- **Spotlight 搜索跳转段落不准**：顶部搜索结果不再拼接错误的 `#chunk-N` 锚点，统一改为 `?highlight=` 高亮跳转，避免服务端字符分块编号与客户端 DOM 段落编号不一致时滚到错误位置。(`site/assets/js/search.js`)
-- **概念页「致股东信」链接跳转位置不准**：右侧面板点击关联信件链接后，URL 中曾携带 `#chunk-N` 锚点，该编号取自服务端搜索索引的按字符分块序号（400 字/块），与客户端渲染时按块级元素（`p`/`blockquote`/`ul`/`ol`/`table`/`pre`）递增的 `id="chunk-N"` 编号完全不对应，导致页面滚动到与关键词无关的段落。**根本原因**：`buildServerSearchIndex`（`build.mjs`）使用字符偏移分块，`renderContent`（`app.js`）使用 DOM 元素编号，两套计数系统互不兼容。**修复方案**：`showScopedSearchModal` 构造 URL 时移除 `#chunk-N` 锚点，仅保留 `?highlight=keyword` 参数；`applyHighlightFromURL` 在无锚点时自动高亮所有匹配词并滚动到第一个 `<mark>` 元素，始终精准定位。(`site/assets/js/app.js`)
-- **同年份信件路由解析修复**：概念/公司/人物页在渲染「致股东信」关联列表时，`buildCrossRefPanel` 先将 `"shareholder-letters/1966"` 拆分为裸 slug `"1966"`，再调用 `resolveSlugs(["1966"])`，导致 manifest 中先出现的同年份信件（如 `partnership-letters/1966`）被错误匹配。修复：改为传入完整路径 `"shareholder-letters/1966"`，`resolveSlugs` 通过 `targetRoute` 精确匹配，彻底消除年份重名冲突。(`site/assets/js/app.js`)
-
----
-
+--
 ## [1.13.0] - 2026-04-13
 
 - 英文单词点击翻译：单击弹出中文释义，🔊 按钮朗读发音（MyMemory + Web Speech API）
