@@ -937,7 +937,7 @@ REF_PANEL_STATE=$(playwright-cli --raw run-code "async page => {
   });
 }" 2>/dev/null)
 
-if echo "$REF_PANEL_STATE" | grep -q '"hasRefLink":true' && ! echo "$REF_PANEL_STATE" | grep -q '"stuckSearching":true'; then
+if echo "$REF_PANEL_STATE" | grep -q 'hasRefLink.*true' && ! echo "$REF_PANEL_STATE" | grep -q 'stuckSearching.*true'; then
   pass "10.3f: 参考原文在检索后正确显示并可跳转，不会一直停留在搜索中"
 else
   fail "10.3f: 参考原文展示状态" "state=$REF_PANEL_STATE"

@@ -10,6 +10,13 @@
 
 ---
 
+## [1.15.1] - 2026-04-17
+
+### 修复
+- **CI 测试 10.3e**：`tests/serve.mjs` 新增 `/api/chat` POST stub，返回 JSON 而非 SPA HTML，修复 CI 测试失败
+- **CI 测试 10.3f**：修复 `playwright-cli --raw` 输出转义引号导致 grep 无法匹配 `"hasRefLink":true` 的问题，改用宽松模式 `hasRefLink.*true`
+- **OpenAI 对话 404**：`runOpenAILoop` 和 `streamOpenAICompatibleResponse` 缺少 `/v1` 自动补全，导致自定义 `baseUrl`（如 `https://api.openai.com`）能列出模型但对话 404；与 `fetchModelList` 行为保持一致
+
 ## [1.15.0] - 2026-04-17
 
 ### 新增

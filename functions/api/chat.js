@@ -371,6 +371,9 @@ export async function onRequestPost(context) {
 }
 
 async function streamOpenAICompatibleResponse(base, headers, model, messages, write) {
+  // Ensure base ends with /v1 (or /vN) so endpoints are reachable
+  base = base.replace(/\/+$/, '');
+  if (!/\/v\d+$/i.test(base)) base = base + '/v1';
   var streamRes = await fetch(base + '/chat/completions', {
     method: 'POST',
     headers: headers,
@@ -438,6 +441,8 @@ async function streamOpenAICompatibleResponse(base, headers, model, messages, wr
 // ─── OpenAI Agentic Loop ────────────────────────────────────────
 async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl, model, write) {
   var base = (baseUrl || 'https://api.openai.com/v1').replace(/\/+$/, '');
+  // Auto-append /v1 if missing (matches fetchModelList normalization)
+  if (!/\/v\d+$/i.test(base)) base = base + '/v1';
   var headers = {
     'Authorization': 'Bearer ' + apiKey,
     'Content-Type': 'application/json'
