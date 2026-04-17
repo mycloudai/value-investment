@@ -10,6 +10,11 @@
 
 ---
 
+## [1.14.1] - 2026-04-17
+
+### 修复
+- **CI 构建 ENOENT 错误**：`buildServerSearchIndex` 在写入 `site/assets/data/server-search-index.json` 前未确保目录存在，而 `ensureDir` 调用在更晚的步骤执行，导致 CI（GitHub Actions）环境报 `ENOENT`。修复方案：在写文件前显式调用 `fs.mkdirSync(..., { recursive: true })`。(`build.mjs`)
+
 ## [1.14.0] - 2026-04-14
 
 ### 移除

@@ -478,6 +478,7 @@ async function buildServerSearchIndex(docs) {
   }
 
   const outPath = path.join(ASSETS_DIR, 'data', 'server-search-index.json');
+  fs.mkdirSync(path.join(ASSETS_DIR, 'data'), { recursive: true });
   await writeFile(outPath, JSON.stringify(allChunks), 'utf8');
   console.log('   ✓ Server search index: ' + allChunks.length + ' chunks → site/assets/data/server-search-index.json');
   return allChunks.length;

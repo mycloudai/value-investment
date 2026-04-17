@@ -1,6 +1,6 @@
 {
   "name": "mycloudai-value-investment",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "description": "MyCloudAI 价值投资 - 与巴菲特同行，读懂价值投资",
   "type": "module",
   "scripts": {
