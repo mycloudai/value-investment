@@ -254,7 +254,7 @@
       for (var i = 0; i < hits.length; i++) {
         var item = hits[i];
         var route = buildRoute(item);
-        var url = route + '#chunk-' + (item.chunkIndex || 0);
+        var url = route + '?highlight=' + encodeURIComponent(query);
         var catLabel = CATEGORY_LABELS[item.category] || item.category || '';
         var yearStr = item.year ? item.year + ' · ' : '';
         var snippet = extractSnippet(item.content || '', query, 120);

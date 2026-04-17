@@ -2374,13 +2374,27 @@ a.quote-source-link:hover {
 /* ─── Talk Page ─────────────────────────────────────────────── */
 .talk-page {
   flex-direction: column;
+  /* Pin .main-content to the remaining viewport so the chat layout never
+     overflows into a scrollable page — input area stays visible at bottom. */
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+/* #app-content must fill the height-constrained .main-content flex container */
+.talk-page #app-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 .talk-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  height: 100vh;
+  /* Use 100% of the constrained parent instead of 100vh, which does not
+     respect the flex-parent height cap and causes the page to scroll. */
+  height: 100%;
+  min-height: 0;
 }
 .talk-header {
   padding: 16px 24px;
@@ -2416,6 +2430,7 @@ a.quote-source-link:hover {
   flex: 1;
   display: flex;
   overflow: hidden;
+  min-height: 0; /* prevent flex children from overflowing on some browsers */
 }
 
 .chat-area {
@@ -2850,6 +2865,10 @@ a.quote-source-link:hover {
   }
   .graph-legend { gap: 8px; font-size: 0.72rem; flex-wrap: wrap; }
   .graph-container { min-height: 400px; }
+  /* On mobile, margin-top is 0 so chat container fills full viewport */
+  .talk-page {
+    height: 100vh;
+  }
   .talk-header {
     padding: 12px 16px 12px 60px;
   }
@@ -3110,148 +3129,4 @@ a.quote-source-link:hover {
   #app-content.guide-layout { padding: 70px 20px 40px; }
 }
 
-/* ─── Bilingual Toggle ─────────────────────────── */
-.bilingual-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 20px;
-  padding: 8px 12px;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  flex-wrap: wrap;
-}
 
-.bilingual-toggle-label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-right: 4px;
-}
-
-.lang-btn {
-  padding: 4px 14px;
-  border-radius: 5px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-secondary);
-  font-size: 0.82rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lang-btn:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.lang-btn.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Side-by-side layout */
-.article-body.bilingual-split-mode {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 100%;
-}
-
-.bilingual-pane {
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.bilingual-pane-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--color-accent);
-}
-
-@media (max-width: 900px) {
-  .article-body.bilingual-split-mode {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ─── English Word Tooltip ──────────────────────── */
-.en-word {
-  border-bottom: 1px dashed var(--color-accent);
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.en-word:hover {
-  background: rgba(37, 99, 235, 0.1);
-  border-radius: 2px;
-}
-
-.en-word-tooltip {
-  position: absolute;
-  z-index: 9999;
-  width: 220px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-  overflow: hidden;
-  font-size: 0.85rem;
-}
-
-.en-word-tooltip-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 10px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
-}
-
-.en-word-tooltip-word {
-  flex: 1;
-  font-weight: 700;
-  color: var(--text-primary);
-  font-size: 0.9rem;
-}
-
-.en-word-speak-btn,
-.en-word-close-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: background 0.15s;
-}
-
-.en-word-speak-btn:hover,
-.en-word-close-btn:hover {
-  background: var(--border);
-  color: var(--text-primary);
-}
-
-.en-word-tooltip-body {
-  padding: 10px 12px;
-  color: var(--text-primary);
-  min-height: 36px;
-}
-
-.en-word-loading {
-  color: var(--text-muted);
-  font-style: italic;
-}
-
-.en-word-translation {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}

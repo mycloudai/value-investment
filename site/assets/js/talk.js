@@ -135,6 +135,7 @@
     var aiDiv = addMessageToUI('assistant', '');
     var fullText = '';
     var searchIndicator = null;
+    var receivedEvent = false;
 
     try {
       var res = await fetch('/api/chat', {
@@ -149,15 +150,25 @@
         })
       });
 
-      if (!res.ok) {
-        var errMsg = '';
-        try { errMsg = await res.text(); } catch(e) {}
-        throw new Error('请求失败: ' + res.status + (errMsg ? ' - ' + errMsg.substring(0, 200) : ''));
-      }
+        if (!res.ok) {
+          var errMsg = '';
+          try { errMsg = await res.text(); } catch(e) {}
+          throw new Error('请求失败: ' + res.status + (errMsg ? ' - ' + errMsg.substring(0, 200) : ''));
+        }
 
-      var reader = res.body.getReader();
-      var dec = new TextDecoder();
-      var buf = '';
+        var contentType = (res.headers && res.headers.get && res.headers.get('content-type')) || '';
+        if (contentType.indexOf('text/event-stream') === -1) {
+          var rawBody = '';
+          try { rawBody = await res.text(); } catch (e) {}
+          if (contentType.indexOf('text/html') !== -1 || /^\s*<!DOCTYPE html/i.test(rawBody)) {
+            throw new Error('当前 /api/chat 返回的是网页内容而不是聊天流。请使用支持 Pages Functions 的方式启动站点（如 ./start-local.sh 或 wrangler pages dev）。');
+          }
+          throw new Error('服务端未返回流式聊天响应（content-type: ' + (contentType || 'unknown') + '）');
+        }
+
+        var reader = res.body.getReader();
+        var dec = new TextDecoder();
+        var buf = '';
 
       while (true) {
         var result = await reader.read();
@@ -172,13 +183,14 @@
           var dataMatch = block.match(/^data: (.+)/m);
           if (!dataMatch) continue;
 
-          var event = eventMatch ? eventMatch[1] : 'chunk';
-          var data;
-          try { data = JSON.parse(dataMatch[1]); } catch(e) { continue; }
+            var event = eventMatch ? eventMatch[1] : 'chunk';
+            var data;
+            try { data = JSON.parse(dataMatch[1]); } catch(e) { continue; }
+            receivedEvent = true;
 
-          if (event === 'tool_call') {
-            // Show search indicator
-            if (!searchIndicator) {
+            if (event === 'tool_call') {
+              // Show search indicator
+              if (!searchIndicator) {
               searchIndicator = document.createElement('div');
               searchIndicator.className = 'search-indicator';
               var bubble = aiDiv ? aiDiv.querySelector('.msg-bubble') : null;
@@ -204,14 +216,18 @@
             }
           } else if (event === 'error') {
             throw new Error(data.message || '服务端错误');
+            }
           }
         }
-      }
 
-      // Update history
-      state.messages.push({ role: 'user', content: userInput });
-      state.messages.push({ role: 'assistant', content: fullText });
-      sessionStorage.setItem('chatHistory', JSON.stringify(state.messages));
+        if (!receivedEvent) {
+          throw new Error('服务端返回了空响应，请检查本地 Functions / API 代理是否正常启动。');
+        }
+
+        // Update history
+        state.messages.push({ role: 'user', content: userInput });
+        state.messages.push({ role: 'assistant', content: fullText });
+        sessionStorage.setItem('chatHistory', JSON.stringify(state.messages));
 
     } catch(e) {
       if (searchIndicator) { searchIndicator.remove(); }
@@ -226,15 +242,36 @@
   // ─── Settings Modal ───────────────────────────────
   // ─── Fetch Models from API ────────────────────────
   async function fetchModels() {
-    var s = loadSettings();
-    if (!s.apiKey) { alert('请先填写 API Key 再获取模型列表'); return; }
+    // Read directly from the visible DOM inputs so that unsaved (freshly typed)
+    // values are picked up immediately — loadSettings() only reads localStorage
+    // and would return empty strings when the modal has never been saved before.
+    var apiKeyEl  = document.getElementById('api-key');
+    var baseUrlEl = document.getElementById('base-url');
+    var providerEl = document.getElementById('provider');
+    var modelEl   = document.getElementById('model');
+
+    var apiKey  = apiKeyEl  ? apiKeyEl.value.trim()  : '';
+    var baseUrl = baseUrlEl ? baseUrlEl.value.trim()  : '';
+    var provider = providerEl ? providerEl.value      : 'openai';
+    var currentModel = modelEl ? modelEl.value        : '';
+
+    // Fall back to persisted settings for any field still blank
+    if (!apiKey || !baseUrl) {
+      var saved = loadSettings();
+      if (!apiKey)  apiKey  = saved.apiKey  || '';
+      if (!baseUrl) baseUrl = saved.baseUrl || 'https://api.openai.com/v1';
+      if (!provider) provider = saved.provider || 'openai';
+      if (!currentModel) currentModel = saved.model || '';
+    }
+
+    if (!apiKey) { alert('请先填写 API Key 再获取模型列表'); return; }
 
     var btn = document.getElementById('fetch-models-btn');
     if (btn) { btn.textContent = '获取中...'; btn.disabled = true; }
 
     try {
       var models = [];
-      if (s.provider === 'claude') {
+      if (provider === 'claude') {
         // Claude 没有公开 /models 端点，返回已知常用模型
         models = [
           'claude-opus-4-5-20250514',
@@ -245,14 +282,23 @@
           'claude-3-haiku-20240307'
         ];
       } else {
-        // OpenAI 格式：调用 /models 端点
-        var base = (s.baseUrl || 'https://api.openai.com/v1').replace(/\/+$/, '');
-        var res = await fetch(base + '/models', {
-          headers: { 'Authorization': 'Bearer ' + s.apiKey }
+        var res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'list_models',
+            apiKey: apiKey,
+            provider: provider,
+            baseUrl: baseUrl
+          })
         });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
+        if (!res.ok) {
+          var err = '';
+          try { err = await res.text(); } catch (_) {}
+          throw new Error(err || ('HTTP ' + res.status));
+        }
         var data = await res.json();
-        var items = data.data || data.models || data || [];
+        var items = data.models || data.data || data || [];
         models = items
           .map(function(m) { return m.id || m.name || m; })
           .filter(function(id) {
@@ -270,7 +316,6 @@
       // 渲染下拉框
       var container = document.getElementById('model-select-wrap');
       if (!container) return;
-      var currentModel = s.model || '';
       var opts = models.map(function(id) {
         return '<option value="' + id + '"' + (id === currentModel ? ' selected' : '') + '>' + id + '</option>';
       }).join('');
@@ -285,7 +330,7 @@
         sel.addEventListener('change', function() { inp.value = sel.value; });
       }
     } catch (e) {
-      alert('获取模型列表失败：' + e.message + '\n\n请检查 API Key 和 Base URL 是否正确。');
+      alert('获取模型列表失败：' + e.message + '\n\n请检查 API Key、Base URL，或稍后重试。');
     } finally {
       if (btn) { btn.textContent = '🔄 获取模型列表'; btn.disabled = false; }
     }

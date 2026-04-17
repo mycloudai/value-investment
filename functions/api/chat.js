@@ -156,6 +156,51 @@ var CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type'
 };
 
+function getModelListCandidates(baseUrl) {
+  var base = (baseUrl || 'https://api.openai.com/v1').replace(/\/+$/, '');
+  var candidates = [base];
+  if (!/\/v\d+$/i.test(base)) candidates.push(base + '/v1');
+  return candidates.filter(function(candidate, index, arr) {
+    return arr.indexOf(candidate) === index;
+  });
+}
+
+async function fetchModelList(apiKey, baseUrl) {
+  var candidates = getModelListCandidates(baseUrl);
+  var errors = [];
+
+  for (var i = 0; i < candidates.length; i++) {
+    var endpoint = candidates[i] + '/models';
+    try {
+      var res = await fetch(endpoint, {
+        method: 'GET',
+        headers: { 'Authorization': 'Bearer ' + apiKey }
+      });
+      if (!res.ok) {
+        var errText = '';
+        try { errText = await res.text(); } catch (_) {}
+        errors.push(endpoint + ' -> HTTP ' + res.status + (errText ? ': ' + errText.slice(0, 120) : ''));
+        continue;
+      }
+
+      var data = await res.json();
+      var items = data.data || data.models || data || [];
+      var models = items.map(function(item) {
+        return item && (item.id || item.name || item);
+      }).filter(function(item) {
+        return typeof item === 'string' && item;
+      });
+
+      if (models.length) return models;
+      errors.push(endpoint + ' -> empty model list');
+    } catch (e) {
+      errors.push(endpoint + ' -> ' + (e && e.message ? e.message : 'request failed'));
+    }
+  }
+
+  throw new Error(errors.join(' | ') || '模型列表获取失败');
+}
+
 // ─── Main Handler ────────────────────────────────────────────────
 export async function onRequestPost(context) {
   var request = context.request;
@@ -229,6 +274,71 @@ export async function onRequestPost(context) {
   });
 }
 
+async function streamOpenAICompatibleResponse(base, headers, model, messages, write) {
+  var streamRes = await fetch(base + '/chat/completions', {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify({
+      model: model,
+      messages: messages,
+      stream: true
+    })
+  });
+
+  if (!streamRes.ok) {
+    var fallbackRes = await fetch(base + '/chat/completions', {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({
+        model: model,
+        messages: messages,
+        stream: false
+      })
+    });
+
+    if (!fallbackRes.ok) {
+      var fallbackErr = await fallbackRes.text();
+      await write(sseEvent('error', { message: 'API Error ' + fallbackRes.status + ': ' + fallbackErr.substring(0, 300) }));
+      return false;
+    }
+
+    var fallbackData = await fallbackRes.json();
+    var fallbackChoice = fallbackData.choices && fallbackData.choices[0];
+    var fallbackMessage = fallbackChoice && fallbackChoice.message;
+    var fallbackContent = (fallbackMessage && fallbackMessage.content) || '';
+    if (fallbackContent) await write(sseEvent('chunk', { text: fallbackContent }));
+    await write(sseEvent('done', {}));
+    return true;
+  }
+
+  var reader = streamRes.body.getReader();
+  var decoder = new TextDecoder();
+  var buf = '';
+
+  while (true) {
+    var chunk = await reader.read();
+    if (chunk.done) break;
+    buf += decoder.decode(chunk.value, { stream: true });
+    var lines = buf.split('\n');
+    buf = lines.pop() || '';
+    for (var li = 0; li < lines.length; li++) {
+      var line = lines[li].trim();
+      if (!line || !line.startsWith('data: ')) continue;
+      var jsonStr = line.substring(6);
+      if (jsonStr === '[DONE]') continue;
+      try {
+        var parsed = JSON.parse(jsonStr);
+        if (parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content) {
+          await write(sseEvent('chunk', { text: parsed.choices[0].delta.content }));
+        }
+      } catch(e) {}
+    }
+  }
+
+  await write(sseEvent('done', {}));
+  return true;
+}
+
 // ─── OpenAI Agentic Loop ────────────────────────────────────────
 async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl, model, write) {
   var base = (baseUrl || 'https://api.openai.com/v1').replace(/\/+$/, '');
@@ -254,6 +364,8 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     });
 
     if (!res.ok) {
+      var streamed = await streamOpenAICompatibleResponse(base, headers, model || 'gpt-4o', currentMessages, write);
+      if (streamed) return;
       var errText = await res.text();
       await write(sseEvent('error', { message: 'API Error ' + res.status + ': ' + errText.substring(0, 300) }));
       return;
@@ -282,48 +394,13 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
       continue;
     }
 
-    // Final answer - stream it
-    var streamRes = await fetch(base + '/chat/completions', {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({
-        model: model || 'gpt-4o',
-        messages: currentMessages,
-        stream: true
-      })
-    });
-
-    if (!streamRes.ok) {
-      var content = (msg && msg.content) || '';
-      if (content) await write(sseEvent('chunk', { text: content }));
+    if ((msg && msg.content) && typeof msg.content === 'string') {
+      await write(sseEvent('chunk', { text: msg.content }));
       await write(sseEvent('done', {}));
       return;
     }
 
-    var reader = streamRes.body.getReader();
-    var decoder = new TextDecoder();
-    var buf = '';
-
-    while (true) {
-      var chunk = await reader.read();
-      if (chunk.done) break;
-      buf += decoder.decode(chunk.value, { stream: true });
-      var lines = buf.split('\n');
-      buf = lines.pop() || '';
-      for (var li = 0; li < lines.length; li++) {
-        var line = lines[li].trim();
-        if (!line || !line.startsWith('data: ')) continue;
-        var jsonStr = line.substring(6);
-        if (jsonStr === '[DONE]') continue;
-        try {
-          var parsed = JSON.parse(jsonStr);
-          if (parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content) {
-            await write(sseEvent('chunk', { text: parsed.choices[0].delta.content }));
-          }
-        } catch(e) {}
-      }
-    }
-    await write(sseEvent('done', {}));
+    await streamOpenAICompatibleResponse(base, headers, model || 'gpt-4o', currentMessages, write);
     return;
   }
 

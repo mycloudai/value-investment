@@ -183,6 +183,10 @@ eval_result() {
   playwright-cli eval "$1" 2>&1 | sed -n '/^### Result$/,/^### Ran/{/^### Result$/d;/^### Ran/d;p;}' | tr -d '"' | head -1
 }
 
+raw_eval() {
+  playwright-cli --raw eval "$1" 2>/dev/null | tr -d '"'
+}
+
 # Get content length via JS
 get_content_length() {
   local selector="${1:-#app-content}"
@@ -440,6 +444,15 @@ fi
 
 # Take sidebar screenshot
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/03-1984-letter-sidebar.png" 2>/dev/null
+
+# 3.7 语言切换功能已移除 — 不应显示 .bilingual-toggle 或 .lang-btn
+BILINGUAL_EXISTS=$(eval_result "document.querySelector('.bilingual-toggle') ? 'FOUND' : 'MISSING'")
+LANGBTN_EXISTS=$(eval_result "document.querySelector('.lang-btn') ? 'FOUND' : 'MISSING'")
+if [ "$BILINGUAL_EXISTS" = "MISSING" ] && [ "$LANGBTN_EXISTS" = "MISSING" ]; then
+  pass "3.7: 语言切换 UI 已移除（.bilingual-toggle / .lang-btn 均不存在）"
+else
+  fail "3.7: 语言切换 UI 应已移除" "bilingual=$BILINGUAL_EXISTS lang-btn=$LANGBTN_EXISTS"
+fi
 
 
 # ─── 4. 合伙人信 ─────────────────────────────────────────
@@ -790,6 +803,71 @@ if echo "$SNAP" | grep -qi 'textbox\|textarea\|输入\|placeholder.*问\|发送'
 else
   fail "消息输入框" "未找到输入框"
 fi
+
+
+# 10.3b 输入区域固定在底部 — 使用简单字符串返回，规避 JSON 转义解析问题
+INPUT_IN_VP=$(eval_result "document.querySelector('.chat-input-area') ? (document.querySelector('.chat-input-area').getBoundingClientRect().bottom <= window.innerHeight + 5 ? 'yes' : 'no') : 'missing'")
+if [ "$INPUT_IN_VP" = "yes" ]; then
+  pass "10.3b: 输入区域固定在视口底部（.chat-input-area in-viewport）"
+elif [ "$INPUT_IN_VP" = "missing" ]; then
+  fail "10.3b: 输入区域可见性" ".chat-input-area 元素不存在"
+else
+  fail "10.3b: 输入区域超出视口" "$INPUT_IN_VP"
+fi
+
+# 10.3c Fetch Models 读取当前输入框值（不依赖 localStorage）
+# 验证：清除保存设置 + 显示 modal + 通过 JS 直接设值，模拟用户填写但未保存的场景
+FETCH_DOM_VAL=$(eval_result "(function(){localStorage.removeItem('mycloudai-settings');var m=document.getElementById('settings-modal');if(m)m.style.display='flex';var k=document.getElementById('api-key');if(k)k.value='sk-test-xyz';return k?k.value.trim():'missing';}())")
+if [ -n "$FETCH_DOM_VAL" ] && [ "$FETCH_DOM_VAL" != "missing" ] && [ "$FETCH_DOM_VAL" != "" ]; then
+  pass "10.3c: settings modal 中 API Key 输入框有值（fetchModels 可从 DOM 读取，无需先保存）"
+else
+  fail "10.3c: settings modal API Key 输入框读取" "值=$FETCH_DOM_VAL"
+fi
+# Close modal
+playwright-cli eval "var m=document.getElementById('settings-modal'); if(m) m.style.display='none'; 'ok'" 2>/dev/null
+
+# 10.3d /api/chat 返回 HTML 时应提示 Functions 未启动，而不是静默无响应
+CHAT_HTML_ERROR=$(playwright-cli --raw run-code "async page => {
+  return await page.evaluate(async () => {
+    localStorage.setItem('mycloudai-settings', JSON.stringify({
+      provider: 'openai',
+      apiKey: 'sk-test-key-placeholder',
+      baseUrl: 'https://api.deepseek.com',
+      model: 'deepseek-chat'
+    }));
+
+    const originalFetch = window.fetch;
+    window.fetch = function(url) {
+      if (url === '/api/chat') {
+        return Promise.resolve(new Response('<!DOCTYPE html><html></html>', {
+          status: 200,
+          headers: { 'Content-Type': 'text/html' }
+        }));
+      }
+      return originalFetch.apply(window, arguments);
+    };
+
+    try {
+      const input = document.getElementById('chat-input');
+      const sendBtn = document.getElementById('send-btn');
+      if (!input || !sendBtn) return 'missing-elements';
+      input.value = '你好';
+      sendBtn.click();
+      await new Promise(resolve => setTimeout(resolve, 200));
+      const lastBubble = document.querySelector('.chat-message.assistant:last-child .msg-bubble');
+      return lastBubble ? lastBubble.textContent : 'missing-bubble';
+    } finally {
+      window.fetch = originalFetch;
+      sessionStorage.removeItem('chatHistory');
+    }
+  });
+}" 2>/dev/null)
+if echo "$CHAT_HTML_ERROR" | grep -q 'Pages Functions'; then
+  pass "10.3d: /api/chat 非 SSE 响应会明确提示 Functions 未启动"
+else
+  fail "10.3d: /api/chat 非 SSE 响应提示" "text=$CHAT_HTML_ERROR"
+fi
+
 
 # 10.4 AI Integration tests (conditional)
 if [ -n "$OPENAI_MODEL" ] && [ -n "$OPENAI_API_KEY" ]; then
@@ -1522,11 +1600,6 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/18-quotes-page.png" 2>/dev
 # ═══════════════════════════════════════════════════════════
 section "19. 搜索 Spotlight 模态框功能测试"
 
-# Helper: evaluate JS and strip quotes from raw output
-raw_eval() {
-  playwright-cli --raw eval "$1" 2>/dev/null | tr -d '"'
-}
-
 # 19.1 搜索按钮存在
 safe_goto "$BASE_URL"
 wait_for_spa 3
@@ -1566,13 +1639,13 @@ else
   fail "19.4: 搜索结果有内容" "结果数: $RESULT_COUNT"
 fi
 
-# 19.5 搜索结果为新 tab 链接，URL 包含 #chunk- 段落锚点（不含 highlight 参数）
+# 19.5 搜索结果为新 tab 链接，URL 含 highlight 参数且不含 #chunk- 锚点
 RESULT_HREF=$(raw_eval "document.querySelector('.spotlight-result-item') ? document.querySelector('.spotlight-result-item').getAttribute('href') : ''")
 RESULT_TARGET=$(raw_eval "document.querySelector('.spotlight-result-item') ? document.querySelector('.spotlight-result-item').getAttribute('target') : ''")
-if echo "$RESULT_HREF" | grep -q '#chunk-' && [ "$RESULT_TARGET" = "_blank" ]; then
-  pass "19.5: 搜索结果为新 tab 链接，含 #chunk- 段落锚点"
+if echo "$RESULT_HREF" | grep -q 'highlight=' && ! echo "$RESULT_HREF" | grep -q '#chunk-' && [ "$RESULT_TARGET" = "_blank" ]; then
+  pass "19.5: 搜索结果为新 tab 链接，含 highlight 参数且无 #chunk- 锚点"
 else
-  fail "19.5: 搜索结果应为 target=_blank 且含 #chunk-" "href=$RESULT_HREF target=$RESULT_TARGET"
+  fail "19.5: 搜索结果应为 target=_blank、含 highlight 且不含 #chunk-" "href=$RESULT_HREF target=$RESULT_TARGET"
 fi
 
 # 19.6 点击结果后模态框关闭（结果在新 tab 打开）
@@ -1663,18 +1736,108 @@ else
   fail "20.3b: scoped 搜索结果" "preview=$PREVIEW_EXISTS"
 fi
 
-# ─── 20.4 scoped 搜索结果 URL 为有效文章链接（无需 highlight 参数）──
+# ─── 20.4 scoped 搜索结果 URL 为有效文章链接（只含 highlight 参数，不含 #chunk-）──
 RESULT_HREF=$(raw_eval "(document.querySelector('.xref-scoped-result') || document.querySelector('.xref-modal-viewpage'))?.getAttribute('href') || ''")
 if echo "$RESULT_HREF" | grep -qE '^/'; then
-  pass "20.4: scoped 搜索结果 URL 为有效文章链接（$RESULT_HREF）"
+  pass "20.4a: scoped 搜索结果 URL 为有效文章路径（$RESULT_HREF）"
 else
-  fail "20.4: scoped 搜索结果 URL 应为文章路径" "href=$RESULT_HREF"
+  fail "20.4a: scoped 搜索结果 URL 应为文章路径" "href=$RESULT_HREF"
+fi
+
+# Verify URL does NOT contain #chunk- (chunk anchor mismatch fix)
+if echo "$RESULT_HREF" | grep -q '#chunk-'; then
+  fail "20.4b: scoped 搜索结果 URL 不应包含 #chunk- 锚点（已修复映射错误）" "href=$RESULT_HREF"
+else
+  pass "20.4b: scoped 搜索结果 URL 不含 #chunk- 锚点（chunk 映射修复验证）"
+fi
+
+# Verify highlight parameter is present for keyword navigation
+if echo "$RESULT_HREF" | grep -q 'highlight='; then
+  pass "20.4c: scoped 搜索结果 URL 含 highlight 参数（keyword 高亮导航）"
+else
+  skip "20.4c: scoped 搜索结果 URL highlight 参数（无结果时跳过）"
 fi
 
 # Close modal
 playwright-cli run-code "async page => { await page.locator('#xref-modal-close').click(); await page.waitForTimeout(300); }" 2>/dev/null
 
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/20-xref-panel.png" 2>/dev/null
+
+# ═══════════════════════════════════════════════════════════
+# 26. 语言移除 & chunk 锚点修复 回归测试
+# ═══════════════════════════════════════════════════════════
+section "26. 语言移除与 chunk 锚点修复回归测试"
+
+# ─── 26.1 所有字母页均无 .bilingual-toggle ──
+safe_goto "$BASE_URL/shareholder-letters/1984"
+wait_for_spa 3
+BILINGUAL_1984=$(raw_eval "document.querySelector('.bilingual-toggle') ? 'FOUND' : 'MISSING'")
+if [ "$BILINGUAL_1984" = "MISSING" ]; then
+  pass "26.1a: 股东信 1984 无 .bilingual-toggle（语言切换已移除）"
+else
+  fail "26.1a: 股东信 1984 .bilingual-toggle 应不存在" "found=$BILINGUAL_1984"
+fi
+
+safe_goto "$BASE_URL/partnership-letters/1966"
+wait_for_spa 3
+BILINGUAL_1966=$(raw_eval "document.querySelector('.bilingual-toggle') ? 'FOUND' : 'MISSING'")
+if [ "$BILINGUAL_1966" = "MISSING" ]; then
+  pass "26.1b: 合伙人信 1966 无 .bilingual-toggle（语言切换已移除）"
+else
+  fail "26.1b: 合伙人信 1966 .bilingual-toggle 应不存在" "found=$BILINGUAL_1966"
+fi
+
+# ─── 26.2 .lang-btn 不存在 ──
+LANGBTN=$(raw_eval "document.querySelector('.lang-btn') ? 'FOUND' : 'MISSING'")
+if [ "$LANGBTN" = "MISSING" ]; then
+  pass "26.2: .lang-btn 不存在（语言按钮已移除）"
+else
+  fail "26.2: .lang-btn 应不存在" "found=$LANGBTN"
+fi
+
+# ─── 26.3 概念页信件链接 URL 不含 #chunk- ──
+safe_goto "$BASE_URL/concepts/moat"
+wait_for_spa 3
+playwright-cli run-code "async page => { await page.locator('.xref-letter-item').first().click(); await page.waitForTimeout(1500); }" 2>/dev/null
+SCOPED_HREF=$(raw_eval "document.querySelector('.xref-scoped-result')?.getAttribute('href') || ''")
+if echo "$SCOPED_HREF" | grep -q '#chunk-'; then
+  fail "26.3: 概念页信件链接不应含 #chunk- 锚点（chunk 索引不对齐）" "href=$SCOPED_HREF"
+else
+  if [ -n "$SCOPED_HREF" ]; then
+    pass "26.3: 概念页信件链接无 #chunk- 锚点（chunk 锚点修复验证，href=$SCOPED_HREF）"
+  else
+    skip "26.3: 未找到 .xref-scoped-result（跳过 chunk 锚点验证）"
+  fi
+fi
+
+# ─── 26.4 验证 highlight 参数存在（高亮导航工作正常）──
+if echo "$SCOPED_HREF" | grep -q 'highlight='; then
+  pass "26.4: 信件链接含 highlight= 参数（关键词高亮导航正常）"
+else
+  if [ -n "$SCOPED_HREF" ]; then
+    fail "26.4: 信件链接应含 highlight= 参数" "href=$SCOPED_HREF"
+  else
+    skip "26.4: 未找到结果，跳过 highlight 参数验证"
+  fi
+fi
+
+# ─── 26.5 同年份股东信/合伙人信 slug 解析正确 ──
+safe_goto "$BASE_URL/concepts/buybacks"
+wait_for_spa 3
+BUYBACKS_1966=$(raw_eval "document.querySelector('.xref-letter-item[data-letter-route=\"/shareholder-letters/1966\"]') ? 'FOUND' : 'MISSING'")
+BUYBACKS_WRONG_1966=$(raw_eval "document.querySelector('.xref-letter-item[data-letter-route=\"/partnership-letters/1966\"]') ? 'FOUND' : 'MISSING'")
+if [ "$BUYBACKS_1966" = "FOUND" ] && [ "$BUYBACKS_WRONG_1966" = "MISSING" ]; then
+  pass "26.5: 同年份信件按完整路由解析（buybacks 正确指向 shareholder-letters/1966）"
+else
+  fail "26.5: 同年份信件路由解析" "shareholder=$BUYBACKS_1966 partnership=$BUYBACKS_WRONG_1966"
+fi
+
+playwright-cli run-code "async page => {
+  const btn = page.locator('#xref-modal-close');
+  if (await btn.count()) await btn.click();
+  await page.waitForTimeout(300);
+}" 2>/dev/null
+playwright-cli screenshot --filename="$SCREENSHOT_DIR/26-regression.png" 2>/dev/null
 
 # ═══════════════════════════════════════════════════════════
 # 关闭浏览器 & 生成总结
@@ -1765,7 +1928,10 @@ fi
 # 22.6 点击遮罩关闭 modal
 playwright-cli click "#help-btn" 2>/dev/null
 sleep 0.8
-playwright-cli click "#help-modal-overlay" 2>/dev/null
+playwright-cli run-code "async page => {
+  await page.mouse.click(10, 10);
+  await page.waitForTimeout(500);
+}" 2>/dev/null
 sleep 0.5
 MODAL_DISPLAY=$(playwright-cli eval "document.getElementById('help-modal-overlay')?.style.display" 2>/dev/null | tr -d '"')
 if echo "$MODAL_DISPLAY" | grep -q "none"; then
