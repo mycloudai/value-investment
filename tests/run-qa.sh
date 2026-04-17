@@ -63,7 +63,7 @@ CLAUDE_MODEL="${CLAUDE_MODEL:-}"                         # 如: claude-3-5-sonne
 # ─────────────────────────────────────────────────────────
 
 BASE_URL="http://localhost:8788"
-PROJECT_DIR="/Users/RVTYadmin/git/personal/value-investment"
+PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 REPORT="$PROJECT_DIR/tests/qa-report.md"
 SCREENSHOT_DIR="$PROJECT_DIR/tests/screenshots"
 PASS=0
@@ -1177,7 +1177,7 @@ fi
 section "14. 缓存策略测试"
 # ═══════════════════════════════════════════════════════════
 
-HEADERS_FILE="/Users/RVTYadmin/git/personal/value-investment/site/_headers"
+HEADERS_FILE="$PROJECT_DIR/site/_headers"
 
 # 检查 _headers 文件存在且包含 no-store
 if grep -q "no-store" "$HEADERS_FILE"; then

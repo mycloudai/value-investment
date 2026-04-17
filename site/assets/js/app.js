@@ -514,6 +514,7 @@
         '    <span class="category-badge">' + getCategoryLabel(category) + '</span>' +
         (fm.year ? '    <span class="year-badge">' + fm.year + '</span>' : '') +
         '  </div>' +
+        (fm.title ? '  <h1 class="article-title">' + fm.title + '</h1>' : '') +
         '  <div class="article-body">' + htmlBody + '</div>' +
         '  <div id="article-quotes-section"></div>' +
         navHTML +

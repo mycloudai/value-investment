@@ -1552,6 +1552,14 @@ a.quote-source-link:hover {
   font-family: var(--font-sans);
 }
 
+.article-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+}
+
 .article-body {
   font-family: var(--font-serif);
   font-size: 1rem;
