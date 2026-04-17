@@ -16,6 +16,7 @@
 - **CI 构建 ENOENT 错误**：`buildServerSearchIndex` 在写入 `site/assets/data/server-search-index.json` 前未确保目录存在，而 `ensureDir` 调用在更晚的步骤执行，导致 CI（GitHub Actions）环境报 `ENOENT`。修复方案：在写文件前显式调用 `fs.mkdirSync(..., { recursive: true })`。(`build.mjs`)
 - **QA 脚本 CI 路径硬编码**：`run-qa.sh` 中 `PROJECT_DIR` 硬编码为本地绝对路径 `/Users/RVTYadmin/...`，在 CI 环境（`/home/runner/work/...`）下导致 `mkdir` 权限错误、`qa-report.md` 无法创建、截图路径超出 playwright-cli 允许根目录。修复方案：改为动态解析脚本位置 `$(cd "$(dirname "$0")/.." && pwd)`。(`tests/run-qa.sh`)
 - **Section 14 缓存测试路径硬编码**：`run-qa.sh` 内 Section 14 的 `HEADERS_FILE` 变量仍残留硬编码绝对路径，导致 CI 中 `site/_headers` 找不到，缓存规则检测全部报失败。修复方案：改为 `"$PROJECT_DIR/site/_headers"`。(`tests/run-qa.sh`)
+- **QA 脚本 pipefail 误判导致大量 ❌ 假阴性**：`set -o pipefail` 下，`echo "$SNAP" | grep -q 'pattern'` 当 `grep -q` 找到匹配项提前退出时，`echo` 收到 SIGPIPE（退出码 141），pipefail 将整个管道标记为失败（非零），导致 `if` 条件判断为 false，即使内容确实存在也报 ❌。修复方案：引入 `sc()`/`sci()` 辅助函数，使用 herestring（`grep -q 'pattern' <<< "$SNAP"`）替代管道。(`tests/run-qa.sh`)
 - **信件/概念/公司/人物页标题未显示**：`renderContent` 只将 `fm.title` 写入 `document.title`，页面内无 `<h1>` 可见标题元素，QA 快照无法匹配。现于 `.article-body` 前插入 `<h1 class="article-title">` 并补全对应 CSS 样式。(`site/assets/js/app.js`, `site/assets/css/style.css`)
 
 ## [1.14.0] - 2026-04-14

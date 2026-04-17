@@ -173,8 +173,15 @@ snapshot_contains() {
   local text="$1"
   local snapshot
   snapshot=$(take_snapshot)
-  echo "$snapshot" | grep -qi "$text"
+  grep -qi "$text" <<< "$snapshot"
 }
+
+# Inline snap-grep helpers — use herestring to avoid SIGPIPE / pipefail false-negative
+# When grep -q finds a match it exits early, causing echo to get SIGPIPE (exit 141).
+# With set -o pipefail that makes the whole pipeline non-zero even when match IS found.
+# sc = case-sensitive, sci = case-insensitive
+sc()  { grep -q  "$1" <<< "$SNAP"; }
+sci() { grep -qi "$1" <<< "$SNAP"; }
 
 # Extract raw value from playwright-cli eval output
 # Input format: "### Result\n\"value\"\n### Ran Playwright code..."
@@ -262,7 +269,7 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/01-homepage.png" 2>/dev/nu
 
 # 1.1 页面标题
 TITLE=$(eval_result "document.title")
-if echo "$TITLE" | grep -q 'MyCloudAI'; then
+if grep -q 'MyCloudAI' <<< "$TITLE"; then
   pass "页面标题包含 MyCloudAI"
 else
   fail "页面标题" "标题不包含 MyCloudAI ($TITLE)"
@@ -270,14 +277,14 @@ fi
 
 # 1.2 导航栏可见（Logo）
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -q 'logo-link\|MyCloudAI.*MyCloudAI\|img "MyCloudAI"'; then
+if sc 'logo-link\|MyCloudAI.*MyCloudAI\|img "MyCloudAI"'; then
   pass "导航栏 Logo 可见"
 else
   fail "导航栏 Logo" "Logo 未找到"
 fi
 
 # 1.3 侧边栏菜单项
-if echo "$SNAP" | grep -q '合伙基金信件' && echo "$SNAP" | grep -q '伯克希尔股东信' && echo "$SNAP" | grep -q '投资理念' && echo "$SNAP" | grep -q '公司解析' && echo "$SNAP" | grep -q '关键人物'; then
+if sc '合伙基金信件' && sc '伯克希尔股东信' && sc '投资理念' && sc '公司解析' && sc '关键人物'; then
   pass "侧边栏菜单项完整（合伙基金信件/股东信/投资理念/公司解析/关键人物）"
 else
   fail "侧边栏菜单项" "缺少部分菜单项"
@@ -332,7 +339,7 @@ else
 fi
 
 # 1.10 AI问答和知识图谱入口
-if echo "$SNAP" | grep -q 'AI问答' && echo "$SNAP" | grep -q '知识图谱'; then
+if sc 'AI问答' && sc '知识图谱'; then
   pass "侧边栏底部 AI问答/知识图谱入口可见"
 else
   fail "侧边栏底部入口" "AI问答或知识图谱入口缺失"
@@ -351,7 +358,7 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/02-shareholder-letters-lis
 SNAP=$(take_snapshot)
 
 # 2.1 页面加载
-if echo "$SNAP" | grep -q '伯克希尔股东信\|shareholder'; then
+if sc '伯克希尔股东信\|shareholder'; then
   pass "股东信列表页加载成功"
 else
   fail "股东信列表页" "页面未正确加载"
@@ -372,7 +379,7 @@ else
 fi
 
 # 2.3 信件链接存在
-if echo "$SNAP" | grep -q '1984\|1993\|2000'; then
+if sc '1984\|1993\|2000'; then
   pass "股东信列表包含信件链接（1984/1993/2000等）"
 else
   fail "股东信列表" "信件链接不完整"
@@ -391,7 +398,7 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/03-1984-letter.png" 2>/dev
 SNAP=$(take_snapshot)
 
 # 3.1 文章标题
-if echo "$SNAP" | grep -q '1984.*巴菲特致股东信\|1984'; then
+if sc '1984.*巴菲特致股东信\|1984'; then
   pass "1984年信件标题显示正确"
 else
   fail "1984信件标题" "标题未显示"
@@ -429,14 +436,14 @@ fi
 
 # 3.5 页面标题更新
 PAGE_TITLE=$(eval_result "document.title")
-if echo "$PAGE_TITLE" | grep -q '1984'; then
+if grep -q '1984' <<< "$PAGE_TITLE"; then
   pass "页面标题已更新包含 1984"
 else
   skip "页面标题未更新为包含年份 ($PAGE_TITLE)"
 fi
 
 # 3.6 上一篇/下一篇导航
-if echo "$SNAP" | grep -qi '上一篇\|下一篇\|prev\|next\|←\|→\|1983\|1985'; then
+if sci '上一篇\|下一篇\|prev\|next\|←\|→\|1983\|1985'; then
   pass "上一篇/下一篇导航可用"
 else
   skip "上一篇/下一篇导航（可能未实现）"
@@ -467,14 +474,14 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/04-partnership-letters-lis
 SNAP=$(take_snapshot)
 
 # 4.1 列表页加载
-if echo "$SNAP" | grep -q '合伙基金信件\|partnership'; then
+if sc '合伙基金信件\|partnership'; then
   pass "合伙人信列表页加载成功"
 else
   fail "合伙人信列表页" "页面未正确加载"
 fi
 
 # 4.2 包含信件
-if echo "$SNAP" | grep -q '1957\|1958\|1959\|1960'; then
+if sc '1957\|1958\|1959\|1960'; then
   pass "合伙人信列表包含信件链接"
 else
   fail "合伙人信列表" "信件链接缺失"
@@ -488,7 +495,7 @@ wait_for_spa
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/04-partnership-1957.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -q '1957'; then
+if sc '1957'; then
   PARTNER_BODY=$(get_content_length ".article-body")
   if [ -z "$PARTNER_BODY" ] || [ "$PARTNER_BODY" -lt 100 ] 2>/dev/null; then
     PARTNER_BODY=$(get_content_length "#app-content")
@@ -514,7 +521,7 @@ wait_for_spa
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/05-concepts-list.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -q '投资理念\|concepts' && echo "$SNAP" | grep -q '护城河'; then
+if sc '投资理念\|concepts' && sc '护城河'; then
   pass "概念列表页加载成功，包含护城河"
 else
   fail "概念列表页" "页面加载异常"
@@ -530,7 +537,7 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/05-concept-moat.png" 2>/de
 SNAP=$(take_snapshot)
 
 # 文章内容
-if echo "$SNAP" | grep -qi '护城河\|Economic Moat\|moat'; then
+if sci '护城河\|Economic Moat\|moat'; then
   pass "护城河概念页内容正常显示"
 else
   fail "护城河概念页" "内容未加载"
@@ -573,7 +580,7 @@ wait_for_spa
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/06-companies-list.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '公司解析\|companies'; then
+if sci '公司解析\|companies'; then
   pass "公司列表页加载成功"
 else
   fail "公司列表页" "页面未加载"
@@ -613,7 +620,7 @@ wait_for_spa 5
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/06-company-coca-cola.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi 'coca.*cola\|可口可乐'; then
+if sci 'coca.*cola\|可口可乐'; then
   pass "可口可乐公司页面加载正确"
 else
   fail "可口可乐页面" "内容未正确显示"
@@ -631,7 +638,7 @@ wait_for_spa
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/07-people-list.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '关键人物\|people' && echo "$SNAP" | grep -qi '芒格\|munger'; then
+if sci '关键人物\|people' && sci '芒格\|munger'; then
   pass "人物列表页加载成功，包含芒格"
 else
   fail "人物列表页" "页面加载异常"
@@ -645,7 +652,7 @@ wait_for_spa 5
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/07-charlie-munger.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '芒格\|Charlie Munger\|查理'; then
+if sci '芒格\|Charlie Munger\|查理'; then
   pass "芒格人物页内容正确显示"
 else
   fail "芒格人物页" "内容未显示"
@@ -680,7 +687,7 @@ wait_for_spa
 
 # 8.1 搜索输入框
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi 'textbox.*搜索\|search.*input\|搜索信件'; then
+if sci 'textbox.*搜索\|search.*input\|搜索信件'; then
   pass "搜索输入框可见"
 else
   fail "搜索输入框" "未找到搜索框"
@@ -744,7 +751,7 @@ HAS_GRAPH=$(eval_result "document.querySelector('svg, canvas, #graph-container, 
 if echo "$HAS_GRAPH" | grep -qi 'svg\|canvas\|DIV'; then
   pass "知识图谱页面加载（检测到 $HAS_GRAPH 元素）"
 else
-  if echo "$SNAP" | grep -qi 'graph\|图谱\|svg'; then
+  if sci 'graph\|图谱\|svg'; then
     pass "知识图谱页面加载"
   else
     fail "知识图谱页面" "未检测到图谱元素 ($HAS_GRAPH)"
@@ -781,7 +788,7 @@ playwright-cli screenshot --filename="$SCREENSHOT_DIR/10-talk.png" 2>/dev/null
 SNAP=$(take_snapshot)
 
 # 10.1 对话界面
-if echo "$SNAP" | grep -qi 'AI\|对话\|问答\|chat\|talk\|消息'; then
+if sci 'AI\|对话\|问答\|chat\|talk\|消息'; then
   pass "AI 对话页面加载"
 else
   fail "AI 对话页面" "页面未加载"
@@ -789,7 +796,7 @@ fi
 
 # 10.2 设置按钮
 HAS_SETTINGS=$(eval_result "document.querySelector('[class*=\"setting\"], [class*=\"config\"], button[aria-label], .talk-settings-btn, [class*=\"gear\"]')?.textContent || 'none'")
-if echo "$SNAP" | grep -qi '设置\|settings\|⚙\|配置'; then
+if sci '设置\|settings\|⚙\|配置'; then
   pass "设置按钮可见"
 elif [ "$HAS_SETTINGS" != "none" ] && [ -n "$HAS_SETTINGS" ]; then
   pass "设置按钮存在 ($HAS_SETTINGS)"
@@ -798,7 +805,7 @@ else
 fi
 
 # 10.3 输入框
-if echo "$SNAP" | grep -qi 'textbox\|textarea\|输入\|placeholder.*问\|发送'; then
+if sci 'textbox\|textarea\|输入\|placeholder.*问\|发送'; then
   pass "消息输入框可见"
 else
   fail "消息输入框" "未找到输入框"
@@ -936,7 +943,7 @@ sleep 3
 wait_for_spa 5
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '护城河\|moat'; then
+if sci '护城河\|moat'; then
   pass "直接访问深层URL /concepts/moat 正常加载"
 else
   fail "深层URL访问" "/concepts/moat 加载失败"
@@ -997,7 +1004,7 @@ wait_for_spa
 playwright-cli screenshot --filename="$SCREENSHOT_DIR/11-404.png" 2>/dev/null
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '404\|找不到\|not found\|页面不存在\|不存在'; then
+if sci '404\|找不到\|not found\|页面不存在\|不存在'; then
   pass "404 页面正确显示"
 else
   HTTP_404=$(curl -s -o /dev/null -w "%{http_code}" "$BASE_URL/this-page-does-not-exist-12345" 2>/dev/null)
@@ -1130,7 +1137,7 @@ sleep 2
 wait_for_spa
 
 SNAP=$(take_snapshot)
-if echo "$SNAP" | grep -qi '特别信件\|special'; then
+if sci '特别信件\|special'; then
   pass "特别信件列表页加载成功"
 else
   skip "特别信件列表页（可能无此分类）"
@@ -1401,7 +1408,7 @@ section "21. 分类索引页测试"
 safe_goto "$BASE_URL/shareholder-letters"
 wait_for_spa 3
 SNAP=$(playwright-cli snapshot 2>&1)
-if echo "$SNAP" | grep -qE '[12][90][0-9]{2}'; then
+if grep -qE '[12][90][0-9]{2}' <<< "$SNAP"; then
   pass "21.1: /shareholder-letters 显示年份信息"
 else
   fail "21.1: /shareholder-letters 年份信息" "页面中未找到年份数字"
