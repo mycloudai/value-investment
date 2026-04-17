@@ -534,13 +534,17 @@ async function runOpenAILoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
     return;
   }
 
-  // Safety: if we somehow exhaust rounds, still try to get a final answer
-  await write(sseEvent('tool_call', { query: '生成最终回答...' }));
+  // Safety: if we somehow exhaust rounds, generate final answer based on collected context
+  await write(sseEvent('tool_call', { query: '基于已收集信息生成回答...' }));
   // Remove tools to force a text response
+  var finalMessages = currentMessages.concat([{
+    role: 'system',
+    content: '你已收集了足够的信息。请现在基于已有检索结果生成完整的回答，不要再调用工具。'
+  }]);
   var finalRes = await fetch(base + '/chat/completions', {
     method: 'POST',
     headers: headers,
-    body: JSON.stringify({ model: model || 'gpt-4o', messages: currentMessages, stream: true })
+    body: JSON.stringify({ model: model || 'gpt-4o', messages: finalMessages, stream: true })
   });
   if (finalRes.ok) {
     var rdr = finalRes.body.getReader();
@@ -697,6 +701,11 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
   }
 
   // Safety: exhausted rounds, force a final text answer without tools
+  await write(sseEvent('tool_call', { query: '基于已收集信息生成回答...' }));
+  var finalClaudeMessages = claudeMessages.concat([{
+    role: 'user',
+    content: '你已收集了足够的信息。请现在基于已有检索结果生成完整的回答，不要再调用工具。'
+  }]);
   var finalRes = await fetch(base + '/v1/messages', {
     method: 'POST',
     headers: headers,
@@ -704,7 +713,7 @@ async function runClaudeLoop(skillPrompt, messages, searchIndex, apiKey, baseUrl
       model: model || 'claude-sonnet-4-20250514',
       max_tokens: 4096,
       system: skillPrompt,
-      messages: claudeMessages,
+      messages: finalClaudeMessages,
       stream: true
     })
   });

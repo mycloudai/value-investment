@@ -107,6 +107,30 @@
     return window.marked;
   }
 
+  // ─── Animated Thinking Indicator ──────────────────
+  var THINKING_EMOJIS = ['🔍', '🤔', '📖', '💡', '📝', '🔎'];
+  var _thinkingTimer = null;
+
+  function createThinkingHTML(text) {
+    return '<span class="thinking-icon">' + THINKING_EMOJIS[0] + '</span>'
+      + '<span class="thinking-dots"><span></span><span></span><span></span></span>'
+      + '<span class="thinking-text">' + escapeHtml(text) + '</span>';
+  }
+
+  function startThinkingAnimation(indicator) {
+    stopThinkingAnimation();
+    var idx = 0;
+    _thinkingTimer = setInterval(function() {
+      idx = (idx + 1) % THINKING_EMOJIS.length;
+      var icon = indicator.querySelector('.thinking-icon');
+      if (icon) icon.textContent = THINKING_EMOJIS[idx];
+    }, 400);
+  }
+
+  function stopThinkingAnimation() {
+    if (_thinkingTimer) { clearInterval(_thinkingTimer); _thinkingTimer = null; }
+  }
+
   // ─── API Calls ────────────────────────────────────
   // Direct API calls are no longer used - all requests go through /api/chat
   // The server-side Agentic Loop handles tool calls and streaming
@@ -170,6 +194,10 @@
 
     addMessageToUI('user', userInput);
 
+    // Clear reference panel for new question
+    var refEl = document.getElementById('ref-content');
+    if (refEl) refEl.innerHTML = '<p class="ref-placeholder">等待 AI 检索中...</p>';
+
     // Build message history (without system prompt - server adds it via Skill)
     var historyForApi = [];
     for (var i = 0; i < state.messages.length; i++) {
@@ -179,8 +207,15 @@
 
     var aiDiv = addMessageToUI('assistant', '');
     var fullText = '';
-    var searchIndicator = null;
     var receivedEvent = false;
+
+    // Show thinking indicator immediately in the AI bubble
+    var searchIndicator = document.createElement('div');
+    searchIndicator.className = 'thinking-indicator';
+    searchIndicator.innerHTML = createThinkingHTML('正在思考中...');
+    var aiBubble = aiDiv ? aiDiv.querySelector('.msg-bubble') : null;
+    if (aiBubble) aiBubble.appendChild(searchIndicator);
+    startThinkingAnimation(searchIndicator);
 
     try {
       var res = await fetch('/api/chat', {
@@ -234,27 +269,24 @@
             receivedEvent = true;
 
             if (event === 'tool_call') {
-              // Show animated thinking indicator
+              // Update thinking indicator with search query
               if (!searchIndicator) {
-              searchIndicator = document.createElement('div');
-              searchIndicator.className = 'thinking-indicator';
-              var bubble = aiDiv ? aiDiv.querySelector('.msg-bubble') : null;
-              if (bubble) bubble.appendChild(searchIndicator);
-            }
-            if (searchIndicator) {
-              searchIndicator.innerHTML = '<span class="thinking-dots"><span></span><span></span><span></span></span> 正在思考检索：' + escapeHtml(data.query || '...');
-            }
-            } else if (event === 'tool_result') {
-              if (searchIndicator) {
-                searchIndicator.remove();
-                searchIndicator = null;
+                searchIndicator = document.createElement('div');
+                searchIndicator.className = 'thinking-indicator';
+                var bubble = aiDiv ? aiDiv.querySelector('.msg-bubble') : null;
+                if (bubble) bubble.appendChild(searchIndicator);
               }
+              searchIndicator.innerHTML = createThinkingHTML('正在检索：' + (data.query || '...'));
+              startThinkingAnimation(searchIndicator);
+            } else if (event === 'tool_result') {
+              // Keep thinking indicator — will be removed on first text chunk
               if (data && data.refs && data.refs.length) {
                 updateRefPanel(data.refs);
               }
           } else if (event === 'chunk') {
             // Remove search indicator on first text chunk
             if (searchIndicator) {
+              stopThinkingAnimation();
               searchIndicator.remove();
               searchIndicator = null;
             }
@@ -262,6 +294,7 @@
             updateMessageUI(aiDiv, fullText);
           } else if (event === 'done') {
             if (searchIndicator) {
+              stopThinkingAnimation();
               searchIndicator.remove();
               searchIndicator = null;
             }
@@ -275,13 +308,14 @@
           throw new Error('服务端返回了空响应，请检查本地 Functions / API 代理是否正常启动。');
         }
 
-        // Update history
+        // Update history and persist in localStorage
         state.messages.push({ role: 'user', content: userInput });
         state.messages.push({ role: 'assistant', content: fullText });
-        sessionStorage.setItem('chatHistory', JSON.stringify(state.messages));
+        localStorage.setItem('chatHistory', JSON.stringify(state.messages));
 
     } catch(e) {
-      if (searchIndicator) { searchIndicator.remove(); }
+      stopThinkingAnimation();
+      if (searchIndicator) { searchIndicator.remove(); searchIndicator = null; }
       updateMessageUI(aiDiv, '\u274C 错误: ' + e.message + '\n\n请检查API设置是否正确。');
     }
 
@@ -458,7 +492,7 @@
       clearBtn.addEventListener('click', function() {
         if (!confirm('确定要清空对话历史吗？')) return;
         state.messages = [];
-        sessionStorage.removeItem('chatHistory');
+        localStorage.removeItem('chatHistory');
         var el = document.getElementById('chat-messages');
         if (el) {
           el.innerHTML = '<div class="chat-welcome"><div class="welcome-avatar">W</div><p>你好！我是基于巴菲特公开文献模拟的AI助手。</p><p class="welcome-hint">\u{1F4A1} 试试问：「什么是护城河？」</p></div>';
@@ -478,9 +512,9 @@
       });
     }
 
-    // Restore history
+    // Restore history from localStorage (persists across sessions)
     try {
-      var saved = sessionStorage.getItem('chatHistory');
+      var saved = localStorage.getItem('chatHistory');
       if (saved) {
         state.messages = JSON.parse(saved);
         for (var i = 0; i < state.messages.length; i++) {

@@ -2617,15 +2617,41 @@ a.quote-source-link:hover {
 .thinking-indicator {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 0 4px;
+  gap: 8px;
+  padding: 10px 0 6px;
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   animation: thinkingFadeIn 0.3s ease;
 }
 @keyframes thinkingFadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+.thinking-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 1rem;
+  animation: thinkingEmoji 2s steps(1) infinite;
+  flex-shrink: 0;
+}
+@keyframes thinkingEmoji {
+  0%   { content: '🔍'; }
+  0%, 16.6%     { /* 🔍 */ }
+  16.7%, 33.2%  { /* 🤔 */ }
+  33.3%, 49.9%  { /* 📖 */ }
+  50%, 66.5%    { /* 💡 */ }
+  66.6%, 83.2%  { /* 📝 */ }
+  83.3%, 100%   { /* 🔎 */ }
+}
+.thinking-text {
+  animation: thinkingPulse 1.5s ease-in-out infinite;
+}
+@keyframes thinkingPulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
 }
 .thinking-dots {
   display: inline-flex;
