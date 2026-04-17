@@ -1,6 +1,7 @@
 # MyCloudAI · 价值投资
 
 > 与巴菲特同行，读懂价值投资 — 免费开源的巴菲特学习网站
+> https://value.mycloudai.org
 
 📝 **想贡献内容？** → [内容贡献指南](./CONTENT_GUIDE.md)
 
