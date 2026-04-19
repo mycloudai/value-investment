@@ -484,6 +484,77 @@ async function buildServerSearchIndex(docs) {
   return allChunks.length;
 }
 
+// ─── Generate sitemap.xml ──────────────────────────────────────
+function generateSitemap(docs) {
+  const siteUrl = (process.env.SITE_URL || 'https://value.mycloudai.org').replace(/\/+$/, '');
+  const now = new Date().toISOString().split('T')[0];
+
+  // Static pages with priorities
+  const staticPages = [
+    { path: '/',                    changefreq: 'weekly',  priority: '1.0' },
+    { path: '/shareholder-letters', changefreq: 'monthly', priority: '0.9' },
+    { path: '/partnership-letters', changefreq: 'monthly', priority: '0.9' },
+    { path: '/concepts',            changefreq: 'monthly', priority: '0.8' },
+    { path: '/companies',           changefreq: 'monthly', priority: '0.8' },
+    { path: '/people',              changefreq: 'monthly', priority: '0.7' },
+    { path: '/quotes',              changefreq: 'monthly', priority: '0.7' },
+    { path: '/graph',               changefreq: 'monthly', priority: '0.6' },
+    { path: '/talk',                changefreq: 'monthly', priority: '0.6' },
+  ];
+
+  // Priority by category
+  const categoryPriority = {
+    'shareholder-letter': '0.8',
+    'partnership-letter': '0.8',
+    'special-letter':     '0.7',
+    'concept':            '0.7',
+    'company':            '0.6',
+    'person':             '0.6',
+  };
+
+  const lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ];
+
+  for (const page of staticPages) {
+    lines.push('  <url>');
+    lines.push('    <loc>' + siteUrl + page.path + '</loc>');
+    lines.push('    <lastmod>' + now + '</lastmod>');
+    lines.push('    <changefreq>' + page.changefreq + '</changefreq>');
+    lines.push('    <priority>' + page.priority + '</priority>');
+    lines.push('  </url>');
+  }
+
+  for (const doc of docs) {
+    const priority = categoryPriority[doc.category] || '0.6';
+    lines.push('  <url>');
+    lines.push('    <loc>' + siteUrl + doc.route + '</loc>');
+    lines.push('    <lastmod>' + now + '</lastmod>');
+    lines.push('    <changefreq>yearly</changefreq>');
+    lines.push('    <priority>' + priority + '</priority>');
+    lines.push('  </url>');
+  }
+
+  lines.push('</urlset>');
+  lines.push('');
+
+  const xml = lines.join('\n');
+  fs.writeFileSync(path.join(SITE_DIR, 'sitemap.xml'), xml, 'utf8');
+
+  // robots.txt
+  const robotsTxt = [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    'Sitemap: ' + siteUrl + '/sitemap.xml',
+    '',
+  ].join('\n');
+  fs.writeFileSync(path.join(SITE_DIR, 'robots.txt'), robotsTxt, 'utf8');
+
+  return docs.length + staticPages.length;
+}
+
 // ─── Main Build ──────────────────────────────────────────────────
 async function build() {
   console.log('🔨 MyCloudAI 价值投资 - SPA构建开始...\n');
@@ -590,6 +661,10 @@ async function build() {
     '  Cache-Control: no-store\n\n' +
     '/content/*\n' +
     '  Cache-Control: no-store\n\n' +
+    '/sitemap.xml\n' +
+    '  Cache-Control: public, max-age=86400\n\n' +
+    '/robots.txt\n' +
+    '  Cache-Control: public, max-age=86400\n\n' +
     '/assets/*\n' +
     '  Cache-Control: public, max-age=31536000, immutable\n';
   fs.writeFileSync(path.join(SITE_DIR, '_headers'), headers);
@@ -615,7 +690,13 @@ async function build() {
     console.log('   删除旧的 nav-data.json');
   }
 
-  // 13. Copy root docs (CHANGELOG.md, HELP.md) to site/content/
+  // 13. Generate sitemap.xml + robots.txt
+  console.log('🗺️  生成 sitemap.xml + robots.txt...');
+  const sitemapCount = generateSitemap(docs);
+  console.log('   ✓ sitemap.xml: ' + sitemapCount + ' 条URL → site/sitemap.xml');
+  console.log('   ✓ robots.txt → site/robots.txt');
+
+  // 14. Copy root docs (CHANGELOG.md, HELP.md) to site/content/
   console.log('📄 复制文档到 site/content/...');
   const rootDocs = [
     { src: 'CHANGELOG.md', dest: 'changelog.md' },

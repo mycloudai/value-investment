@@ -309,7 +309,7 @@ fi
 # 1.6 快速入口卡片
 HAS_QUICK=$(eval_result "document.getElementById('app-content')?.textContent?.includes('快速入口') && document.getElementById('app-content')?.textContent?.includes('伯克希尔股东信')")
 if [ "$HAS_QUICK" = "true" ]; then
-  pass "快速入口卡片完整（股东信/合伙人信/概念/公司/AI问答/知识图谱）"
+  pass "快速入口卡片完整（股东信/合伙人信/概念/公司/人物/金句/AI对话/知识图谱）"
 else
   fail "快速入口卡片" "缺少部分入口"
 fi
@@ -1579,10 +1579,10 @@ fi
 
 # 17.4 快速入口卡片
 ENTRY_CARDS=$(eval_result "document.querySelectorAll('.entry-card').length")
-if [ "$ENTRY_CARDS" = "4" ]; then
-  pass "17.4: 快速入口卡片 4 张"
+if [ "$ENTRY_CARDS" = "8" ]; then
+  pass "17.4: 快速入口卡片 8 张"
 else
-  fail "17.4: 快速入口卡片" "期望4张，实际 $ENTRY_CARDS"
+  fail "17.4: 快速入口卡片" "期望8张，实际 $ENTRY_CARDS"
 fi
 
 # 17.5 精选金句区

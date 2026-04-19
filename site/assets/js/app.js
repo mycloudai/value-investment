@@ -872,23 +872,29 @@
       '  </div>' +
       '</section>';
 
-    // ── Quick entry cards: 4 categories ──
+    // ── Quick entry cards: all categories ──
     var cardData = [
       { emoji: '📄', title: '伯克希尔股东信', desc: '1965–2024年完整收录，见证伯克希尔从纺织厂到万亿帝国', count: (manifest.nav.shareholderLetters || []).length, route: '/shareholder-letters' },
       { emoji: '📋', title: '合伙人信件', desc: '1956–1970年巴菲特合伙基金时期，了解早期投资哲学', count: (manifest.nav.partnershipLetters || []).length, route: '/partnership-letters' },
       { emoji: '💡', title: '投资理念', desc: '护城河、安全边际、内在价值等核心概念系统解析', count: (manifest.nav.concepts || []).length, route: '/concepts' },
+      { emoji: '🏢', title: '公司解析', desc: '可口可乐、苹果等61家公司的投资逻辑与巴菲特评价', count: (manifest.nav.companies || []).length, route: '/companies' },
+      { emoji: '👤', title: '关键人物', desc: '芒格、格雷厄姆等影响巴菲特投资思想的重要人物', count: (manifest.nav.people || []).length, route: '/people' },
+      { emoji: '💬', title: '精选金句', desc: '从信件中精选的投资智慧语录，快速汲取精华', count: (manifest.quotesFiles || []).length, route: '/quotes', countLabel: '个来源' },
+      { emoji: '🤖', title: 'AI 对话', desc: '与巴菲特 AI 助手对话，探讨价值投资的具体问题', route: '/talk', countLabel: '' },
       { emoji: '🕸️', title: '知识图谱', desc: '概念、公司、人物之间的关联关系可视化探索', count: stats.total, route: '/graph', countLabel: '个节点' }
     ];
     var cardsHTML = '<section class="section"><h2 class="section-title">快速入口</h2><div class="entry-cards">';
     for (var i = 0; i < cardData.length; i++) {
       var card = cardData[i];
+      var badge = (card.countLabel === '') ? '' :
+        '<span class="entry-card-badge">' + (card.count || '') + (card.count !== undefined ? ' ' : '') + (card.countLabel || '篇') + '</span>';
       cardsHTML += '<a href="' + card.route + '" data-route="' + card.route + '" class="entry-card">' +
         '<span class="entry-card-icon">' + card.emoji + '</span>' +
         '<div class="entry-card-body">' +
         '  <h3 class="entry-card-title">' + card.title + '</h3>' +
         '  <p class="entry-card-desc">' + card.desc + '</p>' +
         '</div>' +
-        '<span class="entry-card-badge">' + card.count + ' ' + (card.countLabel || '篇') + '</span>' +
+        badge +
         '</a>';
     }
     cardsHTML += '</div></section>';
